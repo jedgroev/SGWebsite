@@ -1,5 +1,5 @@
 ---
-title: Handling databases with Python and R by Zsofia 
+title: Handling databases with Python by Zsofia 
 text: Managing research info in databases is a crucial skill for any researcher now. Here, it will be shown how to do it with Python and R. 
 location: B0.203
 link: https://github.com/ScienceParkStudyGroup/studyGroup/issues/16
