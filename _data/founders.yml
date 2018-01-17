@@ -1,0 +1,25 @@
+- name: Marc Galland
+  affiliation: University of Amsterdam (SILS)
+  github: mgalland
+  interests:
+    - University of Amsterdam
+    - Swammerdam Institute for Life Sciences
+    - Plant Physiology Department
+
+  roles:
+
+- name: Mateusz Kuzak
+  affiliation: Netherlands eScience Center
+  github: mkuzak
+  interests:
+    - Open Science
+    - Reproducible research
+    - FAIR
+
+- name: Carlos Martinez-Ortiz
+  affiliation: Netherlands eScience Center
+  github: c-martinez
+  interests:
+    - Open Science
+    - Digital Humanities
+    - Data Analysis

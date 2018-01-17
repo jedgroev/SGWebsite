@@ -1,72 +1,63 @@
 - name: Marc Galland
-  affiliation: University of Amsterdam (SILS)
+  position: Community Lead
+  affiliation: UvA SILS
   github: mgalland
   interests:
-    - Study Group coordinator
     - Plant Biology
-    - R/Shiny
     - Bioinformatics
-    - Data Analysis
-
-- name: Mateusz Kuzak
-  affiliation: Netherlands eScience Center
-  github: mkuzak
-  interests:
-    - Open Source
-    - Open Science
-    - Open Education
-    - Reproducible Reasearch
-
-- name: Carlos Martinez-Ortiz
-  affiliation: Netherlands eScience Center
-  github: c-martinez
-  interests:
-    - Open Science
-    - Reproducible Reasearch
     - Data Analysis
     
 - name: Emiel van Loon
-  affiliation: University of Amsterdam (IBED)
+  position: Hacky Hours organiser
+  affiliation: UvA IBED
   github: EmielvanLoon
   interests:
-    - Statistical Ecology
-    - Animal Movement Analysis 
+    - Statistics
     - R
-    - Reproducible Research
+    - Modelling
  
 - name: Like Fokkens 
-  affiliation: University of Amsterdam (SILS)
+  position: Teaching coordinator
+  affiliation: UvA SILS
   github: LikeFokkens
   interests:
-    - Genome Biology
-    - Fungal Genetics 
+    - Comparative genomics  
     - Python
     - Teaching
 
 - name: Joeri Jongbloets
-  affiliation: University of Amsterdam (SILS)
+  position: Events advertisement
+  affiliation: UvA SILS
   github: jjongbloets
   interests:
-    - Genetics
-    - Microbiology 
-    - Modelling
-    - Python
+    - Cyanobacteria
+    - Biotechnology 
     - R
 
 - name: Pietro Marchesi
-  affiliation: University of Amsterdam (SILS)
+  position: User pollster
+  affiliation: UvA SILS
   github: pietromarchesi
   interests:
-    - Neurosciences
+    - Role: Neurosciences
     - Computer Science
     - Data analysis 
     - Python
 
 - name: Zsofia Koma
-  affiliation: University of Amsterdam (IBED)
+  position: Website admin
+  affiliation: UvA IBED
   github: komazsofi
   interests:
     - Ecology
     - Geoinformatics
     - Spatial analysis
     - Machine Learning
+
+- name: Susanne Wilken
+  position: User pollster
+  affiliation: UvA IBED
+  github: susannewilken
+  interests:
+    - Marine Biology
+    - Microbial Ecology
