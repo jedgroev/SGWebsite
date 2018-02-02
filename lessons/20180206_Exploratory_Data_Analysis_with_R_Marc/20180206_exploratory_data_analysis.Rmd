@@ -8,6 +8,7 @@ output:
 ---
 # Introduction
 In this document, we are going to see how to get a grasp of a new dataset. Whenever you collect experimental data, you will have to explore your data using some descriptive statistics. By using two powerful R packages (``tidyverse`` and ``ggplot2``). We will make hypothesis and turn them into code and plots.
+Some additional packages will also be used (and loaded when needed).
 
 ## Load libraries 
 ```{r setup,message=FALSE,warning=FALSE}
@@ -66,7 +67,7 @@ This ``flights`` dataset is a good example of a tidy dataset. There is one uniqu
 Exploring data is about making hypothesis and translating them into code.This dataset list flight delays and list multiple variables that can potentially explain delays.    
 First, we will see how the distribution of delays look like. 
 
-Let's first take a subset of this big dataframe. We will focus on the flights leaving the John Fitzgerald Kennedy airport of New York and arriving at the Los Angeles airport.  
+Let's first take a subset of this big dataframe. We will focus on the flights leaving the **John Fitzgerald Kennedy airport of New York** and arriving at the **Los Angeles international airport**.  
 
 ## Data subsetting using the pipe notation (%>%)
 ```{r Subset}
@@ -78,6 +79,7 @@ jfk = flights %>% filter(origin == "JFK",dest == "LAX") %>% na.omit()
 dim(flights)
 dim(jfk)
 ```
+**Question:** How can you show the first lines of the ``jfk`` tibble?  
 
 ## Plotting a distribution for arrival delays
 ```{r delay distribution}
@@ -100,7 +102,7 @@ p.carrier = ggplot(data = jfk,aes(x=carrier)) +
   geom_bar(color="white")
 print(p.carrier)
 
-# this is the same as:
+# the last plot showed the number of flights per carrier. Data can be obtained with:
 jfk %>% group_by(carrier) %>% summarize(number = n()) 
 ```
 
@@ -109,35 +111,112 @@ jfk %>% group_by(carrier) %>% summarize(number = n())
 2. Per month
 3. Per company
 ```{r delay mean / sd}
-# global mean
-basic.stats = jfk %>% summarize(.,mean = mean(arr_delay),sd=sd(arr_delay))
+# global mean and standard deviation (sd) for arrival delay
+# Rounded to 2 digits
+jfk %>% summarize(.,mean = mean(arr_delay),sd=sd(arr_delay))
 
-# more extensively
-summary(jfk$arr_delay)
+# Mean and standard deviation per carrier company
+# first calculate per carrier 
+# then plot with error bars
+
+delayPercompany = 
+  jfk %>%
+  group_by(carrier) %>%
+  summarize(.,
+            mean = mean(arr_delay), 
+            sd = mean(arr_delay)
+  )
+# plot with standard deviation bars
+p.delayPercompany = ggplot(data = delayPercompany,aes(x = carrier,y = mean,fill=carrier)) +
+    geom_bar(stat="identity") +
+   geom_errorbar(aes(ymin=mean-sd, ymax=mean+sd), colour="black", width=.1) 
+print(p.delayPercompany)    
 ```
-How 
+**Question**: do you know plots that display some additional informationon the `àrr_delay`` variable distribution  
 
-## 
+# Bivariate analysis (two variables at a time)
+## Relationship between variables
+Now that we have explored univarite, we can try to see relationships between two variables. 
 
-#
-## More plots: relationship between variables
-Now that we have explored univarite We can start exploring 
+First, is there a relationship between ``dep_delay`` and ``arr_delay``?
 ```{r arrival - departure delays}
+# simple scatterplot departure delay versus 
+p.arr_dep1 = ggplot(na.omit(flights),aes(dep_delay,arr_delay)) + 
+  geom_point()
+print(p.arr_dep1)
+
+# scatterplot with carrier company 
+p.arr_dep2 = ggplot(na.omit(flights),aes(dep_delay,arr_delay,colour=carrier)) + 
+  geom_point()
+print(p.arr_dep2)
+```
+
+Then, between ``arr_delay`` and the ``distance`` traveled?
+```{r arr vs distance}
+# scatterplot with carrier company 
+p.arr_dist = ggplot(na.omit(flights),aes(distance,arr_delay,colour=carrier)) + 
+  geom_point()
+print(p.arr_dist)
+```
+
+**Question**: Can you think of other relationships? Tip: to print all variables, type ``glimpse(flights)`` 
+
+## Multivariate analysis
+### By "eye": heatmap
+Using the R package "superheat", we will make a colored heatmap ((table with colors intensity reflecting values) of some variables of the flights going from JFK airport to Los Angeles for only one company (United Airlines = UA)
+```{r heatmap}
+# install or simply load libraries
+if (require("superheat") == FALSE)  {
+  # no package, it installs it
+  print("superheat package not found, installing from https://cloud.r-project.org/")
+  install.packages("superheat",repos = "https://cloud.r-project.org/")  
+} else {
+  library("superheat")
+}
+
+# create a dataset
+ua = flights %>% 
+  filter(.,carrier=="UA") %>%
+  filter(.,dep_delay > 0 & arr_delay > 0) %>%
+  select(.,dep_time,arr_time,dep_delay,arr_delay,distance) %>%
+  head(.,n=5000)
+
+ua <- as.data.frame(ua)
+row.names(ua) = ua$flight
+ua$flight = NULL
+ua = log(ua,base = 2)
+
+# make a heatmap 
+superheat(ua,
+          # normalise variables (so they become comparable)
+          scale = T,
+           heat.pal = c("#b35806", "white", "#542788"),
+          pretty.order.rows = T,
+          pretty.order.cols = T
+          )
+```
+
+### Principal Component Analysis
+```{r PCA}
+flights.pca <- dplyr::select(flights,carrier,dep_delay,arr_delay,distance,air_time)
+
+# compute PCA
+res.pca <- prcomp(flights.pca[,2:5],scale=TRUE)
+fviz_eig(res.pca)
 
 ```
 
-
-# Data exploration - Bivariate (two variables at a time)
-# Making hypothesis
-How can we explain delays?
+# Making hypothesis: a first step into regressions
+How can we explain delays? We have seen that delauys 
 
 ## Hypothesis 1: delays are related to the distance traveled
 ```{r delay vs distance}
 
 ```
 
-
 ## Hypothesis 2: delays are related to the flight company
+
+
 
 # Conclusion
 
