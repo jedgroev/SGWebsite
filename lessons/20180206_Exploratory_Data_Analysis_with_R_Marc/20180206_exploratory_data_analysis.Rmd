@@ -1,0 +1,148 @@
+---
+title: "Exploratory Data Analysis"
+author: "Marc Galland"
+date: "`r Sys.Date()`"
+output:
+    html_document:
+        keep_md: true
+---
+# Introduction
+In this document, we are going to see how to get a grasp of a new dataset. Whenever you collect experimental data, you will have to explore your data using some descriptive statistics. By using two powerful R packages (``tidyverse`` and ``ggplot2``). We will make hypothesis and turn them into code and plots.
+
+## Load libraries 
+```{r setup,message=FALSE,warning=FALSE}
+# install or simply load libraries
+if (require("tidyverse") == FALSE)  {
+  # no package, it installs it
+  print("tidyverse package not found, installing from https://cloud.r-project.org/")
+  install.packages("tidyverse",repos = "https://cloud.r-project.org/")  
+} else {
+  library("tidyverse")
+}
+
+if (require("nycflights13") == FALSE)  {
+  # no package, it installs it
+  print("nycflights13 package not found, installing from https://cloud.r-project.org/")
+  install.packages("nycflights13",repos = "https://cloud.r-project.org/")  
+} else {
+  library("nycflights13")
+}
+```
+
+## Explore the "nycflights13" dataset
+We’d all like to arrive at our destinations on time whenever possible. We’re going to analyze data related to flights contained in the ``nycflights13`` package (Wickham 2017). Specifically, this package contains five datasets saved as “data frames” with information about all domestic flights departing from New York City in 2013, from either Newark Liberty International (EWR), John F. Kennedy International (JFK), or LaGuardia (LGA) airports.
+
+Let's have a look at this dataset. 
+```{r glimpse}
+# the head command
+head(flights)
+
+# The view command
+View(flights)
+
+# The glimpse command
+glimpse(flights)
+```
+
+While the ``head`` command helps you to have a look at the first lines, the ``glimpse`` command allows you to see all variables (19 columns) at once. Since the dataframe is a **tible** (see glossary) you also see how R encode the different columns (int for integer, chr for character, etc.)
+
+**Explanations of the variables (columns):**
+* year,month,day: Date of departure
+* dep_time,arr_time: Actual departure and arrival times, local tz.
+* sched_dep_time,sched_arr_time: Scheduled departure and arrival times, local tz.
+* dep_delay,arr_delay: Departure and arrival delays, in minutes. Negative times represent early departures/arrivals.
+* hour,minute: Time of scheduled departure broken into hour and minutes.
+* carrier: Two letter carrier abbreviation. See airlines to get name
+* tailnum: Plane tail number
+* flight: Flight number
+* origin,dest: Origin and destination. See airports for additional metadata.
+* air_time: Amount of time spent in the air, in minutes
+* distance: Distance between airports, in miles
+* time_hour: Scheduled date and hour of the flight as a POSIXct date. Along with origin, can be used to join flights data to weather data.
+
+This ``flights`` dataset is a good example of a tidy dataset. There is one unique value per line and variables are well separated. For instance, ``year``, ``month`` and ``day`` are separated. 
+
+# Data exploration - Univariate (one variable at a time)
+Exploring data is about making hypothesis and translating them into code.This dataset list flight delays and list multiple variables that can potentially explain delays.    
+First, we will see how the distribution of delays look like. 
+
+Let's first take a subset of this big dataframe. We will focus on the flights leaving the John Fitzgerald Kennedy airport of New York and arriving at the Los Angeles airport.  
+
+## Data subsetting using the pipe notation (%>%)
+```{r Subset}
+# filtering by destination and arrival airports   
+# na.omit removes the "NA" missing values
+jfk = flights %>% filter(origin == "JFK",dest == "LAX") %>% na.omit()
+
+# let's have a look at the numbers of remaining rows
+dim(flights)
+dim(jfk)
+```
+
+## Plotting a distribution for arrival delays
+```{r delay distribution}
+# default 
+p30 <- ggplot(data=jfk,aes(x=arr_delay)) + 
+  geom_histogram(binwidth = 30) # The width of the bins. By default 30
+print(p30)
+
+# with different values 
+p100 <- ggplot(data=jfk,aes(x=arr_delay)) + 
+  geom_histogram(binwidth = 10) # better for our values
+print(p100)
+```
+
+## Plotting the number of flights operated per flight company (``carrier``)
+Here, we see that we can create a barplot for a variable with the ``geom_bar``. 
+```{r nb flights per company}
+# barplot
+p.carrier = ggplot(data = jfk,aes(x=carrier)) +
+  geom_bar(color="white")
+print(p.carrier)
+
+# this is the same as:
+jfk %>% group_by(carrier) %>% summarize(number = n()) 
+```
+
+## Finding the mean and standard deviation 
+1. For all flights
+2. Per month
+3. Per company
+```{r delay mean / sd}
+# global mean
+basic.stats = jfk %>% summarize(.,mean = mean(arr_delay),sd=sd(arr_delay))
+
+# more extensively
+summary(jfk$arr_delay)
+```
+How 
+
+## 
+
+#
+## More plots: relationship between variables
+Now that we have explored univarite We can start exploring 
+```{r arrival - departure delays}
+
+```
+
+
+# Data exploration - Bivariate (two variables at a time)
+# Making hypothesis
+How can we explain delays?
+
+## Hypothesis 1: delays are related to the distance traveled
+```{r delay vs distance}
+
+```
+
+
+## Hypothesis 2: delays are related to the flight company
+
+# Conclusion
+
+# To go deeper into Exploratory Data Analysis 
+- [Modern Dive](http://moderndive.com/index.html)
+- [ggplot2 cookbook](http://www.cookbook-r.com/Graphs/)
+
+
