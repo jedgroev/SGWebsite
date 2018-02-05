@@ -1,7 +1,7 @@
 ---
 title: "Exploratory Data Analysis"
 author: "Marc Galland"
-date: "`r Sys.Date()`"
+date: "February 6th, 2018"
 output:
     html_document:
         keep_md: true
@@ -9,6 +9,9 @@ output:
 # Introduction
 In this document, we are going to see how to get a grasp of a new dataset. Whenever you collect experimental data, you will have to explore your data using some descriptive statistics. By using two powerful R packages (``tidyverse`` and ``ggplot2``). We will make hypothesis and turn them into code and plots.
 Some additional packages will also be used (and loaded when needed).
+
+__Important note 1__: this lesson is meant to be the follow-up of Joeri's lesson on plots in R [lesson: November 7th, 2017](https://github.com/ScienceParkStudyGroup/studyGroup/blob/gh-pages/lessons/20171107_Simple_plots_with_R_Joeri/20171107_simple_plots_with_r_session.Rmd). 
+__Important note 2__: this lesson will be followed by a lesson on regression on [March 3rd by Emiel](https://github.com/ScienceParkStudyGroup/studyGroup/issues/19). 
 
 ## Load libraries 
 ```{r setup,message=FALSE,warning=FALSE}
@@ -108,8 +111,7 @@ jfk %>% group_by(carrier) %>% summarize(number = n())
 
 ## Finding the mean and standard deviation 
 1. For all flights
-2. Per month
-3. Per company
+2. Per company
 ```{r delay mean / sd}
 # global mean and standard deviation (sd) for arrival delay
 # Rounded to 2 digits
@@ -118,21 +120,21 @@ jfk %>% summarize(.,mean = mean(arr_delay),sd=sd(arr_delay))
 # Mean and standard deviation per carrier company
 # first calculate per carrier 
 # then plot with error bars
-
 delayPercompany = 
   jfk %>%
   group_by(carrier) %>%
   summarize(.,
             mean = mean(arr_delay), 
             sd = mean(arr_delay)
-  )
+)
+
 # plot with standard deviation bars
 p.delayPercompany = ggplot(data = delayPercompany,aes(x = carrier,y = mean,fill=carrier)) +
     geom_bar(stat="identity") +
    geom_errorbar(aes(ymin=mean-sd, ymax=mean+sd), colour="black", width=.1) 
 print(p.delayPercompany)    
 ```
-**Question**: do you know plots that display some additional informationon the `àrr_delay`` variable distribution  
+**Question**: do you know plots that display some additional informationon the ``arr_delay`` variable distribution  
 
 # Bivariate analysis (two variables at a time)
 ## Relationship between variables
@@ -151,74 +153,49 @@ p.arr_dep2 = ggplot(na.omit(flights),aes(dep_delay,arr_delay,colour=carrier)) +
 print(p.arr_dep2)
 ```
 
-Then, between ``arr_delay`` and the ``distance`` traveled?
-```{r arr vs distance}
-# scatterplot with carrier company 
-p.arr_dist = ggplot(na.omit(flights),aes(distance,arr_delay,colour=carrier)) + 
-  geom_point()
-print(p.arr_dist)
-```
-
 **Question**: Can you think of other relationships? Tip: to print all variables, type ``glimpse(flights)`` 
 
 ## Multivariate analysis
-### By "eye": heatmap
-Using the R package "superheat", we will make a colored heatmap ((table with colors intensity reflecting values) of some variables of the flights going from JFK airport to Los Angeles for only one company (United Airlines = UA)
-```{r heatmap}
-# install or simply load libraries
-if (require("superheat") == FALSE)  {
-  # no package, it installs it
-  print("superheat package not found, installing from https://cloud.r-project.org/")
-  install.packages("superheat",repos = "https://cloud.r-project.org/")  
-} else {
-  library("superheat")
-}
-
-# create a dataset
-ua = flights %>% 
-  filter(.,carrier=="UA") %>%
-  filter(.,dep_delay > 0 & arr_delay > 0) %>%
-  select(.,dep_time,arr_time,dep_delay,arr_delay,distance) %>%
-  head(.,n=5000)
-
-ua <- as.data.frame(ua)
-row.names(ua) = ua$flight
-ua$flight = NULL
-ua = log(ua,base = 2)
-
-# make a heatmap 
-superheat(ua,
-          # normalise variables (so they become comparable)
-          scale = T,
-           heat.pal = c("#b35806", "white", "#542788"),
-          pretty.order.rows = T,
-          pretty.order.cols = T
-          )
-```
-
-### Principal Component Analysis
-```{r PCA}
-flights.pca <- dplyr::select(flights,carrier,dep_delay,arr_delay,distance,air_time)
-
-# compute PCA
-res.pca <- prcomp(flights.pca[,2:5],scale=TRUE)
-fviz_eig(res.pca)
-
-```
+We will keep that for a next lesson!
 
 # Making hypothesis: a first step into regressions
 How can we explain delays? We have seen that delauys 
 
-## Hypothesis 1: delays are related to the distance traveled
-```{r delay vs distance}
+## Hypothesis: delays are related to the distance traveled
+From the Github repository of Andrew Bray
+> Say you're curious about the relationship between the number of flights each plane made in 2013, the mean distance that each of those planes flew, and the mean arrival delay. You also want to exclude the edge cases from your analysis, so focus on the planes that have logged more than 20 flights and flown an average distance of less than 2000 miles. Please form the chain that creates this dataset.
 
+
+```{r delay explained by distance}
+arr_delay <- flights %>%
+  group_by(tailnum) %>%
+  summarise(
+    count = n(),
+    distance = mean(distance, na.rm = TRUE), 
+    delay = mean(arr_delay, na.rm = TRUE)) %>%
+  filter(count > 20, distance < 2000)
+
+p.delay <- ggplot(arr_delay, aes(distance, delay)) +
+ geom_point(aes(size = count), alpha = 1/2) +
+ geom_smooth() +
+ scale_size_area()
+print(p.delay)
 ```
 
-## Hypothesis 2: delays are related to the flight company
+The last plot shows that there might be a relationship between ``distance`` and ``arr_delay``, we are going to see how to statistically assess the importance of one variable to another using regression. 
+Y = \beta0 + \beta1.X
 
+```{r fit}
+fit = lm(arr_delay ~ distance, data=na.omit(flights))
 
+# show the summary of the model
+summary(fit)
+```
 
 # Conclusion
+In this lesson, we have seen how to quickly explore and make hypothesis on a dataset using R and the powerful ``tidyverse`` collection of tools. This lesson combines well with the two lessons on simple plots and regressions.
+__Important note 1__: this lesson is meant to be the follow-up of Joeri's lesson on plots in R [lesson: November 7th, 2017](https://github.com/ScienceParkStudyGroup/studyGroup/blob/gh-pages/lessons/20171107_Simple_plots_with_R_Joeri/20171107_simple_plots_with_r_session.Rmd). 
+__Important note 2__: this lesson will be followed by a lesson on regression on [March 3rd by Emiel](https://github.com/ScienceParkStudyGroup/studyGroup/issues/19). 
 
 # To go deeper into Exploratory Data Analysis 
 - [Modern Dive](http://moderndive.com/index.html)
