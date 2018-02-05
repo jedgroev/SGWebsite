@@ -23,11 +23,11 @@ A working Python distribution. You can install Anaconda for an all-in-one setup.
 # Credits
 This lesson is based on a Software Carpentry lesson available [here](http://swcarpentry.github.io/python-novice-inflammation/) 
 
-## Introduction ##
+# Introduction #
 Welcome to this brief walkthrough of doing an analysis of an RNA-seq experiment. We will use some Arabidopsis Thaliana data, with and without drought stress. We will be making  use of FastQC, kallisto and sleuth (in R).
 For each step we have provided the starting files, so you can jump into the walkthrough wherever you want.
 
-#FastQC
+# FastQC #
 The first step after getting back your RNA-sequencing results is to check if your reads are of decent quality. In order to do this we will use FastQC, it is much used tool that is freely avalable.[here](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 
 
@@ -51,7 +51,7 @@ done
 
 These new filtered data we can put back in FastQC to see if indeed we have gotten rid of our small samples.
 
-
+# Kallisto #
 When we have made sure that the input data is correct we can now use kallisto to align our reads to our reference genome.
 *how does kallisto work, with reference*
 
@@ -73,7 +73,7 @@ we first ask for kallisto to run: kallisto/kallisto quant
 we give the reference genome: -I …
 and we show where we want the results: -o …
 next we supply some information:
-# bootstraps, this will indicate how many times Kallisto refines the alignment procedure. We will start at #3, but you can easily go up to 500 without a big increase in alignment time: -b 3
+bootstraps, this will indicate how many times Kallisto refines the alignment procedure. We will start at #3, but you can easily go up to 500 without a big increase in alignment time: -b 3
 our data here is single reads: --single
 If your data is paired end you can use here –paired
 Then we supply the average length of your sample: -l
@@ -94,6 +94,7 @@ Your output folder will contain 3 files.
 
 The output from this run can be directly used to start comparing samples. In in for example excel.
 
+# sleuth #
 We also quickly showcase Sleuth, an analysing tool especially made to be used in conjuction with Kallisto, it has the great advantage that it will take the variation you get in your bootstraps into account when determining the significance of any difference in expression, increasing your statistical power.
 
 Sleuth is ran in R, so if you want to run Sleuth you will first need to install R (studios).
