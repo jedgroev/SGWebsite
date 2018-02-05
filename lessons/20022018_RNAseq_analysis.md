@@ -30,10 +30,16 @@ For each step we have provided the starting files, so you can jump into the walk
 # FastQC #
 The first step after getting back your RNA-sequencing results is to check if your reads are of decent quality. In order to do this we will use FastQC, it is much used tool that is freely avalable.[here](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 
-
 Download software if you don’t have it already. IT works by simple drag and drop.
-This tool will give lots of information about the quality of your project.
-The data we will be using today has been sequenced using Ion-torrent sequencing, the results from this have a different quality than that of illumina, for which FastQC has been optimized. Therefore fastQC will contain some more error than for your own data.
+
+The data we will be using today has been sequenced using Ion-torrent sequencing, the results from this have a different quality than that of illumina, for which FastQC has been optimized. Therefore fastQC will contain some more errors than you might get when you try this with your own data.
+
+You can look through the data file to see if anything looks wrong to you. We will focus only on quality of reads and read size, for more information about the different options of FastQC there are more ellaborate manuals [like this one](https://dnacore.missouri.edu/PDF/FastQC_Manual.pdf)
+If we look at the per base sequence quality we see that if reads are longer, the sequencing quality goes down. In the "Per sequence quality score we see that there are some reads with a quality score of less than 17. For Ion-torrent-sequencing a 17 is the cut-off value you want to take. In the case of Illumina data ???? is generally accepted.
+
+In order to get rid of the reads with low quality we can run the following line in the ?shell?
+download$ fastq_quality_filter -q 17 -p 75 -o testrun.fastq
+q standing for the quality cut off. p for the percentage of the read 
 
 After we have taken a look at the data we see that the there are some samples which have a low read quality and a group of mRNA that are smaller than 15nt.
 For this research project we are not interested in these small RNA’s and therefore we will take them out.
