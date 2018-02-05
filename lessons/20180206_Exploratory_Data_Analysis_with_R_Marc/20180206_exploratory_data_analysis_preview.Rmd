@@ -1,0 +1,172 @@
+---
+title: "Exploratory Data Analysis"
+author: "Marc Galland"
+date: "February 6th, 2018"
+output:
+    html_document:
+        keep_md: true
+---
+# Introduction
+In this document, we are going to see how to get a grasp of a new dataset. Whenever you collect experimental data, you will have to explore your data using some descriptive statistics. By using two powerful R packages (``tidyverse`` and ``ggplot2``). We will make hypothesis and turn them into code and plots.
+Some additional packages will also be used (and loaded when needed).
+
+__Important note 1__: this lesson is meant to be the follow-up of Joeri's lesson on plots in R [lesson: November 7th, 2017](https://github.com/ScienceParkStudyGroup/studyGroup/blob/gh-pages/lessons/20171107_Simple_plots_with_R_Joeri/20171107_simple_plots_with_r_session.Rmd). 
+__Important note 2__: this lesson will be followed by a lesson on regression on [March 3rd by Emiel](https://github.com/ScienceParkStudyGroup/studyGroup/issues/19). 
+
+## Load libraries 
+```{r setup,message=FALSE,warning=FALSE}
+# install or simply load libraries
+if (require("tidyverse") == FALSE)  {
+  # no package, it installs it
+  print("tidyverse package not found, installing from https://cloud.r-project.org/")
+  install.packages("tidyverse",repos = "https://cloud.r-project.org/")  
+} else {
+  library("tidyverse")
+}
+
+if (require("nycflights13") == FALSE)  {
+  # no package, it installs it
+  print("nycflights13 package not found, installing from https://cloud.r-project.org/")
+  install.packages("nycflights13",repos = "https://cloud.r-project.org/")  
+} else {
+  library("nycflights13")
+}
+```
+
+## Explore the "nycflights13" dataset
+We’d all like to arrive at our destinations on time whenever possible. We’re going to analyze data related to flights contained in the ``nycflights13`` package (Wickham 2017). Specifically, this package contains five datasets saved as “data frames” with information about all domestic flights departing from New York City in 2013, from either Newark Liberty International (EWR), John F. Kennedy International (JFK), or LaGuardia (LGA) airports.
+
+Let's have a look at this dataset. 
+```{r glimpse}
+# the head command
+head(flights)
+
+# The view command
+View(flights)
+
+# The glimpse command
+glimpse(flights)
+```
+
+While the ``head`` command helps you to have a look at the first lines, the ``glimpse`` command allows you to see all variables (19 columns) at once. Since the dataframe is a **tible** (see glossary) you also see how R encode the different columns (int for integer, chr for character, etc.)
+
+**Explanations of the variables (columns):**
+* year,month,day: Date of departure
+* dep_time,arr_time: Actual departure and arrival times, local tz.
+* sched_dep_time,sched_arr_time: Scheduled departure and arrival times, local tz.
+* dep_delay,arr_delay: Departure and arrival delays, in minutes. Negative times represent early departures/arrivals.
+* hour,minute: Time of scheduled departure broken into hour and minutes.
+* carrier: Two letter carrier abbreviation. See airlines to get name
+* tailnum: Plane tail number
+* flight: Flight number
+* origin,dest: Origin and destination. See airports for additional metadata.
+* air_time: Amount of time spent in the air, in minutes
+* distance: Distance between airports, in miles
+* time_hour: Scheduled date and hour of the flight as a POSIXct date. Along with origin, can be used to join flights data to weather data.
+
+This ``flights`` dataset is a good example of a tidy dataset. There is one unique value per line and variables are well separated. For instance, ``year``, ``month`` and ``day`` are separated. 
+
+# Data exploration - Univariate (one variable at a time)
+Exploring data is about making hypothesis and translating them into code.This dataset list flight delays and list multiple variables that can potentially explain delays.    
+First, we will see how the distribution of delays look like. 
+
+Let's first take a subset of this big dataframe. We will focus on the flights leaving the **John Fitzgerald Kennedy airport of New York** and arriving at the **Los Angeles international airport**.  
+
+## Data subsetting using the pipe notation (%>%)
+```{r Subset}
+# filtering by destination and arrival airports   
+# na.omit removes the "NA" missing values
+
+# let's have a look at the numbers of remaining rows
+
+```
+**Question:** How can you show the first lines of the ``jfk`` tibble?  
+
+## Plotting a distribution for arrival delays
+```{r delay distribution}
+# default 
+p30 <- ggplot(data=jfk,aes(x=arr_delay)) + 
+  geom_histogram(binwidth = 30) # The width of the bins. By default 30
+print(p30)
+
+# with different values 
+
+```
+
+## Plotting the number of flights operated per flight company (``carrier``)
+Here, we see that we can create a barplot for a variable with the ``geom_bar``. 
+```{r nb flights per company}
+# barplot
+
+# the last plot showed the number of flights per carrier. Data can be obtained with:
+
+```
+
+## Finding the mean and standard deviation 
+1. For all flights
+2. Per company
+```{r delay mean / sd}
+# global mean and standard deviation (sd) for arrival delay
+# Rounded to 2 digits
+
+
+# Mean and standard deviation per carrier company
+# first calculate per carrier 
+# then plot with error bars
+
+# plot with standard deviation bars
+  
+```
+**Question**: do you know plots that display some additional informationon the ``arr_delay`` variable distribution  
+
+# Bivariate analysis (two variables at a time)
+## Relationship between variables
+Now that we have explored univarite, we can try to see relationships between two variables. 
+
+First, is there a relationship between ``dep_delay`` and ``arr_delay``?
+```{r arrival - departure delays}
+# simple scatterplot departure delay versus 
+
+
+# scatterplot with carrier company 
+
+```
+
+**Question**: Can you think of other relationships? Tip: to print all variables, type ``glimpse(flights)`` 
+
+## Multivariate analysis
+We will keep that for a next lesson!
+
+# Making hypothesis: a first step into regressions
+How can we explain delays? We have seen that delauys 
+
+## Hypothesis: delays are related to the distance traveled
+From the Github repository of Andrew Bray
+> Say you're curious about the relationship between the number of flights each plane made in 2013, the mean distance that each of those planes flew, and the mean arrival delay. You also want to exclude the edge cases from your analysis, so focus on the planes that have logged more than 20 flights and flown an average distance of less than 2000 miles. Please form the chain that creates this dataset.
+
+
+```{r delay explained by distance}
+
+```
+
+The last plot shows that there might be a relationship between ``distance`` and ``arr_delay``, we are going to see how to statistically assess the importance of one variable to another using regression. 
+Y = \beta0 + \beta1.X
+
+```{r fit}
+
+# show the summary of the model
+
+```
+
+# Conclusion
+In this lesson, we have seen how to quickly explore and make hypothesis on a dataset using R and the powerful ``tidyverse`` collection of tools. This lesson combines well with the two lessons on simple plots and regressions.
+
+__Important note 1__: this lesson is meant to be the follow-up of Joeri's lesson on plots in R [lesson: November 7th, 2017](https://github.com/ScienceParkStudyGroup/studyGroup/blob/gh-pages/lessons/20171107_Simple_plots_with_R_Joeri/20171107_simple_plots_with_r_session.Rmd). 
+
+__Important note 2__: this lesson will be followed by a lesson on regression on [March 3rd by Emiel](https://github.com/ScienceParkStudyGroup/studyGroup/issues/19). 
+
+# To go deeper into Exploratory Data Analysis 
+- [Modern Dive](http://moderndive.com/index.html)
+- [ggplot2 cookbook](http://www.cookbook-r.com/Graphs/)
+
+
