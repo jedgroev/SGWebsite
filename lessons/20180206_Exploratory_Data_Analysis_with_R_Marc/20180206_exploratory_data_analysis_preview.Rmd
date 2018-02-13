@@ -20,6 +20,7 @@ if (require("tidyverse") == FALSE)  {
   # no package, it installs it
   print("tidyverse package not found, installing from https://cloud.r-project.org/")
   install.packages("tidyverse",repos = "https://cloud.r-project.org/")  
+  library("tidyverse")
 } else {
   library("tidyverse")
 }
@@ -28,6 +29,7 @@ if (require("nycflights13") == FALSE)  {
   # no package, it installs it
   print("nycflights13 package not found, installing from https://cloud.r-project.org/")
   install.packages("nycflights13",repos = "https://cloud.r-project.org/")  
+  library("nycflights13")
 } else {
   library("nycflights13")
 }
