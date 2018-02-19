@@ -36,10 +36,10 @@ One hour: half presentation, half hands-on. Going through the complete processin
 However, the lesson contains enough information on each step to complete on your own.
 
 ## Schedule
-**Fred** (presentation)
+**Fred** (presentation)  
 Short presentation about mRNA-Seq analysis and workflow. 
 
-**Max** (hands-on)
+**Max** (hands-on)  
 1. Generation of the transcriptome reference index with Kallisto
 2. Alignment of clean RNA-Seq reads with Kallisto
 3. Exploration of the results with Sleuth
