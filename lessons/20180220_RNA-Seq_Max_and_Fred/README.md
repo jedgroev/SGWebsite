@@ -28,6 +28,7 @@ One good practice is to create a working environment  that contains softwares, P
 There are two ways to do it. With the _Anaconda navigator_ or from the _command line_
 
 __Using Anaconda Navigator__
+
 1. Start the 'Anaconda Navigator'
 2. Click on 'Environments' 
 3. Click on 'Create'
@@ -36,7 +37,8 @@ __Using Anaconda Navigator__
 6. Click on 'channels' and make sure you have `bioconda` as a channel
 7. Search for `kallisto` and `r-sleuth` and select apply
 
-__From the command line__ (
+__From the command line__ 
+
 The conda package/software manager should be accessible directly. In other words, your computer should know where to find the `conda` program. It should be in your PATH variable. Check it with `echo $PATH`. If you don't see anything like `/Users/[yourname]/anaconda/bin/` then you have to add it to your PATH. To do so, in the command line terminal, type `echo "export PATH=$PATH:/Users/[yourname]/anaconda/test/" >> ~/.bash_profile`. On some systems, it can be `echo "export PATH=$PATH:/Users/[yourname]/anaconda/test/" >> ~/.bashrc`.
 1. Make a new environment called "bio" with: `conda create --name bio python=3.6` 
 2. Activate this new environment with `source activate bio` 
