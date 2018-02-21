@@ -22,6 +22,27 @@ First, please download the lesson files [here](https://www.dropbox.com/sh/lrl7q4
 If you choose the zip file with "all results", it will also contain all the intermediate files. 
 On a mac or linux computer you will be able to run the lesson from jupyter, if you are on  a windows computer it is easier to copy paste the the commands from the lesson to your terminal and execute from them for there.
 
+## Create a working environment 
+One good practice is to create a working environment  that contains softwares, Python packages, R packages etc. It should remain separated from your default `root` environment (sometimes called "Anaconda3" also) because some libraries or some other installation bugs can appear later on (softwares sometimes depend on different libraries and they then enter in conflict).
+
+There are two ways to do it. With the _Anaconda navigator_ or from the _command line_
+
+__Using Anaconda Navigator__
+1. Start the 'Anaconda Navigator'
+2. Click on 'Environments' 
+3. Click on 'Create'
+4. Name it 'bio' (or any other name that make sense to you)
+5. Select Python 3.6  (__do not select r__)
+6. Click on 'channels' and make sure you have `bioconda` as a channel
+7. Search for `kallisto` and `r-sleuth` and select apply
+
+__From the command line__ (
+The conda package/software manager should be accessible directly. In other words, your computer should know where to find the `conda` program. It should be in your PATH variable. Check it with `echo $PATH`. If you don't see anything like `/Users/[yourname]/anaconda/bin/` then you have to add it to your PATH. To do so, in the command line terminal, type `echo "export PATH=$PATH:/Users/[yourname]/anaconda/test/" >> ~/.bash_profile`. On some systems, it can be `echo "export PATH=$PATH:/Users/[yourname]/anaconda/test/" >> ~/.bashrc`.
+1. Make a new environment called "bio" with: `conda create --name bio python=3.6` 
+2. Activate this new environment with `source activate bio` 
+3. Install the latest version of Kallisto with `conda install -c bioconda kallisto`
+4. Install the latest Sleuth version with `conda install -c bioconda r-sleuth`
+
 ## Softwares
 ###### If you are on a **Mac** or a **Linux** computer the anaconda navigator is a easy tool to install other packages. 
 - The Anaconda distribution for data science. [Find it here](https://www.anaconda.com/download/) distributions. The Kallisto software and the Sleuth R package can be downloaded using Anaconda. 
