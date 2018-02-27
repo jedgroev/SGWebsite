@@ -36,13 +36,20 @@ __Using Anaconda Navigator__
 5. Select Python 3.6  (__do not select r__)
 6. Click on 'channels' and make sure you have `bioconda` as a channel
 7. Search for `kallisto` and `r-sleuth` and select apply
+8. Search and install `jupyter` 
+9. Open the downloaded jupyter notebook ``RNAseq_lessonv1.05.ipynb`` 
+
 
 __From the command line__ 
 
-The conda package/software manager should be accessible directly. In other words, your computer should know where to find the `conda` program. It should be in your PATH variable. Check it with `echo $PATH`. If you don't see anything like `/Users/[yourname]/anaconda/bin/` then you have to add it to your PATH. To do so, in the command line terminal, type `echo "export PATH=$PATH:/Users/[yourname]/anaconda/test/" >> ~/.bash_profile`. On some systems, it can be `echo "export PATH=$PATH:/Users/[yourname]/anaconda/test/" >> ~/.bashrc`.
+The conda package/software manager should be accessible directly. In other words, your computer should know where to find the `conda` program. It should be in your PATH variable. Check it with `echo $PATH`. 
+
+If you don't see anything like `/Users/[yourname]/anaconda/bin/` then you have to add it to your PATH. To do so, in the command line terminal, type `echo "export PATH=$PATH:/Users/[yourname]/anaconda/test/" >> ~/.bash_profile`. On some systems, it can be `echo "export PATH=$PATH:/Users/[yourname]/anaconda/test/" >> ~/.bashrc`.
 1. Make a new environment called "bio" with: `conda create --name bio python=3.6 kallisto r-sleuth` 
 2. Type `y` when asked. 
 3. Activate this new environment with `source activate bio` 
+4. Also install "jupyter" by typing `conda install jupyter` to get the capacity to launch Jupyter notebooks.  
+5. Run ``jupyter notebook RNAseq_lessonv1.05.ipynb``
 
 ## Softwares
 ###### If you are on a **Mac** or a **Linux** computer the anaconda navigator is a easy tool to install other packages. 
