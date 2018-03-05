@@ -13,9 +13,7 @@ Absolute beginners and begginers.
 
 # Setup
 ## Lesson files
-First, please download the lesson files [here](a link that works!).
-@Emiel: you can use [Zenodo](https://zenodo.org/communities/scienceparkstudygroup/?page=1&size=20) with the "Science Park Study Group" community 
-if you want to add big files. Otherwise, here in that repo.
+First, please download the lesson files [will be available from Tuesday 10:00].
 
 1. Download the file and unzip it.
 2. Inside the zipped folder, you will find the Rmarkdown notebook (with the ``.Rmd`` extension). 
@@ -27,3 +25,4 @@ One hour
 ## Schedule
 
 # Additional Resources 
+None
