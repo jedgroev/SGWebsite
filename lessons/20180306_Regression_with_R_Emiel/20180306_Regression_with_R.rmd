@@ -7,11 +7,9 @@ html_document:
 keep_md: true
 ---
 
-# Linear Regression 
+# Introduction
 
 > Linear regression is used to predict the value of an outcome variable $Y$ based on one or more input predictor variables $X$. The aim is to establish a linear relationship (a mathematical formula) between the predictor variable(s) and the response variable, so that, we can use this formula to estimate the value of the response $Y$, when only the predictors ($Xs$) values are known.
-
-##Introduction
 
 The aim of linear regression is to model a continuous variable $Y$ as a mathematical function of one or more $X$ variable(s), so that we can use this regression model to predict the $Y$ when only the $X$ is known. This mathematical equation can be generalized as follows:
 
@@ -19,7 +17,7 @@ $$Y = \beta_{1} + \beta_{2} X + \epsilon$$
 
 where, $\beta_{1}$ is the intercept and $\beta_{2}$ is the slope. Collectively, they are called _regression coefficients_. $\epsilon$ is the error term, the part of $Y$ the regression model is unable to explain.
 
-<!-- ![regression_model]("./screenshots/linear-regression-small.png", dpi = 220) -->
+<!-- ![regression_model]("./figures/linear-regression-small.png", dpi = 220) -->
 
 
 ## Example Problem
