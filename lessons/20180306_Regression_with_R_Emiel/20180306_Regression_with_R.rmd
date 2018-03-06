@@ -157,7 +157,7 @@ It is absolutely important for the model to be statistically significant before 
 ## How to calculate the t Statistic and p-Values?
 
 When the model co-efficients and standard error are known, the formulas for calculating t Statistic and p-Value is as follows:
-$$t~Statistic = {(??-coefficient value) \over Std.Error}$$
+$$t~Statistic = {(\beta-coefficient value) \over Std.Error}$$
 ```{r, eval=TRUE}
 modelSummary <- summary(linMod)  # capture model summary as an object
 modelCoeffs <- modelSummary$coefficients  # model coefficients
@@ -223,11 +223,11 @@ The Akaike's information criterion - AIC (Akaike, 1974) and the Bayesian informa
 
 The AIC is defined as:
 
-$$AIC = \left( ???2 \right) \times ln \left( L \right) + \left(2 \times k \right)$$
+$$AIC = \left( -2 \right) \times ln \left( L \right) + \left(2 \times k \right)$$
 
 where, k is the number of model parameters and the BIC is defined as:
 
-$$BIC = \left( ???2 \right) \times ln \left( L \right) + k \times ln \left( n \right)$$
+$$BIC = \left( -2 \right) \times ln \left( L \right) + k \times ln \left( n \right)$$
 
 where, n is the sample size.
 
