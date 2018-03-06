@@ -13,16 +13,21 @@ Absolute beginners and begginers.
 
 # Setup
 ## Lesson files
-First, please download the lesson files [will be available from Tuesday 10:00].
+First, please download the lesson files.
 
 1. Download the file and unzip it.
-2. Inside the zipped folder, you will find the Rmarkdown notebook (with the ``.Rmd`` extension). 
+2. Inside the zipped folder, you will find the Rmarkdown notebook (with the ``.Rmd`` extension),
+   as well as a csv-data file and an html-file (result from processing the rmd notebook)
 
 # Lesson outline
 ## Time to Complete
 One hour
 
 ## Schedule
+1) exploring relationships between two variables
+2) correlatoin
+3) the lm() function
+4) interpreting the output for a linear model
 
 # Additional Resources 
 None
