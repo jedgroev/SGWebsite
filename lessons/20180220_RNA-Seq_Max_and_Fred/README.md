@@ -14,13 +14,11 @@ Absolute beginners and begginers.
 
 # Setup
 ## Lesson files
-First, please download the lesson files [here](https://www.dropbox.com/sh/lrl7q4c6yv4y3va/AABsQTqVj47a5C_o8MxL-n2xa?dl=0) or [here](https://doi.org/10.5281/zenodo.1175858).
+First, please download the lesson files from Zenodo [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1201035.svg)](https://doi.org/10.5281/zenodo.1201035) and unzip it.
 
-1. Download the file and unzip it.
-2. Inside the zipped folder, you will find the jupyter notebook (with the ``.ipynb`` extension) and the sequencing files information. 
-
-If you choose the zip file with "all results", it will also contain all the intermediate files. 
-On a mac or linux computer you will be able to run the lesson from jupyter, if you are on  a windows computer it is easier to copy paste the the commands from the lesson to your terminal and execute from them for there.
+The lesson files come in two flavors:
+1. ``RNAseq_lesson_only_start_files.zip`` contains the RNA sequencing file (fastq format), a reference transcriptome sequence (fasta format) and experimental setup info.
+2. ``RNAseq_lesson_all_files.zip`` contains the same files above and the results of the complete analysis.  
 
 ## Create a working environment 
 One good practice is to create a working environment  that contains softwares, Python packages, R packages etc. It should remain separated from your default `root` environment (sometimes called "Anaconda3" also) because some libraries or some other installation bugs can appear later on (softwares sometimes depend on different libraries and they then enter in conflict).
