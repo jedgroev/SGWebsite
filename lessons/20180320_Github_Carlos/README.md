@@ -42,7 +42,7 @@ One hour.
 2. Relevance for academics (research groups, protocols)
 3. How do I use Github for my own research
 
-**Carlos / Marc ** ~45min
+**Carlos/Marc** ~45min  
 What are we going to to during this lesson.
 
 # Expected results 
