@@ -43,7 +43,12 @@ One hour.
 3. How do I use Github for my own research
 
 **Carlos/Marc** ~45min  
-What are we going to to during this lesson.
+1. Forking the [Jekyll-now](https://github.com/barryclark/jekyll-now) repository on your own Github account
+2. Changing the ``_config.yml`` parameters online
+3. Visualising the newly built website
+4. Updating text files online
+5. Visualising the online changes on the website
+6. etc.
 
 # Expected results 
 A personal website that you can easily customize!
