@@ -1,5 +1,10 @@
 # Create your own personal website with Git/Github
-A one-hour practical where we are going to create a personal website powered by Github. 
+A one-hour practical where we are going to create a personal website for academics powered by Github. 
+
+## Lesson objectives
+At the end of this lesson:
+- You will dispose of a personal website online where you can add your CV, talks, presentations, etc.
+- You will discover a system (Github) to perform version control (on text files mostly). 
 
 ### Time and Place
 - Where: room B0.203, Science Park 904  
@@ -25,7 +30,6 @@ If you don't have an account on [Github](https://github.com/), please make one b
 # Lesson outline
 ## Time to Complete
 One hour.  
-~15min to present Git and Github 
 
 ## Schedule
 **Carlos** ~10min
@@ -38,7 +42,7 @@ One hour.
 2. Relevance for academics (research groups, protocols)
 3. How do I use Github for my own research
 
-**Carlos**
+**Carlos / Marc ** ~45min
 What are we going to to during this lesson.
 
 # Expected results 
