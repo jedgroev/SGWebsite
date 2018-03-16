@@ -13,17 +13,26 @@ Absolute beginners and begginers.
 
 # Setup
 ## Lesson files
-First, please download the lesson files [here](a link that works!).
-@Emiel: you can use [Zenodo](https://zenodo.org/communities/scienceparkstudygroup/?page=1&size=20) with the "Science Park Study Group" community 
-if you want to add big files. Otherwise, here in that repo.
+First, please download the lesson files.
 
 1. Download the file and unzip it.
-2. Inside the zipped folder, you will find the Rmarkdown notebook (with the ``.Rmd`` extension). 
+2. Inside the zipped folder, you will find the Rmarkdown notebook (with the ``.Rmd`` extension),
+   as well as a csv-data file and an html-file (result from processing the rmd notebook)
 
 # Lesson outline
 ## Time to Complete
 One hour
 
 ## Schedule
+<<<<<<< HEAD
 
 # Additional Resources 
+=======
+1) exploring relationships between two variables
+2) correlatoin
+3) the lm() function
+4) interpreting the output for a linear model
+
+# Additional Resources 
+None
+
