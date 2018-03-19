@@ -4,7 +4,7 @@ A one-hour practical where we are going to create a personal website for academi
 ## Lesson objectives
 At the end of this lesson:
 - You will dispose of a personal website online where you can add your CV, talks, presentations, etc.
-- You will discover a system (Github) to perform version control (on text files mostly). 
+- You will discover the Github system (no command line involved) to perform file version control. 
 
 ### Time and Place
 - Where: room B0.203, Science Park 904  
@@ -32,15 +32,15 @@ If you don't have an account on [Github](https://github.com/), please make one b
 One hour.  
 
 ## Schedule
-**Carlos** ~10min
-1. First look at Github: what it is. 
-2. Why should I use Github for my own research?
-3. How do I use it for my Software Engineering work.
-
 **Marc** ~5min  
 1. An example of a [personal website](www.mgalland.info) made with Github and Jekyll.
 2. Relevance for academics (research groups, protocols)
 3. How do I use Github for my own research
+
+**Carlos** ~10min
+1. First look at Github: what it is. 
+2. Why should I use Github for my own research?
+3. How do I use it for my Software Engineering work.
 
 **Carlos/Marc** ~45min  
 1. Forking the [Jekyll-now](https://github.com/barryclark/jekyll-now) repository on your own Github account
