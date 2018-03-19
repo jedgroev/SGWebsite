@@ -30,25 +30,56 @@ If you don't have an account on [Github](https://github.com/), please make one b
 # Lesson outline
 ## Time to Complete
 One hour.  
+Marc (5min)
+Carlos (10min)
+Carlos (45min)
 
-## Schedule
-**Marc** ~5min  
+## Lesson contents
+### Expected output (5min)
 1. An example of a [personal website](www.mgalland.info) made with Github and Jekyll.
 2. Relevance for academics (research groups, protocols)
 3. How do I use Github for my own research
 
-**Carlos** ~10min
+### Website creation part I (10min)
+1. Forking the [Jekyll-now](https://github.com/barryclark/jekyll-now) repository on your own Github account
+2. Rename your repository with your github user name
+  - Click on ``Settings``
+  - Change the name in repository name
+3. Click on the ``_config.yml`` file and select the pencil :pencil2: button (top right)
+4. Edit a few lines in the ``_config.yml``:
+  - Line 6: Name
+  - Line 9: Description (of your website)
+  - Line 43: the link (URL) with your username (http://yourgithubusername.github.io)
+
+### How do I use Github in my own work introduction (10min)
 1. First look at Github: what it is. 
 2. Why should I use Github for my own research?
 3. How do I use it for my Software Engineering work.
+(what is a commit?)(commit tree)(collaboration)
 
-**Carlos/Marc** ~45min  
-1. Forking the [Jekyll-now](https://github.com/barryclark/jekyll-now) repository on your own Github account
-2. Changing the ``_config.yml`` parameters online
-3. Visualising the newly built website
-4. Updating text files online
-5. Visualising the online changes on the website
-6. etc.
+### Website creation part II
+**Changing your picture on your website**
+1. Right-click on your Github picture and select ``Copy this location``. 
+2. Click on the ``_config.yml`` file and change line 12 (avatar) and copy the link here 
+
+**Edit the index**
+1. Click the ``About.md`` file and select pencil :pencil2: button (top right)
+2. Edit the file following [Markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+**Creating a new page called "Publications""**
+1. At the root of their personal website repository, create a new file called ``Publications.md`` by clicking on ``Create new file``  
+2. Add this content:
+```
+---
+layout: page
+title: List of scientific publications
+permalink: /Publications/
+---
+
+## Peer-reviewed publications
+1. Me, Myself and I. (2018). We found life on Mars. *Journal of Planet earth*. In press. [doi:10.3389/fpls.2017.01984](doi:10.3389/fpls.2017.01984)
+```
+**(Optional) Create your own pages following the same method**
 
 # Expected results 
 A personal website that you can easily customize!
