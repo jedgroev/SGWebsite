@@ -79,6 +79,15 @@ permalink: /Publications/
 ## Peer-reviewed publications
 1. Me, Myself and I. (2018). We found life on Mars. *Journal of Planet earth*. In press. [doi:10.3389/fpls.2017.01984](doi:10.3389/fpls.2017.01984)
 ```
+3. Edit `_layouts/default.html` to include a link to your newly created `/Publications/` file.
+```
+<nav>
+  <a href="{{ site.baseurl }}/Publications">Publications</a>
+  <a href="{{ site.baseurl }}/">Blog</a>
+  <a href="{{ site.baseurl }}/about">About</a>
+</nav>
+```
+
 **(Optional) Create your own pages following the same method**
 
 # Expected results 
