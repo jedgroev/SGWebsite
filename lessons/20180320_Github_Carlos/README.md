@@ -101,6 +101,8 @@ A personal website that you can easily customize!
 # Additional Resources 
 - Coupling Github and RStudio to keep track of the changes of R scripts.[Link](http://r-pkgs.had.co.nz/git.html)
 - The official tutorial for first steps on Github. [Link](https://guides.github.com/activities/hello-world/)
+- A nice theme for academic webpages: [Academic pages](https://academicpages.github.io/)
+- Making a website for your laboratory [The Griffith Lab](https://github.com/griffithlab/griffithlab.github.io)
 
 # Further reading
 - Interview by the creator of Git, Linus Torvald.[Link](http://www.linuxfoundation.org/blog/10-years-of-git-an-interview-with-git-creator-linus-torvalds/) 
