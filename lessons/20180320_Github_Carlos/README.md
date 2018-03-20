@@ -1,3 +1,8 @@
+# eScience courses
+[Version  Control and Collaboration with Git and GitHub](https://www.eventbrite.nl/e/tickets-version-control-and-collaboration-with-git-and-github-42978307274)
+
+[Introduction  to Scientific Data Analysis in Python](https://www.eventbrite.nl/e/tickets-introduction-to-scientific-data-analysis-in-python-42978185911)
+ 
 # Create your own personal website with Git/Github
 A one-hour practical where we are going to create a personal website for academics powered by Github. 
 
