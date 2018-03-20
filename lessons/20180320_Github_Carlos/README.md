@@ -54,7 +54,7 @@ Carlos (45min)
 4. Edit a few lines in the ``_config.yml``:
   - Line 6: Name
   - Line 9: Description (of your website)
-  - Line 43: the link (URL) with your username (http://yourgithubusername.github.io)
+  - Line 43: the link (URL) with your username (https://yourgithubusername.github.io)
 
 ### How do I use Github in my own work introduction (10min)
 1. First look at Github: what it is. 
