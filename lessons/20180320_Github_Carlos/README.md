@@ -41,7 +41,7 @@ Carlos (45min)
 
 ## Lesson contents
 ### Expected output (5min)
-1. An example of a [personal website](www.mgalland.info) made with Github and Jekyll.
+1. An example of a [personal website](https://www.mgalland.info) made with Github and Jekyll.
 2. Relevance for academics (research groups, protocols)
 3. How do I use Github for my own research
 
