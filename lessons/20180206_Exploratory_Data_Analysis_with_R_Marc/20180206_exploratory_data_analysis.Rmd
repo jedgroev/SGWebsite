@@ -19,7 +19,8 @@ __Important note 2__: this lesson will be followed by a lesson on regression on 
 if (require("tidyverse") == FALSE)  {
   # no package, it installs it
   print("tidyverse package not found, installing from https://cloud.r-project.org/")
-  install.packages("tidyverse",repos = "https://cloud.r-project.org/")  
+  install.packages("tidyverse",repos = "https://cloud.r-project.org/") 
+  library("tidyverse") # to load it after installation
 } else {
   library("tidyverse")
 }
