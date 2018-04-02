@@ -1,5 +1,5 @@
 <p align="center">
-<img src="circos-sample-panel.png" width="400px" >
+<img src="circos-sample-panel.png" width="800px" >
 </p>
 
 # Visualizing genome comparisons with Circos
