@@ -23,11 +23,7 @@ First, please download the lesson files.
 ## Time to Complete
 One hour
 
-## Schedule
-<<<<<<< HEAD
-
 # Additional Resources 
-=======
 1) exploring relationships between two variables
 2) correlatoin
 3) the lm() function
