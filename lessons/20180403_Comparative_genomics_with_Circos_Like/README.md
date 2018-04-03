@@ -1,7 +1,7 @@
 <p align="center">
 <img src="circos-sample-panel.png" width="800px" >
 </p>
-Figure taken from the [Circos website](http://circos.ca/. 
+Figure taken from the [Circos website](http://circos.ca) . 
   
 # Visualizing genome comparisons with Circos
  [Circos](http://circos.ca/) is program that allows you to visualize data in circular format. This format is explicitly convenient to show links between two or more sets of ordered data. It is originally designed for genomics, but it can definetely be used for other types of data as well. Check out this [video](https://www.youtube.com/watch?v=M-rTAr3pj5g) (52 mins.), where the designer of Circos explains the importance of good data visualization, shows examples of how figures can be made more clear and explains how we best abide to the limits on what a human can process visually.    
