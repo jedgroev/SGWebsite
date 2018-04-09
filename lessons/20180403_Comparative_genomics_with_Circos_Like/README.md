@@ -8,12 +8,12 @@ Figure taken from http://circos.ca.
     
 This will be a one-hour demo showing how to use the program to plot results from comparative genomics. We will use Python scripts to generate the input files for Circos.
   
-In this demo, we will go step-by-step through the entire process: downloading genomes from public repositories, aligning the genomes, and plotting homologous regions in the two genomes. It is designed to be an interactive demo, which means that there won't be time for hands on exercises, but I will ask you to think along in writing code and -importantly- in developing our idea on what we want to visualize and then how we will do this. 
+In this demo, we will go step-by-step through the entire process: downloading genomes from public repositories, aligning the genomes, and plotting homologous regions in the two genomes. It is designed to be an interactive demo, which means that there won't be time for hands-on exercises, but I will ask you to think along in writing code and -importantly- in developing our idea on what we want to visualize and then how we will do this. 
 
-The notebook that describes every step I take will be published online, which will allow you to try this by yourself. If you run into any problems, just send me an e-mail and drop by on a Study Group hacky hour. I'd like to end with a short discussion on data visualization.   
+The notebook that describes every step I take will be published online, which will allow you to try this by yourself. If you run into any problems, just send me an e-mail, [submit a new issue (click on "New Issue")](https://github.com/ScienceParkStudyGroup/studyGroup/issues) and drop by during a Study Group hacky hour. I'd like to end with a short discussion on data visualization.   
 
 At the end of this demo you will:  
-- have an idea of how to approach a comparitive genomics project 
+- have an idea of how to approach a comparative genomics project 
 - how to explore your results using circular visualization.
 - (hopefully) be inspired to use circular visualizations to clarify your data.
 
