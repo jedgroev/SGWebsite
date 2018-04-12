@@ -668,11 +668,30 @@ aside.clients img {
     margin: 50px auto;
 }
 
+/*!
+ * Help section
+ */
+
+ section#help {
+    background-color: #222;
+    background-image: url(img/sea.jpg);
+    background-position: center;
+    background-repeat: repeat;
+}
+
+section#assistance .section-heading {
+    color: #F8F8FF;
+}
+
+/*!
+ * Contact section
+ */
+
 section#contact {
     background-color: #222;
     background-image: url(img/map-image.png);
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 section#contact .section-heading {
