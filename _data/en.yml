@@ -6,13 +6,13 @@ whoWeAre: Who Are We
 contact: Contact
 
 
-activitiesSubheading: "Amsterdam Science Park Study Group is dedicated to building a community of researchers who perform computational data analysis as part of their academic work. This Study Group promotes skill sharing and collaboration by (1) organizing one-hour interactive workshops, (2) regularly organise co-working sessions for peer-to-peer assistance, (4) act as local hub to set-up Software and Data Carpentry workshops and, last but not least (4) bring researchers together at social events like Hacky Hours hackatons. All are welcome to this study group, regardless of scientific research area, affiliation or training level."
-activitiesSubheading2: "All are welcome regardless of scientific research area, affiliation or programming level (absolute begginer to expert)"
+activitiesSubheading: "Amsterdam Science Park Study Group is dedicated to building a community of computational biologists and bioinformaticians. This Study Group promotes skill sharing and collaboration by (1) organizing one-hour interactive workshops, (2) regularly organise co-working sessions for peer-to-peer assistance, (4) act as local hub to set-up Software and Data Carpentry workshops and, last but not least (4) bring researchers together at social events like Hacky Hours hackatons. All are welcome to this study group, regardless of scientific research area, affiliation or training level."
+activitiesSubheading2: "All are welcome! Regardless of scientific research area, affiliation or programming level (absolute beginner to expert)"
 activities:
   - title: Skill-sharing workshops
-    description: Small practical sessions to learn and share coding skills  
+    description: One hour lessons to learn and practice coding skills  
     icon: fa-comment
-  - title: Co-Working sessions
+  - title: Hacky Hours (co-Working sessions)
     description: 'Get help on your coding projects.'
     icon: fa-laptop
   - title: Community Building
