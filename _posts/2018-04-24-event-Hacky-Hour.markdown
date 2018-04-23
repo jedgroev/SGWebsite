@@ -1,10 +1,10 @@
 ---
 title: Hacky Hour !!!
-text:  
+text: Workflow & gene counts matrix comparison 
 location: Oerknal Café
-link: 
+link: https://github.com/ScienceParkStudyGroup/studyGroup/tree/gh-pages/hackyhours/20180424_hacky_hour/
 date: 2018-04-24
-startTime: '17:00'
+startTime: '16:00'
 endTime: '18:00'
 
 ---
