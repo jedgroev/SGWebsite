@@ -1,6 +1,6 @@
 Hacky Hour is back!
 
-Two themes this time!
+3 themes this time!
 
 ## Workflow improvement
 To solve [issue #31](https://github.com/ScienceParkStudyGroup/studyGroup/issues/31) submitted by Grace (PhD student, SILS Molecular Neuroscience).
@@ -22,3 +22,11 @@ What's an intelligent way to proceed to potentially identify some TEs and their 
 If clarification is needed then let me know!
 Cheers
 Fred
+
+## Needed Shiny application for lab experiments
+To see what type of Shiny application Bas Beerens (SILS, Molecular Plant Phytopathology) would need.
+
+## Announced helpers:
+- Huub Hoefsloot (SILS, Biosystems & Data Analysis)
+- Stefania Astrologo (SILS, Synthetic biology & nuclear organisation)
+- Marc Galland (SILS, Plant Physiology)
