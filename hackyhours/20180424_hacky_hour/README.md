@@ -33,8 +33,9 @@ To see what type of Shiny application Bas Beerens (SILS, Molecular Plant Phytopa
 
 ## Attendees
 Biwen Wang
-Ernerst
-Huub
-Grace 
-Fred
+Ernerst Aliche
+Huub Hoefsloot
+Grace Farmiloe
+Fred White
+Tijs Bliek
 
