@@ -30,3 +30,11 @@ To see what type of Shiny application Bas Beerens (SILS, Molecular Plant Phytopa
 - Huub Hoefsloot (SILS, Biosystems & Data Analysis)
 - Stefania Astrologo (SILS, Synthetic biology & nuclear organisation)
 - Marc Galland (SILS, Plant Physiology)
+
+## Attendees
+Biwen Wang
+Ernerst
+Huub
+Grace 
+Fred
+
