@@ -32,10 +32,10 @@ To see what type of Shiny application Bas Beerens (SILS, Molecular Plant Phytopa
 - Marc Galland (SILS, Plant Physiology)
 
 ## Attendees
-Biwen Wang
-Ernerst Aliche
-Huub Hoefsloot
-Grace Farmiloe
-Fred White
-Tijs Bliek
+Biwen Wang  
+Ernerst Aliche  
+Huub Hoefsloot  
+Grace Farmiloe  
+Fred White  
+Tijs Bliek  
 
