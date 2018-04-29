@@ -24,7 +24,7 @@ Design of experiments involves:
 - Planning changes to independent (input) variables and the effect on dependent variables or response variables
 - Ensuring results are valid, easily interpreted, and definitive.
 
-The most important principles1 are:
+The most important principles are:
 - **Randomization**: the assignment of study components by a completely random method, like simple random sampling. Randomization eliminates bias from the results
 - **Replication**: the experiment must be replicable by other researchers. This is usually achieved with the use of statistics like the standard error of the sample mean or confidence intervals.
 - **Blocking**: controlling sources of variation in the experimental results.
