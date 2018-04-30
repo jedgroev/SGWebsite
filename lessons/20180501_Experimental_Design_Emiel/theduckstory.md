@@ -10,7 +10,7 @@ Material:
 60 duckings born on the same day.
 
 # Experimental design #1
-<img src="experimental_design1.png alt="Experimental design #1" style="width:1024px;height:768px;" />
+<img src="experimental_design1.png alt="Experimental design #1" style="width:1024px;">
 What is wrong with this first set-up?
 
 # Experimental design #2
