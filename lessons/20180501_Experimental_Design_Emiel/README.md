@@ -14,13 +14,13 @@ Absolute beginners, begginers and advanced.
 
 ### Lesson objectives
 At the end of this lesson, you will be able to:
-- Important principles of a good experimental design
-- What are confounding factors
-- What is an experimental unit
+- Understand important principles of a good experimental design
+- Know what are confounding factors in an experiment
+- Understand what is an experimental unit
 
 # Lesson outline
 
-## Part I - Definitions and a practical case (~ 15min - Marc & Emiel)
+## Part I - Definitions and a first simple case (~ 15min - Marc & Emiel)
 1. Introduction
 2. What is experimental design? 
 3. Most important principles.
@@ -29,7 +29,7 @@ At the end of this lesson, you will be able to:
 ## Part II -the tasting experiment (~45min)
 The tasting experiment. 
 
-# Part I - Definitions & a practical case
+# Part I - Definitions & a practical case (Marc/Emiel)
 ## Introduction
 A joke to start this lesson:
 > One statistician and a biologist are condemned to death.  
@@ -64,8 +64,11 @@ The most important principles are:
 - **Blocking**: controlling sources of variation in the experimental results.
 
 ## The duck story (see exercise)
+A small "food for thought" experiment to introduce these concepts.
+The link will be added tomorrow.
 
-# Part II - the tasting experiment
+# Part II - the tasting experiment (Emiel)
+A live practical session based on [Ronald Fisher](https://en.wikipedia.org/wiki/Ronald_Fisher), a famous statistican, ["lady tasting tea" experiment](https://en.wikipedia.org/wiki/Lady_tasting_tea). 
 
 # To go further
 [Statistics How to](http://www.statisticshowto.com/experimental-design/): a website full of statistical info (not only on experimental design)    
