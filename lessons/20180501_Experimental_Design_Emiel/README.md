@@ -12,6 +12,12 @@ A one-hour lesson on experimental design. No laptop required!
 ### Level
 Absolute beginners, begginers and advanced.  
 
+### Lesson objectives
+At the end of this lesson, you will be able to:
+- Important principles of a good experimental design
+- What are confounding factors
+- What is an experimental unit
+
 # Lesson outline
 
 ## Part I - Definitions and a practical case (~ 15min - Marc & Emiel)
