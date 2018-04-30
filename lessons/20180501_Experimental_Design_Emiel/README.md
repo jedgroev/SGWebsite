@@ -64,8 +64,8 @@ The most important principles are:
 - **Blocking**: controlling sources of variation in the experimental results.
 
 ## The duck story (see exercise)
-A small "food for thought" experiment to introduce these concepts.
-The link will be added tomorrow.
+A small "food for thought" experiment to introduce these concepts.  
+[A story of ducks](https://github.com/ScienceParkStudyGroup/studyGroup/blob/gh-pages/lessons/20180501_Experimental_Design_Emiel/theduckstory.md)
 
 # Part II - the tasting experiment (Emiel)
 A live practical session based on [Ronald Fisher](https://en.wikipedia.org/wiki/Ronald_Fisher), a famous statistican, ["lady tasting tea" experiment](https://en.wikipedia.org/wiki/Lady_tasting_tea). 
