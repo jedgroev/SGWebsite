@@ -13,17 +13,14 @@ A one-hour lesson on experimental design. No laptop required!
 Absolute beginners, begginers and advanced.  
 
 # Lesson outline
-## Time to Complete
-One hour
 
-## Lesson outline
-Part I - Definitions and a practical case (~ 15min - Marc & Emiel)
+## Part I - Definitions and a practical case (~ 15min - Marc & Emiel)
 1. Introduction
 2. What is experimental design? 
 3. Most important principles.
 4. A duck story
 
-Part II -the tasting experiment (~45min)
+## Part II -the tasting experiment (~45min)
 The tasting experiment. 
 
 # Part I - Definitions & a practical case
@@ -60,7 +57,7 @@ The most important principles are:
 - **Replication**: the number of replicates needed will depend on the variability of the measured variable.3 is not a magic number!
 - **Blocking**: controlling sources of variation in the experimental results.
 
-### The duck story (see exercise)
+## The duck story (see exercise)
 
 # Part II - the tasting experiment
 
