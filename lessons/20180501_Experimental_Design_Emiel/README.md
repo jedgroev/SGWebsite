@@ -43,7 +43,7 @@ Definitions below are taken from www.statisticshowto.com:
 
 **Experimental design is a way to carefully plan experiments in advance so that your results are both objective and valid**.  
 Ideally, your experimental design should:
-- Describe how participants are allocated to experimental groups. 
+- Describe how subjects are allocated to experimental treatments. 
 - Minimize or eliminate confounding variables, which can offer alternative explanations for the experimental results.
 - Allow you to make inferences about the relationship between independent variables and dependent variables.
 - Reduce variability, to make it easier for you to find differences in treatment outcomes.
