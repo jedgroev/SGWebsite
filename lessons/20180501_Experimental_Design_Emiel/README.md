@@ -62,6 +62,7 @@ The most important principles are:
 - **Randomization**: the assignment of study components by a completely random method, like simple random sampling. Randomization eliminates bias from the results
 - **Replication**: the number of replicates needed will depend on the variability of the measured variable.3 is not a magic number!
 - **Blocking**: controlling sources of variation in the experimental results.
+- **Control**: if possible, use a control. Sometimes, you cannot have a control. 
 
 ## The duck story (see exercise)
 A small "food for thought" experiment to introduce these concepts.  
