@@ -21,8 +21,10 @@
                   {% if postyear > nowyear or postday >= nowday and postyear >= nowyear %}
                     {% assign isEvent = 1 %}
                     <li>
-                      <a class='eventTitle' href="{{ post.link }}">{{ post.title }}, {{ post.location }}, {{ post.date | date: "%-d %B %Y"}}, {{post.startTime | date:"%r"}} </a>
-                      <div class='eventSub'>{{ post.text }}</a></div>
+                      <a class='eventTitle' href="{{ post.link }}">{{ post.title }} </a>
+                      <br/>
+                      <a class='eventSub' > {{ post.date | date: "%-d %B %Y"}} at {{post.startTime | date: "%R"}} - {{ post.location }} </a>
+                      <div class='eventText'>{{ post.text }}</a></div>
                     </li>
                   {% endif %}
                 {% endfor %}

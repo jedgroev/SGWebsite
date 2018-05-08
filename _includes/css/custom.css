@@ -77,7 +77,12 @@ a.eventTitle {
 }
 
 .eventSub {
-    font-size: 1.2em;
+    font-size: 1.3em;
+}
+
+.eventText {
+    text-align: justify;
+    font-size: 1.5em
 }
 
 .team-member img.img-responsive {
