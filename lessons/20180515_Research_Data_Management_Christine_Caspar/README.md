@@ -22,7 +22,7 @@ This lesson will be divided in two parts.
 
 First, Christine Staiger will talk about the Research Data Life Cycle, FAIR principles and how a central RDM system is needed. 
 
-Secondly,Caspar Treijtel will demo the use of FigShare. 
+Secondly, Caspar Treijtel will demo the use of FigShare. 
 
 
 # Going further
