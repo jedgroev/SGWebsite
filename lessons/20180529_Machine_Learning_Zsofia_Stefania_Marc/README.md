@@ -28,3 +28,5 @@ There is no setup required as the Jupyter notebook will run online in the cloud.
 - Python, a modern and popular programming language. 
 - mybinder: a tool to run Jupyter notebooks in the cloud online. You don't need to install anything.
 
+# Useful links
+[Building Random Forest Classifier with Python Scikit learn](https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/)  
