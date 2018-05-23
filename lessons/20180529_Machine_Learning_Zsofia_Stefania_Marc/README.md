@@ -1,3 +1,7 @@
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/ScienceParkStudyGroup/studyGroup.git/master?filepath=https%3A%2F%2Fgithub.com%2FScienceParkStudyGroup%2FstudyGroup%2Fblob%2Fgh-pages%2Flessons%2F20180529_Machine_Learning_Zsofia_Stefania_Marc%2FStudyGroup_MachineLearning_Class.ipynb)
+
+Copy markdown link to clipboard 
+
 # Machine Learning applications in Biology
 
 # Lesson outline
