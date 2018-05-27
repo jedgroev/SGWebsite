@@ -1,3 +1,5 @@
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/ScienceParkStudyGroup/studyGroup/gh-pages)
+
 # Welcome to the Amsterdam Science Park Study Group Github repository!
 The Amsterdam Science Park Study Group is meant to be a small organisation composed of scientists that program. Most of people that join now are Life Scientists but every all fields are welcome! We are officially affiliated to the [Mozilla Science Lab](https://www.mozillascience.org/) Study Group initiative. 
 
