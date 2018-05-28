@@ -35,18 +35,19 @@ There is no setup required as the Jupyter notebook will run online in the **mybi
 ## Lesson outline
 This lesson is strongly inspired from the [Data Aspirant lesson](https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/) on Random Forest.
 
-### research context (Stefania, 10min)
-Stefania will introduce the context of the study. How the Machine Learning approach is useful in her research context. 
+### Applications in biology (Stefania, 10min)
+Stefania will introduce different biological contexts in which you can apply the Machine Learning Random Forest approach. 
+1. Breast cancer: datasets from the [University of Wisconsin](https://archive.ics.uci.edu/ml/datasets/breast+cancer+wisconsin+(original))    
+2. Prediction of age: [Naue et al., 2018](https://www.ncbi.nlm.nih.gov/pubmed/29175600). 
+
 
 ### What is Machine Learning (Zsofia, 10min)
 Some useful definitions. 
 
-
-### Hands-on (Zsofia, 40min)
-We will start the 
-
+### Hands-on (Zsofia/Marc, 40min)
+We will start the hands-on session. 
 
 # Useful links
-[Building Random Forest Classifier with Python Scikit learn](https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/)  
-[Mybinder](https://mybinder.org/): Binder allows you to create custom computing environments that can be shared and used by many remote users. It is powered by BinderHub, which is an open-source tool that deploys the Binder service in the cloud. One-such deployment lives here, at mybinder.org, and is free to use.  
-[Data Aspirant lesson](https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/)
+[Building Random Forest Classifier with Python Scikit learn](https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/)    
+[Mybinder](https://mybinder.org/): Binder allows you to create custom computing environments that can be shared and used by many remote users. It is powered by BinderHub, which is an open-source tool that deploys the Binder service in the cloud. One-such deployment lives here, at mybinder.org, and is free to use.    
+[Data Aspirant lesson](https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/)  
