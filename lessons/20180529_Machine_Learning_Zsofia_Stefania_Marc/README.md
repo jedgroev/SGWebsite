@@ -2,17 +2,19 @@
 
 # Machine Learning applications in Biology
 
-# Lesson outline
+# Lesson description
+A lesson on how to apply a Machine Learning method (Random Forest) to a cancer biological dataset. We are going to find the most relevant attributes to classify two cancer types (begign & malignant). 
 
 ## Lesson objectives
 At the end of this lesson:
 - You will know more about Machine Learning: what it is and how it can be applied to your research.
 - You will learn about a particular type of Machine Learning method called Random Forest. 
 - You will be able to run a Jupyter Notebook to execute the popular Machine Learning [scikit](http://scikit-learn.org/stable/index.html)
+- You will better understand how to apply it to a biological research question. 
 
 ## Time and Place
 - Where: room B0.203, Science Park 904  
-- When:  Tuesday, March 20th, 2018 at 17:00 PM
+- When:  Tuesday, May 29th, 2018 at 17:00 PM
 
 ## Authors
 - Zsofia Koma (PhD student, UvA-IBED)
@@ -22,13 +24,29 @@ At the end of this lesson:
 ## Level
 Begginers and advanced beginners.  
 
-## Setup
+# Setup
 
-There is no setup required as the Jupyter notebook will run online in the cloud. 
+There is no setup required as the Jupyter notebook will run online in the **mybinder** cloud. 
 
 ## Tools used
 - Python, a modern and popular programming language. 
 - mybinder: a tool to run Jupyter notebooks in the cloud online. You don't need to install anything.
 
+## Lesson outline
+This lesson is strongly inspired from the [Data Aspirant lesson](https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/) on Random Forest.
+
+### research context (Stefania, 10min)
+Stefania will introduce the context of the study. How the Machine Learning approach is useful in her research context. 
+
+### What is Machine Learning (Zsofia, 10min)
+Some useful definitions. 
+
+
+### Hands-on (Zsofia, 40min)
+We will start the 
+
+
 # Useful links
 [Building Random Forest Classifier with Python Scikit learn](https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/)  
+[Mybinder](https://mybinder.org/): Binder allows you to create custom computing environments that can be shared and used by many remote users. It is powered by BinderHub, which is an open-source tool that deploys the Binder service in the cloud. One-such deployment lives here, at mybinder.org, and is free to use.  
+[Data Aspirant lesson](https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/)
