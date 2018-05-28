@@ -1,5 +1,3 @@
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/ScienceParkStudyGroup/studyGroup.git/gh-pages?filepath=https%3A%2F%2Fgithub.com%2FScienceParkStudyGroup%2FstudyGroup%2Fblob%2Fgh-pages%2Flessons%2F20180529_Machine_Learning_Zsofia_Stefania_Marc%2FStudyGroup_MachineLearning_Class.ipynb)
-
 # Machine Learning applications in Biology
 
 # Lesson description
@@ -25,7 +23,6 @@ At the end of this lesson:
 Begginers and advanced beginners.  
 
 # Setup
-
 There is no setup required as the Jupyter notebook will run online in the **mybinder** cloud. 
 
 ## Tools used
