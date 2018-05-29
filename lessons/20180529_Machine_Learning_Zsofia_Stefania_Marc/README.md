@@ -43,6 +43,8 @@ Some useful definitions. Vocabulary used in Machine Learning Random Forest.
 
 ### Hands-on (Zsofia/Marc, 40min)
 We will start the hands-on session. 
+1. Right-click on the badge [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/ScienceParkStudyGroup/studyGroup/gh-pages) and select "open in new tab". This will create an environment that you can work in.
+2. Go to "lessons/20180529_Machine_Learning_Zsofia_Stefania_Marc/" and click on "Preview_ML_Lesson.ipynb" to start the Jupyter notebook.
 
 # Useful links
 [Building Random Forest Classifier with Python Scikit learn](https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/)    
