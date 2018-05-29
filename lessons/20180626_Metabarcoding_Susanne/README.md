@@ -1,7 +1,7 @@
 # Metabarcoding for Microbial Ecology
 
  - **Authors**: 
-   - Susanne Wilkens (PhD student, UvA-IBED FAME)
+   - Susanne Wilkens (Assistant-Professor, UvA-IBED FAME)
    - Mattias de Hollander (Bioinformatician NIOO)
    - Marc Galland (Postdoc, UvA-SILS)
  - **Research field**: Microbial Ecology / Bioinformatics
