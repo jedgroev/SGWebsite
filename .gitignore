@@ -2,3 +2,4 @@ client_secret.json
 _site/
 .DS_store
 .Rproj.user
+.ipynb_checkpoints
