@@ -42,7 +42,9 @@ Stefania will introduce different biological contexts in which you can apply the
 Some useful definitions. 
 
 ### Hands-on (Zsofia/Marc, 40min)
-We will start the hands-on session. 
+We will start the hands-on session. Click on the link in the badge below: 
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/mgalland/bindertest/master)
+
 
 # Useful links
 [Building Random Forest Classifier with Python Scikit learn](https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/)    
