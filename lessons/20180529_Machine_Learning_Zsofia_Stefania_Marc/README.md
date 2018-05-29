@@ -41,11 +41,12 @@ Stefania will introduce different biological contexts in which you can apply the
 ### Machine Learning & Random Forest definitions (Zsofia, 10min)
 Some useful definitions:
 - Regression (continuous variable) and classification (category)
-- Decision tree
+- Decision tree (play baseball = Yes,No -> friends? weather forecast? equipment available? playground occupied?)
 - Bagging: taking repeated samples from the same dataset
 - Out-of-Bag observations: samples left out during 
 - Training a model and testing it
 - Random Forest: multiple decision trees + decorrelation between trees
+- Variable importance
 
 
 ### Hands-on (Zsofia/Marc, 40min)
