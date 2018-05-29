@@ -35,18 +35,18 @@ This lesson is strongly inspired from the [Data Aspirant lesson](https://dataasp
 ### Applications in biology (Stefania, 10min)
 Stefania will introduce different biological contexts in which you can apply the Machine Learning Random Forest approach. 
 1. Breast cancer: datasets from the [University of Wisconsin](https://archive.ics.uci.edu/ml/datasets/breast+cancer+wisconsin+(original))    
-2. Prediction of age: [Naue et al., 2018](https://www.ncbi.nlm.nih.gov/pubmed/29175600). 
+2. Prediction of age: [Naue et al., 2017](https://www.ncbi.nlm.nih.gov/pubmed/29175600). 
 
 
 ### What is Machine Learning (Zsofia, 10min)
-Some useful definitions. 
+Some useful definitions. Vocabulary used in Machine Learning Random Forest.
 
 ### Hands-on (Zsofia/Marc, 40min)
 We will start the hands-on session. Click on the link in the badge below: 
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/mgalland/bindertest/master)
 
-
 # Useful links
 [Building Random Forest Classifier with Python Scikit learn](https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/)    
 [Mybinder](https://mybinder.org/): Binder allows you to create custom computing environments that can be shared and used by many remote users. It is powered by BinderHub, which is an open-source tool that deploys the Binder service in the cloud. One-such deployment lives here, at mybinder.org, and is free to use.    
 [Data Aspirant lesson](https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/)  
+[Random Forest intro on the breast cancer dataset from datascience.com](https://www.datascience.com/resources/notebooks/random-forest-intro)
