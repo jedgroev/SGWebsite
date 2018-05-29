@@ -38,8 +38,15 @@ Stefania will introduce different biological contexts in which you can apply the
 2. Prediction of age: [Naue et al., 2017](https://www.ncbi.nlm.nih.gov/pubmed/29175600). 
 
 
-### What is Machine Learning (Zsofia, 10min)
-Some useful definitions. Vocabulary used in Machine Learning Random Forest.
+### Machine Learning & Random Forest definitions (Zsofia, 10min)
+Some useful definitions:
+- Regression (continuous variable) and classification (category)
+- Decision tree
+- Bagging: taking repeated samples from the same dataset
+- Out-of-Bag observations: samples left out during 
+- Training a model and testing it
+- Random Forest: multiple decision trees + decorrelation between trees
+
 
 ### Hands-on (Zsofia/Marc, 40min)
 We will start the hands-on session. 
@@ -47,7 +54,8 @@ We will start the hands-on session.
 2. Go to "lessons/20180529_Machine_Learning_Zsofia_Stefania_Marc/" and click on "Preview_ML_Lesson.ipynb" to start the Jupyter notebook.
 
 # Useful links
-[Building Random Forest Classifier with Python Scikit learn](https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/)    
-[Mybinder](https://mybinder.org/): Binder allows you to create custom computing environments that can be shared and used by many remote users. It is powered by BinderHub, which is an open-source tool that deploys the Binder service in the cloud. One-such deployment lives here, at mybinder.org, and is free to use.    
-[Data Aspirant lesson](https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/)  
-[Random Forest intro on the breast cancer dataset from datascience.com](https://www.datascience.com/resources/notebooks/random-forest-intro)
+- [Building Random Forest Classifier with Python Scikit learn](https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/)    
+- [Mybinder](https://mybinder.org/): Binder allows you to create custom computing environments that can be shared and used by many remote users. It is powered by BinderHub, which is an open-source tool that deploys the Binder service in the cloud. One-such deployment lives here, at mybinder.org, and is free to use.    
+- [Data Aspirant lesson](https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/)  
+[Random Forest intro on the breast cancer dataset from datascience.com](https://www.datascience.com/resources/notebooks/random-forest-intro)  
+- [Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/). Good intro on Random Forests (chapter 8)  
