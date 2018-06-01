@@ -17,7 +17,7 @@ Patricia Caicedo (PhD student, Bacterial Cell Biology & Physiology)
 Bora Kim (PhD student, Plant Hormone Biology)  
 Anouk Zancarini (Postdoc student, Plant Hormone Biology)  
 Thierry Mondeel (PhD student, Synthetic Systems Biology and Nuclear Organisation)  
-Ilona Vuist (PhD student, Synthetic Systems Biology and Nuclear Organisation) 
+Ilona Vuist (PhD student, Synthetic Systems Biology and Nuclear Organisation)   
 Fred White (Master student, Molecular Neurobiology)  
 
 ### IBED members
