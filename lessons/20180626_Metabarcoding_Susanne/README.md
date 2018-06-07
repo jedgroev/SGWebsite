@@ -1,7 +1,7 @@
 # Metabarcoding for Microbial Ecology
 
  - **Authors**: 
-   - Susanne Wilkens (PhD student, UvA-IBED FAME)
+   - Susanne Wilkens (Assistant-Professor, UvA-IBED FAME)
    - Mattias de Hollander (Bioinformatician NIOO)
    - Marc Galland (Postdoc, UvA-SILS)
  - **Research field**: Microbial Ecology / Bioinformatics
@@ -13,7 +13,7 @@
 
 # Lesson objectives
 At the end of this lesson, you will:
-- Be able to understand the major steps of a 16S rRNA metabarcoding analysis
+- Be able to understand the major steps of a 16S/18S rRNA metabarcoding analysis
 - Have undertaken one to several steps of the workflow (see below)
 - Have identified potential pitfalls in these steps.
 
