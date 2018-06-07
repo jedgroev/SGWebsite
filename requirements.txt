@@ -4,4 +4,3 @@ scikit-learn
 numpy
 seaborn
 scipy
-mpl_toolkits
