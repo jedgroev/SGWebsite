@@ -4,4 +4,4 @@ scikit-learn
 numpy
 seaborn
 scipy
-basemap
+basemap 1.0.8
