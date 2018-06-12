@@ -1,0 +1,9 @@
+name: basemap-environment
+channels:
+  - conda-forge
+  - bioconda
+  - anaconda
+dependencies:
+  - pillow
+  - basemap-data-hires
+  - netcdf4 
