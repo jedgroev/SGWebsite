@@ -1,8 +1,9 @@
 # Spatial data visualisation
 
-In this lesson, we will show how to visualise spatial datasets using Python.
+In this lesson, we will show how to visualise spatial datasets using Python. This can be important for visualizing field data in an easy way using python as a GIS.
 
 # Lesson objectives
+
 After this lesson, you will:
 - Be able to visualise vector and raster dataset along with google map
 - Understand projections, and basic basemap package functionalities
@@ -13,7 +14,7 @@ We are using binder environment for carrying out the lesson, no installation is 
 
 ## Datasets used
 - [california cities](https://github.com/awantik/data-science/blob/master/data/california_cities.csv)  
-- 
+- netcdf file 
 
 
 # Suggested tools
