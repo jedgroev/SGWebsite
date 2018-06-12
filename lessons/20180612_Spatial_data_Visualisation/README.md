@@ -1,3 +1,5 @@
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/mgalland/basemap/master)
+
 # Spatial data visualisation
 
 In this lesson, we will show how to visualise spatial datasets using Python. This can be important for visualizing field data in an easy way using python as a GIS.
@@ -10,7 +12,8 @@ After this lesson, you will:
 
 # Setup
 
-We are using binder environment for carrying out the lesson, no installation is required. 
+We are using binder environment for carrying out the lesson, no installation is required. Click on the link below.
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/mgalland/basemap/master)
 
 ## Datasets used
 - [california cities](https://github.com/awantik/data-science/blob/master/data/california_cities.csv)  
