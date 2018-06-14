@@ -35,7 +35,10 @@ if ("dada2" %in% installed.packages()){
 
 ## Getting fastq files and sample names 
 1. Create a directory called `dada2` on your `~/Desktop/`
-2. Place the tutorial fastq files there
+2. Download the tutorial fastq file at http://www.mothur.org/w/images/d/d6/MiSeqSOPData.zip
+3. Place the zipped fastq files in `~/Desktop/dada2/`
+4. Unzip them: you will get a `/MiSeq_SOP/`
+
 Indicate file locations etc.
 ```{r indicating fastq file locations}
 my_workdir <- "~/Desktop/dada2/"
