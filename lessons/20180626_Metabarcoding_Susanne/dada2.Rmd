@@ -1,0 +1,179 @@
+---
+title: "dada2"
+author: "Marc Galland"
+date: "12 juin 2018"
+output: html_document
+---
+
+# Introduction
+In this lesson, we will mostly rely on the [dada2 tutorial](https://benjjneb.github.io/dada2/tutorial.html).
+> Our starting point is a set of Illumina-sequenced paired-end fastq files that have been split (or “demultiplexed”) by sample and from which the barcodes/adapters have already been removed. The end product is an amplicon sequence variant (ASV) table, a higher-resolution analogue of the traditional OTU table, which records the number of times each exact amplicon sequence variant was observed in each sample. 
+
+At the end of this lesson, we will have a amplicon sequence variant table that we can use with Phyloseq. 
+
+
+# Setup
+__important__: different R versions lead to different dada2 installed !
+
+Install R version 3.5 for your operating system:
+- Mac OS X: https://cran.r-project.org/bin/macosx/
+- Windows: https://cran.r-project.org/bin/windows/base/ 
+- Linux: https://cran.r-project.org/src/base/R-3/ 
+
+Install the `dada2`package.
+```{r setup,results="hide"}
+if ("dada2" %in% installed.packages()){
+  library("dada2")
+} else {
+  source("https://bioconductor.org/biocLite.R")
+  biocLite("dada2")
+  library(dada2)
+}
+```
+
+# dada2 
+
+## Getting fastq files and sample names 
+1. Create a directory called `dada2` on your `~/Desktop/`
+2. Place the tutorial fastq files there
+Indicate file locations etc.
+```{r indicating fastq file locations}
+my_workdir <- "~/Desktop/dada2/"
+setwd(my_workdir)
+list.files("./MiSeq_SOP/")
+```
+
+Get the files and sample names
+```{r getting fastq file names}
+# listing the forward and reverse reads
+# get them into two vectors
+path <- "./MiSeq_SOP"
+fnFs <- sort(list.files(path, pattern="_R1_001.fastq", full.names = TRUE))
+fnRs <- sort(list.files(path, pattern="_R2_001.fastq", full.names = TRUE))
+
+# get the sample names
+# first get the file names (without the complete path)
+file.names <- sapply(X = fnFs,FUN = basename,simplify = T,USE.NAMES = F)
+sample.names = sapply(file.names,FUN = function(x){strsplit(x,split = "_")[[1]][1]},simplify = T,USE.NAMES = F)
+```
+
+## Quality checks
+
+### plots 
+```{r plotting read quality}
+plotQualityProfile(fl = fnFs[1])
+```
+
+__Exercise__: compare the quality plots for forward and reverse reads. Do you see a difference? Can you explain why? 
+
+### Filtering and trimming
+We need to remove low quality reads and trim the end of the reads that is of poor quality.
+```{r pressure, echo=FALSE}
+# creating file locations for trimmed and quality filtered files
+goodFs <- file.path(path, "filtered", paste0(sample.names, "_F_filt.fastq.gz"))
+goodRs <- file.path(path, "filtered", paste0(sample.names, "_R_filt.fastq.gz"))
+
+# filtered = list()
+# for (i in seq_along(fnFs)){
+#   for_reads = fnFs[[i]]
+#   rev_reads = fnRs[[i]]
+#   filt_for = goodFs[[i]] 
+#   filt_rev = goodRs[[i]]
+#   filtered[[i]] = fastqPairedFilter(fn = c(for_reads,rev_reads),fout = c(filt_for,filt_rev))
+# }
+
+
+
+filtered <- filterAndTrim(
+  fnFs,                 # paths to input forward reads
+  goodFs,               # paths to output filtered reads
+  fnRs,                 # paths to input reverse reads    
+  goodRs,               # paths to output filtered reverse reads
+  truncQ = 10,                    # truncate reads from the nucleotide where quality < truncQ. phred score based
+  truncLen = c(240,160),          # truncate reads after truncLen bases. Reads shorter are discarded. Here forward reads are cut after 240nts and reverse reads are cut after 160nts
+  trimLeft = 0,            # number of nucleotides to remove from the start of each read
+  minLen = 20,             # remove reads with length less than minLen
+  maxN = 0,                # after truncation, sequences with more than maxN ambiguous nucleotides
+  minQ = 0,                # after truncatino, reads that contain a quality score less than minQ will be discarded.
+  maxEE=c(2,2),            #  After truncation, reads with higher than maxEE "expected errors" will be discarded. Expected errors are calculated from the nominal definition of the quality score: EE = sum(10^(-Q/10)
+  rm.phix=TRUE,            # Default TRUE. If TRUE, discard reads that match against the phiX genome, as determined by isPhiX.
+  multithread = F,         # can be set to TRUE for Mac OS and Unix/Linux systems
+  compress = T
+  )
+```
+
+## Learning 
+```{r}
+errF <- learnErrors(filtFs, multithread=TRUE)
+errR <- learnErrors(filtRs, multithread=TRUE)
+```
+
+## Dereplication
+```{r}
+derepFs <- derepFastq(filtFs, verbose=TRUE)
+derepRs <- derepFastq(filtRs, verbose=TRUE)
+# Name the derep-class objects by the sample names
+names(derepFs) <- sample.names
+names(derepRs) <- sample.names
+```
+
+## Merging
+Here I should include a picture of the forward and reverse overlap (see my notebook). To explain the impact of the trimming length, this picture will show the remaining overlap between the forward and reverse reads.
+#![Caption for the picture.](/path/to/image.png)
+
+```{r}
+dadaFs <- dada(derepFs, err=errF, multithread=TRUE)
+dadaRs <- dada(derepRs, err=errR, multithread=TRUE)
+
+mergers <- mergePairs(dadaFs, derepFs, dadaRs, derepRs, verbose=TRUE)
+# Inspect the merger data.frame from the first sample
+head(mergers[[1]])
+```
+
+# Amplicon Sequence Variants (ASV) and taxonomy
+
+## Get the sequence table (equivalent of OTU table)
+Occurence of each sequence in each sample
+```{r seq table}
+seqtab <- makeSequenceTable(mergers)
+```
+
+## Remove chimeric sequences (contigs coming from two different strains)
+Chimeric sequences are identified if they can be exactly reconstructed by combining a left-segment and a right-segment from two more abundant “parent” sequences.
+```{r chimeras}
+seqtab.nochim <- removeBimeraDenovo(seqtab, method="consensus", multithread=TRUE, verbose=TRUE)
+
+# print percentages of chimeras
+perc_chimeras = round((ncol(seqtab)-ncol(seqtab.nochim))/ncol(seqtab)*100,digits = 0)
+print(paste0("you have ",perc_chimeras,"% of chimeric sequences"))
+
+# print total abundance of chimeric sequences
+abundance_chimeras = round((sum(seqtab)-sum(seqtab.nochim))/sum(seqtab)*100,digits = 0)
+print(paste0("the total abundance of the chimeric sequences represent ",abundance_chimeras," % of all sequences"))
+
+```
+
+## Track reads through the pipeline
+How many reads did we keep at which stage? 
+```{r}
+getN <- function(x) sum(getUniques(x))
+track <- cbind(filtered, sapply(dadaFs, getN), sapply(dadaRs, getN), sapply(mergers, getN), rowSums(seqtab.nochim))
+# If processing a single sample, remove the sapply calls: e.g. replace sapply(dadaFs, getN) with getN(dadaFs)
+colnames(track) <- c("input", "filtered", "denoisedF", "denoisedR", "merged", "nonchim")
+rownames(track) <- sample.names
+head(track)
+```
+
+## Assign taxonomy to the contig sequences
+To assign a taxonomic information to each contig sequence, you have to rely on a reference database such as [Silva](https://www.arb-silva.de/silva-license-information/).
+
+Other databases formatted for use with `dada2` can be found at https://benjjneb.github.io/dada2/training.html
+
+Download the `silva_nr_v132_train_set.fa.gz` dataset from [Zenodo](https://zenodo.org/record/1172783). Save it in your workding directory (that you specified in `my_workdir` variable). 
+```{r}
+# get sequences and 
+silva_path = file.path(my_workdir,"silva_nr_v132_train_set.fa.gz")
+
+taxa <- assignTaxonomy(seqtab.nochim, refFasta = silva_path, multithread=TRUE)
+```
+
