@@ -20,6 +20,15 @@ Install R version 3.5 for your operating system:
 - Windows: https://cran.r-project.org/bin/windows/base/ 
 - Linux: https://cran.r-project.org/src/base/R-3/ 
 
+## Working directory
+Specifying where you are going to work.
+```{r "setup", include=FALSE}
+# specifying what will be the working directory (when different from the notebook location)
+my_working_dir <- "~/Desktop/dada2/"
+setwd(my_working_dir)
+```
+
+
 Install the `dada2`package.
 ```{r setup,results="hide"}
 if ("dada2" %in% installed.packages()){
@@ -41,8 +50,8 @@ if ("dada2" %in% installed.packages()){
 
 Indicate file locations etc.
 ```{r indicating fastq file locations}
-my_workdir <- "~/Desktop/dada2/"
-setwd(my_workdir)
+#my_workdir <- "~/Desktop/dada2/"
+#setwd(my_workdir)
 list.files("./MiSeq_SOP/")
 ```
 
@@ -76,17 +85,6 @@ We need to remove low quality reads and trim the end of the reads that is of poo
 goodFs <- file.path(path, "filtered", paste0(sample.names, "_F_filt.fastq.gz"))
 goodRs <- file.path(path, "filtered", paste0(sample.names, "_R_filt.fastq.gz"))
 
-# filtered = list()
-# for (i in seq_along(fnFs)){
-#   for_reads = fnFs[[i]]
-#   rev_reads = fnRs[[i]]
-#   filt_for = goodFs[[i]] 
-#   filt_rev = goodRs[[i]]
-#   filtered[[i]] = fastqPairedFilter(fn = c(for_reads,rev_reads),fout = c(filt_for,filt_rev))
-# }
-
-
-
 filtered <- filterAndTrim(
   fnFs,                 # paths to input forward reads
   goodFs,               # paths to output filtered reads
@@ -107,14 +105,14 @@ filtered <- filterAndTrim(
 
 ## Learning 
 ```{r}
-errF <- learnErrors(filtFs, multithread=TRUE)
-errR <- learnErrors(filtRs, multithread=TRUE)
+errF <- learnErrors(goodFs, multithread=TRUE)
+errR <- learnErrors(goodRs, multithread=TRUE)
 ```
 
 ## Dereplication
 ```{r}
-derepFs <- derepFastq(filtFs, verbose=TRUE)
-derepRs <- derepFastq(filtRs, verbose=TRUE)
+derepFs <- derepFastq(goodFs, verbose=TRUE)
+derepRs <- derepFastq(goodRs, verbose=TRUE)
 # Name the derep-class objects by the sample names
 names(derepFs) <- sample.names
 names(derepRs) <- sample.names
@@ -124,7 +122,7 @@ names(derepRs) <- sample.names
 Here I should include a picture of the forward and reverse overlap (see my notebook). To explain the impact of the trimming length, this picture will show the remaining overlap between the forward and reverse reads.
 #![Caption for the picture.](/path/to/image.png)
 
-```{r}
+```{r echo=FALSE,message="hide", results="hide"}
 dadaFs <- dada(derepFs, err=errF, multithread=TRUE)
 dadaRs <- dada(derepRs, err=errR, multithread=TRUE)
 
@@ -137,7 +135,7 @@ head(mergers[[1]])
 
 ## Get the sequence table (equivalent of OTU table)
 Occurence of each sequence in each sample
-```{r seq table}
+```{r seq table message=FALSE}
 seqtab <- makeSequenceTable(mergers)
 ```
 
@@ -176,7 +174,6 @@ Download the `silva_nr_v132_train_set.fa.gz` dataset from [Zenodo](https://zenod
 ```{r}
 # get sequences and 
 silva_path = file.path(my_workdir,"silva_nr_v132_train_set.fa.gz")
-
 taxa <- assignTaxonomy(seqtab.nochim, refFasta = silva_path, multithread=TRUE)
 ```
 
