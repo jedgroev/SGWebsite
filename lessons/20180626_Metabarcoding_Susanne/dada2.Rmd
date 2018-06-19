@@ -177,3 +177,41 @@ silva_path = file.path(my_workdir,"silva_nr_v132_train_set.fa.gz")
 taxa <- assignTaxonomy(seqtab.nochim, refFasta = silva_path, multithread=TRUE)
 ```
 
+## Prepare for microbial community analysis in Phyloseq
+Phyloseq is an R-package for microbial community analysis. As input it requires three tables. In addition to the OTU-table (or sequence variant table) and the taxonomy table it requires a table with the sample metadata. In this case we will just extract some metadata from the sample names of the example dataset.
+```{r}
+samples.out <- rownames(seqtab.nochim)
+subject <- sapply(strsplit(samples.out, "D"), `[`, 1)
+gender <- substr(subject,1,1)
+subject <- substr(subject,2,999)
+day <- as.integer(sapply(strsplit(samples.out, "D"), `[`, 2))
+samdf <- data.frame(Subject=subject, Gender=gender, Day=day)
+samdf$When <- "Early"
+samdf$When[samdf$Day>100] <- "Late"
+rownames(samdf) <- samples.out
+```
+
+## Construct a phyloseq object
+Now we have all the components to contruct a phyloseq object:
+```{r}
+ps <- phyloseq(otu_table(seqtab.nochim, taxa_are_rows=FALSE), 
+               sample_data(samdf), 
+               tax_table(taxa))
+```
+For the community comparison we remove the Mock community:
+```{r}
+ps <- prune_samples(sample_names(ps) != "Mock", ps) # Remove mock sample
+```
+
+## Transformation and ordination analysis
+The read counts per sequence variant need to be normalised to the total number of counts. The easiest way is to just divide by total counts, but note that this transformation results in a compositional dataset in which the individual variables are no longer independent from each other. This violates the assumptions of many statistical tests. Here we are going to calculate Bray-Curtis dissimilarities which are not very sensitive to compositional data, but check out McMurdie & Holmes (2014) (http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003531) for an in-depth discusssion.
+```{r}
+ps.prop <- transform_sample_counts(ps, function(otu) otu/sum(otu))
+```
+
+Phyloseq offers many different ordination techniques based on a variety of dissimilarity indices. Here is an example of non-metric multi-dimensional scaling based on the Bray-Curtis dissimilarity.
+```{r}
+ord.nmds.bray <- ordinate(ps.prop, method="NMDS", distance="bray")
+plot_ordination(ps.prop, ord.nmds.bray, color="When", title="Bray NMDS")
+```
+
