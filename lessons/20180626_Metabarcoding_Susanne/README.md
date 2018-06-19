@@ -1,7 +1,7 @@
 # Metabarcoding for Microbial Ecology
 
  - **Authors**: 
-   - Susanne Wilkens (Assistant-Professor, UvA-IBED FAME)
+   - Susanne Wilken (Assistant-Professor, UvA-IBED FAME)
    - Mattias de Hollander (Bioinformatician NIOO)
    - Marc Galland (Postdoc, UvA-SILS)
  - **Research field**: Microbial Ecology / Bioinformatics
@@ -18,11 +18,10 @@ At the end of this lesson, you will:
 - Have identified potential pitfalls in these steps.
 
 # Steps
-**Step 1**: Demultiplex the raw reads (example workflow for workshop)  
-**Step 2**: Pick Operational Taxonomic Units (OTUs)  
-**Step 3**: Identify chimeras and remove chimeric sequences from the OTU table  
-**Step 4**: Align sequences and remove alignment failures from the OTU table  
-**Step 5**: Filter rep set fasta file to match the OTU IDs in your filtered OTU table  
-**Step 6**: Construct a phylogenetic tree  
-**Step 7**: Carry out microbial community analyses to assess alpha- and beta-diversity  
+**Step 1**: Quality filter raw reads (example workflow for workshop)  
+**Step 2**: Dereplicate your dataset  
+**Step 3**: Make a sequence variant table
+**Step 4**: Identify chimeras and remove chimeric sequences 
+**Step 5**: Assign taxonomy to your sequences based on a reference database  
+**Step 6**: Visualize and analyze microbial community composition
  
