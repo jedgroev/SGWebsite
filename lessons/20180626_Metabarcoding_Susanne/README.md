@@ -5,7 +5,7 @@
    - Mattias de Hollander (Bioinformatician NIOO)
    - Marc Galland (Postdoc, UvA-SILS)
  - **Research field**: Microbial Ecology / Bioinformatics
- - **Lesson topic**: 16S rRNA  
+ - **Lesson topic**: metabarcoding through 16S and 18S rRNA  
  - **Lesson content URL**: <https://github.com/ScienceParkStudyGroup/studyGroup/tree/gh-pages/lessons/20180626_Metabarcoding_Susanne/>
 
 # Introduction
@@ -17,11 +17,15 @@ At the end of this lesson, you will:
 - Have undertaken one to several steps of the workflow (see below)
 - Have identified potential pitfalls in these steps.
 
-# Steps
-**Step 1**: Quality filter raw reads (example workflow for workshop)  
-**Step 2**: Dereplicate your dataset  
-**Step 3**: Make a sequence variant table
-**Step 4**: Identify chimeras and remove chimeric sequences 
-**Step 5**: Assign taxonomy to your sequences based on a reference database  
-**Step 6**: Visualize and analyze microbial community composition
+# Analysis steps
+- **Step 1**: Quality filter raw reads (example workflow for workshop)  
+- **Step 2**: Dereplicate your dataset    
+- **Step 3**: Make a sequence variant table  
+- **Step 4**: Identify chimeras and remove chimeric sequences   
+- **Step 5**: Assign taxonomy to your sequences based on a reference database    
+- **Step 6**: Visualize and analyze microbial community composition  
  
+
+# Going further
+- [Callahan et al., 2018](https://www.nature.com/articles/nmeth.3869)
+- [Silva ribosomal RNA databases](https://www.arb-silva.de/) 
