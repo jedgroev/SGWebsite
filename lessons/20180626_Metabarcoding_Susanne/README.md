@@ -29,3 +29,4 @@ At the end of this lesson, you will:
 # Going further
 - [Callahan et al., 2018](https://www.nature.com/articles/nmeth.3869)
 - [Silva ribosomal RNA databases](https://www.arb-silva.de/) 
+- [Introduction to Microbial Ecology (metagenomics here) from the Freiburg Galaxy team](http://galaxyproject.github.io/training-material/topics/metagenomics/slides/introduction.html#14)
