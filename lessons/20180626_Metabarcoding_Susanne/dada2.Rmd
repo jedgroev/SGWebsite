@@ -20,11 +20,6 @@ Install R version 3.5 for your operating system:
 - Windows: https://cran.r-project.org/bin/windows/base/ 
 - Linux: https://cran.r-project.org/src/base/R-3/ 
 
-## Sequencing files
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1293780.svg)](https://doi.org/10.5281/zenodo.1293780)
-Download the trimmed sequencing files from Zenodo (click on the badge).  
-These are ...< Susanne can you add a description of the samples here>
-
 ## Working directory
 Specifying where you are going to work.
 1. Create a directory called `dada2` on your `~/Desktop/`
@@ -46,6 +41,7 @@ if ("dada2" %in% installed.packages()){
 # dada2 analysis
 
 ## Working directory
+Make sure you have the trimmed fastq files and the reference taxonomic database inside your working directory (e.g. `~/Desktop/dada2/`)
 ```{r "setup", include=FALSE}
 # specifying what will be the working directory
 my_working_dir <- "~/Desktop/dada2/"
