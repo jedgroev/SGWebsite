@@ -17,5 +17,5 @@ do
 	shortname="${fullname%_S[0-9+]*}"
 	echo "processing" $shortname
 	# cutadapt
-	cutadapt -a CCTTCYGCAGGTTCACCTAC -g TTGTACACACCGCCC -A GTAGGTGAACCTGCRGAAGG	-G GGGCGGTGTGTACAA --match-read-wildcards --discard-untrimmed --minimum-length 100 -o ./trimmed/$shortname_R1.trim.fastq -p ./trimmed/$shortname_R2.trim.fastq ${for[i]} ${rev[i]} 2>./trimmed/$shortname.report.txt 
+	cutadapt -a TTGTACACACCGCCC...GTAGGTGAACCTGCRGAAGG -A CCTTCYGCAGGTTCACCTAC...GGGCGGTGTGTACAA --match-read-wildcards --discard-untrimmed --pair-filter=any --minimum-length 100 -o ./trimmed/$shortname_R1.trim.fastq -p ./trimmed/$shortname_R2.trim.fastq ${for[i]} ${rev[i]} 2>./trimmed/$shortname.report.txt 
 done
