@@ -20,15 +20,18 @@ Install R version 3.5 for your operating system:
 - Windows: https://cran.r-project.org/bin/windows/base/ 
 - Linux: https://cran.r-project.org/src/base/R-3/ 
 
+## Sequencing files
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1293780.svg)](https://doi.org/10.5281/zenodo.1293780)
+Download the trimmed sequencing files from Zenodo (click on the badge).  
+These are ...< Susanne can you add a description of the samples here>
+
 ## Working directory
 Specifying where you are going to work.
-```{r "setup", include=FALSE}
-# specifying what will be the working directory (when different from the notebook location)
-my_working_dir <- "~/Desktop/dada2/"
-setwd(my_working_dir)
-```
+1. Create a directory called `dada2` on your `~/Desktop/`
+2. Create a new R markdown notebook there: in Rstudio: File > New File > R Markdown). Save it under the `dada2.Rmd` name for instance.
+3. Place the downloaded fastq files in `~/Desktop/dada2/`. The path to the fastq files should be `~/Desktop/dada2/trimmed`  
 
-
+## Package installation
 Install the `dada2`package.
 ```{r setup,results="hide"}
 if ("dada2" %in% installed.packages()){
@@ -40,28 +43,28 @@ if ("dada2" %in% installed.packages()){
 }
 ```
 
-# dada2 
+# dada2 analysis
+
+## Working directory
+```{r "setup", include=FALSE}
+# specifying what will be the working directory
+my_working_dir <- "~/Desktop/dada2/"
+setwd(my_working_dir)
+```
 
 ## Getting fastq files and sample names 
-1. Create a directory called `dada2` on your `~/Desktop/`
-2. Download the tutorial fastq file at http://www.mothur.org/w/images/d/d6/MiSeqSOPData.zip
-3. Place the zipped fastq files in `~/Desktop/dada2/`
-4. Unzip them: you will get a `/MiSeq_SOP/`
-
 Indicate file locations etc.
 ```{r indicating fastq file locations}
-#my_workdir <- "~/Desktop/dada2/"
-#setwd(my_workdir)
-list.files("./MiSeq_SOP/")
+list.files("./trimmed/")
 ```
 
 Get the files and sample names
 ```{r getting fastq file names}
 # listing the forward and reverse reads
 # get them into two vectors
-path <- "./MiSeq_SOP"
-fnFs <- sort(list.files(path, pattern="_R1_001.fastq", full.names = TRUE))
-fnRs <- sort(list.files(path, pattern="_R2_001.fastq", full.names = TRUE))
+path <- "./trimmed/"
+fnFs <- sort(list.files(path, pattern="_R1_001.trimmed.fastq", full.names = TRUE))
+fnRs <- sort(list.files(path, pattern="_R2_001.trimmed.fastq", full.names = TRUE))
 
 # get the sample names
 # first get the file names (without the complete path)
@@ -82,8 +85,8 @@ __Exercise__: compare the quality plots for forward and reverse reads. Do you se
 We need to remove low quality reads and trim the end of the reads that is of poor quality.
 ```{r pressure, echo=FALSE}
 # creating file locations for trimmed and quality filtered files
-goodFs <- file.path(path, "filtered", paste0(sample.names, "_F_filt.fastq.gz"))
-goodRs <- file.path(path, "filtered", paste0(sample.names, "_R_filt.fastq.gz"))
+goodFs <- file.path(path, "filtered", paste0(sample.names, "_F_trim_filt.fastq"))
+goodRs <- file.path(path, "filtered", paste0(sample.names, "_R_trim_filt.fastq"))
 
 filtered <- filterAndTrim(
   fnFs,                 # paths to input forward reads
@@ -91,7 +94,7 @@ filtered <- filterAndTrim(
   fnRs,                 # paths to input reverse reads    
   goodRs,               # paths to output filtered reverse reads
   truncQ = 10,                    # truncate reads from the nucleotide where quality < truncQ. phred score based
-  truncLen = c(240,160),          # truncate reads after truncLen bases. Reads shorter are discarded. Here forward reads are cut after 240nts and reverse reads are cut after 160nts
+  truncLen = c(0,0),          # truncate reads after truncLen bases. Reads shorter are discarded. Here forward reads are cut after 240nts and reverse reads are cut after 160nts
   trimLeft = 0,            # number of nucleotides to remove from the start of each read
   minLen = 20,             # remove reads with length less than minLen
   maxN = 0,                # after truncation, sequences with more than maxN ambiguous nucleotides

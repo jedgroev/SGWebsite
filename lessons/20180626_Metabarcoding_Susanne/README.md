@@ -10,6 +10,10 @@
 
 # Introduction
 
+# Getting the files
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1296204.svg)](https://doi.org/10.5281/zenodo.1296204)
+Click on the Zenodo badge to get the files. Download the trimmed fastq zip file (exact name: "DSEL15_SIPE1_18SV9_examples_trimmed.zip").
+ 
 
 # Lesson objectives
 At the end of this lesson, you will:
@@ -18,13 +22,20 @@ At the end of this lesson, you will:
 - Have identified potential pitfalls in these steps.
 
 # Analysis steps
+- **Step 0**: Trimming (removing of the sequencing primers) --> 
 - **Step 1**: Quality filter raw reads (example workflow for workshop)  
 - **Step 2**: Dereplicate your dataset    
 - **Step 3**: Make a sequence variant table  
 - **Step 4**: Identify chimeras and remove chimeric sequences   
 - **Step 5**: Assign taxonomy to your sequences based on a reference database    
 - **Step 6**: Visualize and analyze microbial community composition  
- 
+
+# Step 0: trimming
+Fragment insert size can be quite short meaning that the reads could contain sequencing primers and eventually remnants of the adapters from the sequencing center (combined 5' and 3' adapters).  
+We have already removed the eventual residual sequencing primers from the reads (DSEL15_SIPE1_18SV9_examples_trimmed.zip)
+
+# Step 1 to 6                         
+These steps will be done through the `dada2.Rmd` notebook. 
 
 # Going further
 - [Callahan et al., 2018](https://www.nature.com/articles/nmeth.3869)
