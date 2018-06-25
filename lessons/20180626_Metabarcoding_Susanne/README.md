@@ -11,16 +11,19 @@
 # Introduction
 
 # Getting the files
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1297347.svg)](https://doi.org/10.5281/zenodo.1297347)  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1297449.svg)](https://doi.org/10.5281/zenodo.1297449)  
 All files are available at Zenodo (click on the badge above).
 
 ## 18S rRNA Fastq files 
 - Download the trimmed fastq zip file: "DSEL15_SIPE1_18SV9_examples_trimmed_subsampled.zip" 
 - These fastq files were downsampled to speed up analysis.
 
+## FastQC results
+If you want to have a look at the quality of input fastq files, download and unzip the `fastqc.zip` file.
+
 ##  Reference database for taxonomic assignment
 - Download the PR2 (Protist Reference) reference database at https://github.com/vaulot/pr2database/releases.  
-- Select the `pr2_version_4.10.0_dada2.fasta.gz` and save it. 
+- Select the `pr2_version_4.10.0_dada2_7tax.fa.gz` and save it. 
 
 # Softwares used
 For this lesson, we will be using R and RStudio. 
