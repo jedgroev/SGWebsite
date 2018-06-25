@@ -13,7 +13,7 @@
 # Getting the files
 
 ## 18S rRNA Fastq files
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1297334.svg)](https://doi.org/10.5281/zenodo.1297334)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1297334.svg)](https://doi.org/10.5281/zenodo.1297334)  
 Click on the Zenodo badge to get the files. Download the trimmed fastq zip file (exact name: "DSEL15_SIPE1_18SV9_examples_trimmed_subsampled.zip") that was subsampled to 20,000 reads per file.
 
 ##  Reference database for taxonomic assignment
