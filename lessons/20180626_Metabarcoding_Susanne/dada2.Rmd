@@ -196,7 +196,7 @@ taxa <- assignTaxonomy(seqtab.nochim, refFasta = db_path,taxLevels = c("Kingdom"
 ```
 
 ## Prepare for microbial community analysis in Phyloseq
-Phyloseq is an R-package for microbial community analysis. As input it requires three tables. In addition to the OTU-table (or sequence variant table) and the taxonomy table it requires a table with the sample metadata. In this case we will just extract some metadata from the sample names of the example dataset.
+Phyloseq is an R-package for microbial community analysis. As input it requires three tables. In addition to the OTU-table (or sequence variant table) and the taxonomy table it requires a table with the sample metadata. In this case we will extract some metadata from the sample names of the example dataset and add the densities measured in the density gradient fractions.
 ```{r}
 samples.out <- rownames(seqtab.nochim)
 cruise <- sapply(strsplit(samples.out, "-"), `[`, 1)
@@ -220,7 +220,7 @@ ps <- phyloseq(otu_table(seqtab.nochim, taxa_are_rows=FALSE),
 
 
 ## Transformation and ordination analysis
-The read counts per sequence variant need to be normalised to the total number of counts. The easiest way is to just divide by total counts, but note that this transformation results in a compositional dataset in which the individual variables are no longer independent from each other. This violates the assumptions of many statistical tests. Here we are going to calculate Bray-Curtis dissimilarities which are not very sensitive to compositional data, but check out McMurdie & Holmes (2014) (http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003531) for an in-depth discusssion.
+The read counts per sequence variant need to be normalised to the total number of counts. The easiest way is to just divide by total counts, but note that this transformation results in a compositional dataset in which the individual variables are no longer independent from each other. This violates the assumptions of many statistical tests. Check out McMurdie & Holmes (2014) (http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003531) for an in-depth discusssion of this issue. Here we are just using it for a few exploratory plots. 
 ```{r}
 ps.prop <- transform_sample_counts(ps, function(otu) otu/sum(otu))
 ```
@@ -239,7 +239,7 @@ MyPalette <- c("#666633", "#990000", "#3333ff", "#99ff99","#cc3399",
 plot_bar(tax_glom(ps.prop, "Division"), x="Density", fill="Division") + facet_wrap(~Bottle, scales="free_x") + scale_fill_manual(values=MyPalette)
 
 ```
-It looks like something is happening within the Stramenopiles, so we can zoom into that group:
+It looks like something is happening within some stramenopile groups, so we can zoom into only the Strameopiles:
 ```{r}
 strameno = subset_taxa(ps, Supergroup=="Stramenopiles")
 strameno.prop <- transform_sample_counts(strameno, function(otu) otu/sum(otu))
