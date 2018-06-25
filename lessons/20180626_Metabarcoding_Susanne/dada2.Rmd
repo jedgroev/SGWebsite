@@ -87,8 +87,7 @@ sample.names = sapply(file.names,FUN = function(x){strsplit(x,split = "_")[[1]][
 ## Quality checks
 
 ### FastQC 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1297334.svg)](https://doi.org/10.5281/zenodo.1297334)
-You can check the results of the FastQC analysis in the Zenodo datafiles.   
+You can check the results of the FastQC analysis in the `fastqc.zip` [compressed file](https://doi.org/10.5281/zenodo.1297449).
 
 ### Quality plots 
 ```{r plotting read quality}
@@ -127,6 +126,7 @@ filtered <- filterAndTrim(
 errF <- learnErrors(goodFs, multithread=TRUE)
 errR <- learnErrors(goodRs, multithread=TRUE)
 ```
+
 Inspecting modelled errors relative to average error rates
 ```{r}
 plotErrors(errF, nominalQ=TRUE)
@@ -142,9 +142,6 @@ names(derepRs) <- sample.names
 ```
 
 ## Merging
-Here I should include a picture of the forward and reverse overlap (see my notebook). To explain the impact of the trimming length, this picture will show the remaining overlap between the forward and reverse reads.
-#![Caption for the picture.](/path/to/image.png)
-
 ```{r echo=FALSE,message="hide", results="hide"}
 dadaFs <- dada(derepFs, err=errF, multithread=TRUE)
 dadaRs <- dada(derepRs, err=errR, multithread=TRUE)
@@ -189,11 +186,9 @@ head(track)
 ```
 
 ## Assign taxonomy to the contig sequences
-To assign a taxonomic information to each contig sequence, you have to rely on a reference database such as [Silva](https://www.arb-silva.de/silva-license-information/).
+To assign a taxonomic information to each contig sequence, you have to rely on a reference database such as [Silva](https://www.arb-silva.de/silva-license-information/). Silva is quite accurate for 16S rRNA while PR2 (Protist Reference) contains more 18S rRNA references. Other databases formatted for use with `dada2` can be found at https://benjjneb.github.io/dada2/training.html
 
-Other databases formatted for use with `dada2` can be found at https://benjjneb.github.io/dada2/training.html
-
-Download the `silva_nr_v132_train_set.fa.gz` dataset from [Zenodo](https://zenodo.org/record/1172783). Save it in your workding directory (that you specified in `my_workdir` variable). 
+Download the taxonomic database from the [lesson Zenodo files](https://doi.org/10.5281/zenodo.1297449). Save it in your workding directory (that you specified in `my_workdir` variable). 
 ```{r}
 # get sequences and 
 db_path = file.path(my_working_dir,"pr2_version_4.10.0_dada2.fasta.gz")
