@@ -49,6 +49,10 @@ At the end of this lesson, you will:
 In the provided example fastq files, the fragment insert size can be quite short (down to 90nts) meaning that the reads could contain sequencing primers and eventually remnants of the adapters from the sequencing center. Therefore, we needed to remove the 5' and 3' sequencing primers on both ends. We have already removed the eventual residual sequencing primers from the reads (DSEL15_SIPE1_18SV9_examples_trimmed.zip). To speed up the analysis, we have also downsampled the number of sequencing reads.  
 The `trim.sh` script was used to remove sequencing primers and eventual remaining adapters. 
 
+[Note for later improvement]
+- Trimming the forward and reverse complement sequencing primer
+- Then, depending on the read length, trimming with different error rates (longer reads will have more errors)  
+
 # Step 1 to 6                         
 These steps will be done with the `dada2.Rmd` notebook. 
 
