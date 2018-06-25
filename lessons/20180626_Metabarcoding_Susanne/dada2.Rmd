@@ -70,6 +70,7 @@ sample.names = sapply(file.names,FUN = function(x){strsplit(x,split = "_")[[1]][
 ## Quality checks
 
 ### FastQC 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1297334.svg)](https://doi.org/10.5281/zenodo.1297334)
 You can check the results of the FastQC analysis in the Zenodo datafiles.   
 
 ### Quality plots 
@@ -94,7 +95,7 @@ filtered <- filterAndTrim(
   truncQ = 2,                    # truncate reads from the nucleotide where quality < truncQ. phred score based
   truncLen = c(120,100),          # truncate reads after truncLen bases. Reads shorter are discarded. Here forward reads are cut after 240nts and reverse reads are cut after 160nts
   trimLeft = 0,            # number of nucleotides to remove from the start of each read
-  minLen = 20,             # remove reads with length less than minLen
+  minLen = 90,             # remove reads with length less than minLen
   maxN = 0,                # after truncation, sequences with more than maxN ambiguous nucleotides
   minQ = 0,                # after truncatino, reads that contain a quality score less than minQ will be discarded.
   maxEE=c(2,2),            #  After truncation, reads with higher than maxEE "expected errors" will be discarded. Expected errors are calculated from the nominal definition of the quality score: EE = sum(10^(-Q/10)
@@ -104,10 +105,14 @@ filtered <- filterAndTrim(
   )
 ```
 
-## Learning 
+## Learning errors
 ```{r}
 errF <- learnErrors(goodFs, multithread=TRUE)
 errR <- learnErrors(goodRs, multithread=TRUE)
+```
+Inspecting modelled errors relative to average error rates
+```{r}
+plotErrors(errF, nominalQ=TRUE)
 ```
 
 ## Dereplication
@@ -119,7 +124,10 @@ names(derepFs) <- sample.names
 names(derepRs) <- sample.names
 ```
 
-## Merging of the forward/reverse reads
+## Merging
+Here I should include a picture of the forward and reverse overlap (see my notebook). To explain the impact of the trimming length, this picture will show the remaining overlap between the forward and reverse reads.
+#![Caption for the picture.](/path/to/image.png)
+
 ```{r echo=FALSE,message="hide", results="hide"}
 dadaFs <- dada(derepFs, err=errF, multithread=TRUE)
 dadaRs <- dada(derepRs, err=errR, multithread=TRUE)
@@ -170,12 +178,9 @@ Other databases formatted for use with `dada2` can be found at https://benjjneb.
 
 Download the `silva_nr_v132_train_set.fa.gz` dataset from [Zenodo](https://zenodo.org/record/1172783). Save it in your workding directory (that you specified in `my_workdir` variable). 
 ```{r}
-# get the reference database path 
-db_path = file.path(my_working_dir,"pr2_version_4.10.0_dada2_7tax.fa.gz")
-
-# take a subset of all sequences (for time sake because taxonomic assignment takes some time)
-seqtab.nochim.sub <- seqtab.nochim[,1:100]
-taxa <- assignTaxonomy(seqtab.nochim.sub, refFasta = db_path, multithread=TRUE)
+# get sequences and 
+db_path = file.path(my_working_dir,"pr2_version_4.10.0_dada2.fasta.gz")
+taxa <- assignTaxonomy(seqtab.nochim, refFasta = db_path, multithread=TRUE)
 ```
 
 ## Prepare for microbial community analysis in Phyloseq
