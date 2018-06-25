@@ -33,7 +33,24 @@ if ("dada2" %in% installed.packages()){
 } else {
   source("https://bioconductor.org/biocLite.R")
   biocLite("dada2")
-  library(dada2)
+  library("dada2")
+}
+
+# phyloseq
+if ("phyloseq" %in% installed.packages()){
+  library("phyloseq")
+} else {
+  source('http://bioconductor.org/biocLite.R')
+  biocLite("phyloseq")
+  library("phyloseq")
+}
+
+# ggplot2
+if ("ggplot2" %in% installed.packages()){
+  library("ggplot2")
+} else {
+  install.packages("ggplot2")
+  library("ggplot2")
 }
 ```
 
