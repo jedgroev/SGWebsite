@@ -162,7 +162,7 @@ seqtab <- makeSequenceTable(mergers)
 ## Remove chimeric sequences (contigs coming from two different strains)
 Chimeric sequences are identified if they can be exactly reconstructed by combining a left-segment and a right-segment from two more abundant “parent” sequences.
 ```{r chimeras}
-seqtab.nochim <- removeBimeraDenovo(seqtab, method="consensus", multithread=TRUE, verbose=TRUE)
+seqtab.nochim <- removeBimeraDenovo(seqtab, method="pooled", multithread=TRUE, verbose=TRUE)
 
 # print percentages of chimeras
 perc_chimeras = round((ncol(seqtab)-ncol(seqtab.nochim))/ncol(seqtab)*100,digits = 0)
@@ -191,7 +191,7 @@ To assign a taxonomic information to each contig sequence, you have to rely on a
 Download the taxonomic database from the [lesson Zenodo files](https://doi.org/10.5281/zenodo.1297449). Save it in your workding directory (that you specified in `my_workdir` variable). 
 ```{r}
 # get sequences and 
-db_path = file.path(my_working_dir,"pr2_version_4.10.0_dada2.fasta.gz")
+db_path = file.path(my_working_dir,"pr2_version_4.10.0_dada2_7tax.fasta.gz")
 taxa <- assignTaxonomy(seqtab.nochim, refFasta = db_path, multithread=TRUE)
 ```
 
@@ -216,6 +216,7 @@ ps <- phyloseq(otu_table(seqtab.nochim, taxa_are_rows=FALSE),
                sample_data(samdf), 
                tax_table(taxa))
 ```
+
 For the community comparison we remove the Mock community:
 ```{r}
 ps <- prune_samples(sample_names(ps) != "Mock", ps) # Remove mock sample
