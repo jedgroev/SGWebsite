@@ -123,8 +123,8 @@ filtered <- filterAndTrim(
 
 ## Learning errors
 ```{r}
-errF <- learnErrors(goodFs, multithread=TRUE)
-errR <- learnErrors(goodRs, multithread=TRUE)
+errF <- learnErrors(goodFs, multithread=F)
+errR <- learnErrors(goodRs, multithread=F)
 ```
 
 Inspecting modelled errors relative to average error rates
@@ -143,8 +143,8 @@ names(derepRs) <- sample.names
 
 ## Merging
 ```{r echo=FALSE,message="hide", results="hide"}
-dadaFs <- dada(derepFs, err=errF, multithread=TRUE)
-dadaRs <- dada(derepRs, err=errR, multithread=TRUE)
+dadaFs <- dada(derepFs, err=errF, multithread=F)
+dadaRs <- dada(derepRs, err=errR, multithread=F)
 
 mergers <- mergePairs(dadaFs, derepFs, dadaRs, derepRs, verbose=TRUE)
 # Inspect the merger data.frame from the first sample
@@ -162,7 +162,7 @@ seqtab <- makeSequenceTable(mergers)
 ## Remove chimeric sequences (contigs coming from two different strains)
 Chimeric sequences are identified if they can be exactly reconstructed by combining a left-segment and a right-segment from two more abundant “parent” sequences.
 ```{r chimeras}
-seqtab.nochim <- removeBimeraDenovo(seqtab, method="consensus", multithread=TRUE, verbose=TRUE)
+seqtab.nochim <- removeBimeraDenovo(seqtab, method="pooled", multithread=F, verbose=TRUE)
 
 # print percentages of chimeras
 perc_chimeras = round((ncol(seqtab)-ncol(seqtab.nochim))/ncol(seqtab)*100,digits = 0)
@@ -188,24 +188,25 @@ head(track)
 ## Assign taxonomy to the contig sequences
 To assign a taxonomic information to each contig sequence, you have to rely on a reference database such as [Silva](https://www.arb-silva.de/silva-license-information/). Silva is quite accurate for 16S rRNA while PR2 (Protist Reference) contains more 18S rRNA references. Other databases formatted for use with `dada2` can be found at https://benjjneb.github.io/dada2/training.html
 
-Download the taxonomic database from the [lesson Zenodo files](https://doi.org/10.5281/zenodo.1297449). Save it in your workding directory (that you specified in `my_workdir` variable). 
+Download the taxonomic database from the [lesson Zenodo files](https://doi.org/10.5281/zenodo.1297449). Save it in your workding directory (that you specified in `my_working_dir` variable). 
 ```{r}
 # get sequences and 
 db_path = file.path(my_working_dir,"pr2_version_4.10.0_dada2.fasta.gz")
-taxa <- assignTaxonomy(seqtab.nochim, refFasta = db_path, multithread=TRUE)
+taxa <- assignTaxonomy(seqtab.nochim, refFasta = db_path,taxLevels = c("Kingdom","Supergroup","Division","Class","Order","Family","Genus"), multithread=F)
 ```
 
 ## Prepare for microbial community analysis in Phyloseq
 Phyloseq is an R-package for microbial community analysis. As input it requires three tables. In addition to the OTU-table (or sequence variant table) and the taxonomy table it requires a table with the sample metadata. In this case we will just extract some metadata from the sample names of the example dataset.
 ```{r}
 samples.out <- rownames(seqtab.nochim)
-subject <- sapply(strsplit(samples.out, "D"), `[`, 1)
-gender <- substr(subject,1,1)
-subject <- substr(subject,2,999)
-day <- as.integer(sapply(strsplit(samples.out, "D"), `[`, 2))
-samdf <- data.frame(Subject=subject, Gender=gender, Day=day)
-samdf$When <- "Early"
-samdf$When[samdf$Day>100] <- "Late"
+cruise <- sapply(strsplit(samples.out, "-"), `[`, 1)
+experiment <- sapply(strsplit(samples.out, "-"), `[`, 2)
+bottle <- sapply(strsplit(samples.out, "-"), `[`, 3)
+fractionNr <- sapply(strsplit(samples.out, "-"), `[`, 4)
+fraction <- c(11, 17, 08, 11, 17, 08)
+density <- c(1.77, 1.75, 1.78, 1.77, 1.75, 1.78)
+
+samdf <- data.frame(Cruise=cruise, Experiment=experiment, Bottle=bottle, Fraction=fraction, Density=density)
 rownames(samdf) <- samples.out
 ```
 
@@ -216,10 +217,7 @@ ps <- phyloseq(otu_table(seqtab.nochim, taxa_are_rows=FALSE),
                sample_data(samdf), 
                tax_table(taxa))
 ```
-For the community comparison we remove the Mock community:
-```{r}
-ps <- prune_samples(sample_names(ps) != "Mock", ps) # Remove mock sample
-```
+
 
 ## Transformation and ordination analysis
 The read counts per sequence variant need to be normalised to the total number of counts. The easiest way is to just divide by total counts, but note that this transformation results in a compositional dataset in which the individual variables are no longer independent from each other. This violates the assumptions of many statistical tests. Here we are going to calculate Bray-Curtis dissimilarities which are not very sensitive to compositional data, but check out McMurdie & Holmes (2014) (http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003531) for an in-depth discusssion.
@@ -227,9 +225,23 @@ The read counts per sequence variant need to be normalised to the total number o
 ps.prop <- transform_sample_counts(ps, function(otu) otu/sum(otu))
 ```
 
-Phyloseq offers many different ordination techniques based on a variety of dissimilarity indices. Here is an example of non-metric multi-dimensional scaling based on the Bray-Curtis dissimilarity.
+Phyloseq offers many different plotting funcitons and ordination techniques. Let's first have a look at the community composition at a broad taxonomic level:
 ```{r}
-ord.nmds.bray <- ordinate(ps.prop, method="NMDS", distance="bray")
-plot_ordination(ps.prop, ord.nmds.bray, color="When", title="Bray NMDS")
-```
+MyPalette <- c("#666633", "#990000", "#3333ff", "#99ff99","#cc3399",
+               "#cccccc", "#ff9999", "#00ccff", "#336633","#ff00ff",
+               "#cccc33", "#ff3300", "#003399", "#00cc00","#cc00cc",
+               "#ffff33", "#993300", "#33ffff", "#66ff33","#9933cc",
+               "#666666", "#cc6666", "#000099", "#33ff66","#ff99ff",
+               "#999900", "#cc0033", "#3333cc", "#339933","#990099",
+               "#ffff99", "#993333", "#99ccff", "#00ff00","#ff3399",
+               "#999966", "#ff6600", "#3399ff", "#00ff33","#660066")
+               
+plot_bar(tax_glom(ps.prop, "Division"), x="Density", fill="Division") + facet_wrap(~Bottle, scales="free_x") + scale_fill_manual(values=MyPalette)
 
+```
+It looks like something is happening within the Stramenopiles, so we can zoom into that group:
+```{r}
+strameno = subset_taxa(ps, Supergroup=="Stramenopiles")
+strameno.prop <- transform_sample_counts(strameno, function(otu) otu/sum(otu))
+plot_bar(tax_glom(strameno.prop, "Class"), x="Density", fill="Class") + facet_wrap(~Bottle, scales="free_x") + scale_fill_manual(values=MyPalette)
+```
