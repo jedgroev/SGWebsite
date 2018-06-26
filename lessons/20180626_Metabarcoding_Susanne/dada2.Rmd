@@ -111,7 +111,7 @@ filtered <- filterAndTrim(
   fnRs,                 # paths to input reverse reads    
   goodRs,               # paths to output filtered reverse reads
   truncQ = 2,                    # truncate reads from the nucleotide where quality < truncQ. phred score based
-  truncLen = c(120,100),          # truncate reads after truncLen bases. Reads shorter are discarded. Here forward reads are cut after 240nts and reverse reads are cut after 160nts
+  truncLen = c(120,100),          # truncate reads after truncLen bases. Reads shorter are discarded. Here forward reads are cut after 120nts and reverse reads are cut after 100nts
   trimLeft = 0,            # number of nucleotides to remove from the start of each read
   minLen = 90,             # remove reads with length less than minLen
   maxN = 0,                # after truncation, sequences with more than maxN ambiguous nucleotides
