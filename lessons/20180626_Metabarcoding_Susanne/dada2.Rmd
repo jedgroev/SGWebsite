@@ -230,11 +230,7 @@ Phyloseq offers many different plotting funcitons and ordination techniques. Let
 MyPalette <- c("#666633", "#990000", "#3333ff", "#99ff99","#cc3399",
                "#cccccc", "#ff9999", "#00ccff", "#336633","#ff00ff",
                "#cccc33", "#ff3300", "#003399", "#00cc00","#cc00cc",
-               "#ffff33", "#993300", "#33ffff", "#66ff33","#9933cc",
-               "#666666", "#cc6666", "#000099", "#33ff66","#ff99ff",
-               "#999900", "#cc0033", "#3333cc", "#339933","#990099",
-               "#ffff99", "#993333", "#99ccff", "#00ff00","#ff3399",
-               "#999966", "#ff6600", "#3399ff", "#00ff33","#660066")
+               "#ffff33", "#993300", "#33ffff", "#66ff33","#9933cc")
                
 plot_bar(tax_glom(ps.prop, "Division"), x="Density", fill="Division") + facet_wrap(~Bottle, scales="free_x") + scale_fill_manual(values=MyPalette)
 
