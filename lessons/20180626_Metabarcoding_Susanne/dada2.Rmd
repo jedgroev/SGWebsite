@@ -63,6 +63,8 @@ Make sure you have the trimmed fastq files and the reference taxonomic database 
 my_working_dir <- "~/Desktop/dada2/"
 setwd(my_working_dir)
 ```
+If this doesn't work you can manually set the working directory in R-studio: Session > Set Working Directory > Choose Directory.
+
 
 ## Getting fastq files and sample names 
 Indicate file locations etc.
