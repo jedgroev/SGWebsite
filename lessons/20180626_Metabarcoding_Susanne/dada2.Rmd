@@ -195,6 +195,7 @@ Download the taxonomic database from the [lesson Zenodo files](https://doi.org/1
 # assign taxonomy
 taxa <- assignTaxonomy(seqtab.nochim, "./pr2_version_4.10.0_dada2_7tax.fa.gz", taxLevels = c("Kingdom","Supergroup","Division","Class","Order","Family","Genus"), multithread=F)
 ```
+Note that the assignTaxonomy function uses a naive Bayesian classifier (Wang et al. 2007, Appl. Environm. Microbiol. 73:5261-5267). The accuracy of the assignments strongly depends on the quality of the reference database, which is much higher for prokaryotes than for eukaryotes. Alternatively, especially for eukaryotes BLAST is often used.
 
 ## Prepare for microbial community analysis in Phyloseq
 Phyloseq is an R-package for microbial community analysis. As input it requires three tables. In addition to the OTU-table (or sequence variant table) and the taxonomy table it requires a table with the sample metadata. In this case we will extract some metadata from the sample names of the example dataset and add the densities measured in the density gradient fractions.
