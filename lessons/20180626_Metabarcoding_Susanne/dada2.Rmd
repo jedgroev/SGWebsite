@@ -218,9 +218,11 @@ Now we have all the components to contruct a phyloseq object:
 ps <- phyloseq(otu_table(seqtab.nochim, taxa_are_rows=FALSE), 
                sample_data(samdf), 
                tax_table(taxa))
+#check what the object consists of
+ps
 ```
 
-## Transformation and ordination analysis
+## Transformation and exploratory plots
 The read counts per sequence variant need to be normalised to the total number of counts. The easiest way is to just divide by total counts, but note that this transformation results in a compositional dataset in which the individual variables are no longer independent from each other. This violates the assumptions of many statistical tests. Check out McMurdie & Holmes (2014) (http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003531) for an in-depth discusssion of this issue. Here we are just using it for a few exploratory plots. 
 ```{r}
 ps.prop <- transform_sample_counts(ps, function(otu) otu/sum(otu))
