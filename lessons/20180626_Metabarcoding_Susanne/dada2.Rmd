@@ -190,13 +190,10 @@ head(track)
 ## Assign taxonomy to the contig sequences
 To assign a taxonomic information to each contig sequence, you have to rely on a reference database such as [Silva](https://www.arb-silva.de/silva-license-information/). Silva is quite accurate for 16S rRNA while PR2 (Protist Reference) contains more 18S rRNA references. Other databases formatted for use with `dada2` can be found at https://benjjneb.github.io/dada2/training.html
 
-Download the taxonomic database from the [lesson Zenodo files](https://doi.org/10.5281/zenodo.1297449). Save it in your workding directory (that you specified in `my_working_dir` variable). 
+Download the taxonomic database from the [lesson Zenodo files](https://doi.org/10.5281/zenodo.1297449). Save it in your working directory. 
 ```{r}
-# get taxonomic reference database path
-db_path = file.path(my_working_dir,"pr2_version_4.10.0_dada2_7tax.fasta.gz")
-
 # assign taxonomy
-taxa <- assignTaxonomy(seqtab.nochim, refFasta = db_path,taxLevels = c("Kingdom","Supergroup","Division","Class","Order","Family","Genus"), multithread=F)
+taxa <- assignTaxonomy(seqtab.nochim, "./pr2_version_4.10.0_dada2_7tax.fa.gz", taxLevels = c("Kingdom","Supergroup","Division","Class","Order","Family","Genus"), multithread=F)
 ```
 
 ## Prepare for microbial community analysis in Phyloseq
