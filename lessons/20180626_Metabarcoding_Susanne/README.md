@@ -2,7 +2,6 @@
 
  - **Authors**: 
    - Susanne Wilken (Assistant-Professor, UvA-IBED FAME)
-   - Mattias de Hollander (Bioinformatician NIOO)
    - Marc Galland (Postdoc, UvA-SILS)
  - **Research field**: Microbial Ecology / Bioinformatics
  - **Lesson topic**: metabarcoding through 16S and 18S rRNA  

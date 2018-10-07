@@ -15,10 +15,12 @@ Lieke Vlaar (PhD student, Plant Hormone Biology)
 Alessandra Guerrieri (PhD student, Plant Hormone Biology)  
 Patricia Caicedo (PhD student, Bacterial Cell Biology & Physiology)    
 Bora Kim (PhD student, Plant Hormone Biology)  
-Anouk Zancarini (Postdoc student, Plant Hormone Biology)  
+Anouk Zancarini (Postdoctoral fellow, Plant Hormone Biology)  
 Thierry Mondeel (PhD student, Synthetic Systems Biology and Nuclear Organisation)  
 Ilona Vuist (PhD student, Synthetic Systems Biology and Nuclear Organisation)   
-Fred White (Master student, Molecular Neurobiology)  
+Fred White (Master student, Molecular Neurobiology) 
+Ernest Aliche (Postdoctoral fellow, Plant Hormone Biology)  
+Lissy-Anne Dekers (Master student, Plant Hormone Biology)
 
 ### IBED members
 Seringe Huisman (PhD student, Ecosystem & Landscape Dynamics)  
@@ -26,3 +28,8 @@ Sara Campana (PhD student, Freshwater and Marine Ecology)
 Mariam Cabrera (PhD student, Paleo Ecology and Landscape Ecology)  
 Anne-Catherine Ahn (PhD student, Freshwater and Marine Ecology )  
 Leqin Choo (PhD student, FAME/Naturalis)
+Petra Visser (Assistant-Professor, FAME)
+Tom Theirlijnde (?)
+
+### Others
+Grabriel Brouchon (Photanol)
