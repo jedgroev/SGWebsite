@@ -1,23 +1,42 @@
+- name: Zsofia Koma
+  position: Community lead
+  affiliation: UvA IBED
+  github: komazsofi
+  interests:
+    - Spatial analysis (GIS)
+    - Python
+    - Databases
+    - Machine Learning
+
 - name: Marc Galland
-  position: Community Lead
+  position: Community lead
   affiliation: UvA SILS
   github: mgalland
   interests:
-    - Plant Biology
-    - Bioinformatics
-    - Data Analysis
+    - Genomics
+    - Snakemake
+    - Data Science
     
 - name: Emiel van Loon
-  position: Hacky Hours organiser
+  position: Board member
   affiliation: UvA IBED
   github: EmielvanLoon
   interests:
     - Statistics
     - R
     - Modelling
- 
+
+- name: Tijs Bliek
+  position: Board member
+  affiliation: UvA SILS
+  github: tijsbliek
+  interests:
+    - Genomics
+    - Snakemake
+    - RNA-Seq
+
 - name: Like Fokkens 
-  position: Teaching coordinator
+  position: Carpentry Workshop organiser
   affiliation: UvA SILS
   github: LikeFokkens
   interests:
@@ -25,39 +44,36 @@
     - Python
     - Teaching
 
-- name: Joeri Jongbloets
-  position: Events advertisement
+- name: Huub Hoefsloot
+  position: Board member
   affiliation: UvA SILS
-  github: jjongbloets
+  github: HuubHoefslot
   interests:
-    - Cyanobacteria
-    - Biotechnology 
-    - R
-
-- name: Pietro Marchesi
-  position: User pollster
-  affiliation: UvA SILS
-  github: pietromarchesi
-  interests:
-    - Role: Neurosciences
-    - Computer Science
-    - Data analysis 
-    - Python
-
-- name: Zsofia Koma
-  position: Website admin
-  affiliation: UvA IBED
-  github: komazsofi
-  interests:
-    - Ecology
-    - Geoinformatics
-    - Spatial analysis
-    - Machine Learning
+    - Statistics
+    - Mathematical modelling
+    - Teaching
 
 - name: Susanne Wilken
-  position: User pollster
+  position: Board member
   affiliation: UvA IBED
-  github: susannewilken
+  github: SuseW
   interests:
     - Marine Biology
     - Microbial Ecology
+    - R
+
+- name: Max van Hooren
+  position: Board member
+  affiliation: UvA SILS
+  github: mvhoore1
+  interests:
+    - RNA-Seq
+    - R
+
+- name: Grace Farmiloe
+  position: Board member
+  affiliation: UvA SILS
+  github: Farmiloe3
+  interests:
+    - Snakemake
+    - Genomics
