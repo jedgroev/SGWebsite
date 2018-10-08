@@ -1,0 +1,57 @@
+- name: Jihed Chouaref
+  affiliation: University of Amsterdam (SILS)
+  position: Snakemake users lead
+  github: JihedC
+  interests:
+    - ChIP-Seq
+    - Snakemake
+    - Genomics
+    
+- name: Fred White
+  position: regular contributor
+  affiliation: University of Amsterdam (SILS)
+  github: Fred-White94
+  interests:
+    - Feature selection
+    - Data Science
+    - R
+    
+- name: Pietro Marchesi
+  position: regular contributor
+  affiliation: UvA SILS
+  github: pietromarchesi
+  interests:
+    - Machine Learning
+    - Python
+
+- name: Joeri Jongbloets
+  position: regular contributor
+  affiliation: UvA SILS
+  github: jjongbloets
+  interests:
+    - Data visualisation
+    - R
+
+- name: Pim Schravendijk
+  position: regular contributor
+  affiliation: Rijk Zwaan
+  github: rdwrt
+  interests:
+    - Scientific programming
+    - Workflows
+
+- name: Caspar Treijtel
+  position: regular contributor
+  affiliation: UvA Library
+  github: caspartreijtel
+  interests:
+    - Python
+    - Carpentry workshops
+
+- name: Mariette van Selm
+  position: regular contributor
+  affiliation: UvA Library
+  github: mariettevanselm
+  interests:
+    - Research Data Management
+    - Figshare
