@@ -6,6 +6,5 @@ link: https://github.com/ScienceParkStudyGroup/studyGroup/tree/gh-pages/lessons/
 date: 2018-06-26
 startTime: '17:00'
 endTime: '18:00'
-
 ---
 
