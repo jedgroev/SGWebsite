@@ -1,0 +1,189 @@
+#Charmaine Yung (charmaineyung@gmail.com) Started 14Dec2017
+
+#Sequence processing for Amplicon libraries (V9) 
+# SIP and choano paper related sequences
+
+## Program/ package used
+Usearch9 v9.0.2132
+Usearch10 v10.0.240
+Vsearch v2.4.3
+Qiime v1.9.1
+Sickle v1.33
+cutadapt v1.11
+
+#Unzip files
+	gunzip *.gz
+	
+# Raw R1 number of sequence
+while read p; 
+    do
+    expr $(cat ''"$p"'_R1_001_001_001.fastq' | wc -l) / 4
+done < sample_name.txt > raw_reads.txt
+          
+# Phix filter
+while read p; 
+    do
+    usearch9 -filter_phix ''"$p"'_R1_001_001.fastq' -reverse ''"$p"'_R2_001_001.fastq' -output ''"$p"'_R1_001_001_nophix.fastq' -output2 ''"$p"'_R2_001_001_nophix.fastq' -threads 4
+done < sample_name.txt
+    
+# R1 number of sequence after phix removal
+while read p; 
+    do
+    expr $(cat ''"$p"'_R1_001_001_nophix.fastq' | wc -l) / 4
+done < sample_name.txt > phix_reads.txt
+	
+#Run sequence read file through quality trimming: running window of Q25, window width: is 0.1 of read length, mean Q25 
+
+while read p; 
+    do
+    sickle pe -f ''"$p"'_R1_001_001_nophix.fastq'  -r ''"$p"'_R2_001_001_nophix.fastq' -t sanger \
+    -o ''"$p"'_R1_001_001_paired.fastq' -p ''"$p"'_R2_001_001_paired.fastq' \
+    -s ''"$p"'_nonparied.fastq' -q 25
+done < sample_name.txt
+
+#Number of sequences after quality trimming
+
+while read p; 
+    do
+    expr $(cat ''"$p"'_R1_001_001_paired.fastq' | wc -l) / 4
+done < sample_name.txt > quality_trimming_reads.txt
+
+#Merging using Usearch (max difference % = 5%, min overlap= 20nt, min merged read length= 100)
+
+while read p; 
+    do
+    usearch9 -fastq_mergepairs ''"$p"'_R1_001_paired.fastq' -reverse ''"$p"'_R2_001_paired.fastq' \
+    -fastq_maxdiffpct 5 -fastqout ''"$p"'_merge.fastq' -fastq_minovlen 20 -fastq_minmergelen 100 -threads 16; 
+done < sample_name.txt
+
+#Number of sequences after merging
+while read p; 
+    do
+    expr $(cat ''"$p"'_merge.fastq' | wc -l) / 4
+done < sample_name.txt > merging_reads.txt
+    
+#Quality-filtering merged reads (fastq_maxee_rate 0.001)
+
+while read p; 
+    do
+    usearch9 -fastq_filter ''"$p"'_merge.fastq'  -fastq_maxee_rate 0.001 \
+	-fastaout ''"$p"'_merge.filt.fasta' -threads 16;
+done < sample_name.txt
+    
+   
+# Number of sequence after Quality-filtering
+while read p; 
+    do
+    grep -c "^>"  ''"$p"'_merge.filt.fasta' ;
+done < sample_name.txt > quality_filtering_reads.txt
+
+#Discard sequence without primer sequences and then remove PCR primer sequences 
+#18S-V9
+while read p; 
+    do
+    cutadapt -g TTGTACACACCGCCC -a CCTTCYGCAGGTTCACCTAC \
+   -o ''"$p"'_primercut.fasta'  \
+   ''"$p"'_merge.filt.fasta'   --e 0 --discard-untrimmed --match-read-wildcards
+done < sample_name.txt
+
+ # Number of sequence after primer
+while read p; 
+    do
+    grep -c "^>"  ''"$p"'_primercut.fasta' ;
+done < sample_name.txt > primer_cut_reads.txt
+   
+#Remove all Illumina sequences and Ns
+while read p;      
+    do    
+    cutadapt -b file:/home/cyung/Documents/ncbi_univec_adaptors_primers.fasta -e 0.02 --overlap=5 -m 100 --max-n 0 \
+    -o ''"$p"'_cut.fasta'   \
+    ''"$p"'_primercut.fasta' ;  
+done < sample_name.txt
+
+#Number of sequence after Ns
+while read p; 
+    do
+    grep -c "^>"  ''"$p"'_cut.fasta';
+done < sample_name.txt > N_removed_reads.txt
+    
+#Add barcode labels onto sequence read identifiers
+while read p; 
+    do
+    fasta_number2.py ''"$p"'_cut.fasta' "$p" > ''"$p"'_label.fasta'
+done < sample_name.txt
+
+#Concatenate sequence reads from all recently merged files into one file  
+    cat *_label.fasta > SW_18S_V9.fasta
+        
+#Dereplicate the sequences using vsearch (64 bit), min= 2 reads
+    time vsearch --derep_fulllength SW_18S_V9.fasta --output SW_18S_V9_derep.fasta --sizeout --minuniquesize 2 --log=log --threads 16
+
+#Clustering at different similarity using Usearch9
+    time usearch9 -cluster_otus SW_18S_V9_derep.fasta -otus SW_18S_V9_derep_cluster_98.fasta -otu_radius_pct 0.99 -threads 16
+    time usearch9 -cluster_otus SW_18S_V9_derep.fasta -otus SW_18S_V9_derep_cluster_97.fasta -otu_radius_pct 0.985 -threads 16
+    time usearch9 -cluster_otus SW_18S_V9_derep.fasta -otus SW_18S_V9_derep_cluster_95.fasta -otu_radius_pct 0.975 -threads 16
+
+#Denoising using Usearch10
+    time usearch10 -unoise3 SW_18S_V9_derep.fasta  -zotus SW_18S_V9_derep_zotus.fasta 
+
+#Rename OTUs
+	fasta_number.py SW_18S_V9_derep_cluster_98.fasta OTU_ > SW_18S_V9_derep_cluster_98_num.fasta 
+	fasta_number.py SW_18S_V9_derep_cluster_97.fasta OTU_ > SW_18S_V9_derep_cluster_97_num.fasta 
+	fasta_number.py SW_18S_V9_derep_cluster_95.fasta OTU_ > SW_18S_V9_derep_cluster_95_num.fasta 
+	fasta_number.py SW_18S_V9_derep_zotus.fasta OTU_ > SW_18S_V9_derep_zotus_num.fasta 
+
+#Assign reads to OTUs
+    vsearch --usearch_global SW_18S_V9.fasta --db SW_18S_V9_derep_cluster_98_num.fasta  --id .99 --uc SW_18S_V9_derep_cluster_98.uc --threads 16 
+    vsearch --usearch_global SW_18S_V9.fasta --db SW_18S_V9_derep_cluster_97_num.fasta  --id .985 --uc SW_18S_V9_derep_cluster_97.uc --threads 16 
+    vsearch --usearch_global SW_18S_V9.fasta --db SW_18S_V9_derep_cluster_95_num.fasta  --id .975 --uc SW_18S_V9_derep_cluster_95.uc --threads 16 
+    usearch10 -otutab SW_18S_V9.fasta -zotus SW_18S_V9_derep_zotus_num.fasta -otutabout SW_18S_V9_derep_zotus.txt   
+    
+#Create an OTU table
+    uc2otutab.py SW_18S_V9_derep_cluster_98.uc > SW_18S_V9_derep_cluster_98.txt
+    uc2otutab.py SW_18S_V9_derep_cluster_97.uc > SW_18S_V9_derep_cluster_97.txt
+    uc2otutab.py SW_18S_V9_derep_cluster_95.uc > SW_18S_V9_derep_cluster_95.txt
+
+#Convert OTU table from txt to biom format
+	biom convert -i SW_18S_V9_derep_cluster_98.txt -o SW_18S_V9_derep_cluster_98.biom --table-type="OTU table" --to-hdf5
+	biom convert -i SW_18S_V9_derep_cluster_97.txt -o SW_18S_V9_derep_cluster_97.biom --table-type="OTU table" --to-hdf5
+	biom convert -i SW_18S_V9_derep_cluster_95.txt -o SW_18S_V9_derep_cluster_95.biom --table-type="OTU table" --to-hdf5
+	biom convert -i SW_18S_V9_derep_zotus.txt -o SW_18S_V9_derep_zotus.biom --table-type="OTU table" --to-hdf5
+
+#Start QIIME
+source activate qiime1
+
+#Summarize OTU table
+	biom summarize-table -i SW_18S_V9_derep_cluster_98.biom  -o SW_18S_V9_derep_cluster_98_summary.txt
+	biom summarize-table -i SW_18S_V9_derep_cluster_97.biom  -o SW_18S_V9_derep_cluster_97_summary.txt
+	biom summarize-table -i SW_18S_V9_derep_cluster_95.biom  -o SW_18S_V9_derep_cluster_95_summary.txt
+	biom summarize-table -i SW_18S_V9_derep_zotus.biom  -o SW_18S_V9_derep_zotus_summary.txt
+
+#Assign taxonomy (method: uclust; Minimum percent similarity: 0.9; database: refv9_20170811_nico.fasta)
+assign_taxonomy.py -i SW_18S_V9_derep_cluster_98_num.fasta -o assigned_taxonomy/ -t refv9/refv9_20170811_nico_tax.txt -r refv9/refv9_20170811_nico.fasta --similarity 0.9 
+assign_taxonomy.py -i SW_18S_V9_derep_cluster_97_num.fasta -o assigned_taxonomy/ -t refv9/refv9_20170811_nico_tax.txt -r refv9/refv9_20170811_nico.fasta --similarity 0.9
+assign_taxonomy.py -i SW_18S_V9_derep_cluster_95_num.fasta -o assigned_taxonomy/ -t refv9/refv9_20170811_nico_tax.txt -r refv9/refv9_20170811_nico.fasta --similarity 0.9
+assign_taxonomy.py -i SW_18S_V9_derep_zotus_num.fasta -o assigned_taxonomy/ -t refv9/refv9_20170811_nico_tax.txt -r refv9/refv9_20170811_nico.fasta --similarity 0.9
+
+#Add taxonomy to OTU table
+    
+    biom add-metadata -i SW_18S_V9_derep_cluster_98.biom  -o SW_18S_V9_derep_cluster_98_tax.biom    --observation-metadata-fp assigned_taxonomy/SW_18S_V9_derep_cluster_98_num_tax_assignments.txt --observation-header OTUID,taxonomy,confidence --sc-separated taxonomy --float-fields confidence
+	biom convert -i SW_18S_V9_derep_cluster_98_tax.biom -o SW_18S_V9_derep_cluster_98_tax.txt --to-tsv --header-key taxonomy
+
+    biom add-metadata -i SW_18S_V9_derep_cluster_97.biom  -o SW_18S_V9_derep_cluster_97_tax.biom    --observation-metadata-fp assigned_taxonomy/SW_18S_V9_derep_cluster_97_num_tax_assignments.txt --observation-header OTUID,taxonomy,confidence --sc-separated taxonomy --float-fields confidence
+	biom convert -i SW_18S_V9_derep_cluster_97_tax.biom -o SW_18S_V9_derep_cluster_97_tax.txt --to-tsv --header-key taxonomy
+  
+    biom add-metadata -i SW_18S_V9_derep_cluster_95.biom  -o SW_18S_V9_derep_cluster_95_tax.biom    --observation-metadata-fp assigned_taxonomy/SW_18S_V9_derep_cluster_95_num_tax_assignments.txt --observation-header OTUID,taxonomy,confidence --sc-separated taxonomy --float-fields confidence
+	biom convert -i SW_18S_V9_derep_cluster_95_tax.biom -o SW_18S_V9_derep_cluster_95_tax.txt --to-tsv --header-key taxonomy
+
+    biom add-metadata -i SW_18S_V9_derep_zotus.biom  -o SW_18S_V9_derep_zotus_tax.biom    --observation-metadata-fp assigned_taxonomy/SW_18S_V9_derep_zotus_num_tax_assignments.txt --observation-header OTUID,taxonomy,confidence --sc-separated taxonomy --float-fields confidence
+	biom convert -i SW_18S_V9_derep_zotus_tax.biom -o SW_18S_V9_derep_zotus_tax.txt --to-tsv --header-key taxonomy
+
+#Taxonomy plots
+summarize_taxa_through_plots.py -o SW_18S_V9_derep_cluster_98_tax -i SW_18S_V9_derep_cluster_98_tax.biom
+summarize_taxa_through_plots.py -o SW_18S_V9_derep_cluster_97_tax -i SW_18S_V9_derep_cluster_97_tax.biom
+summarize_taxa_through_plots.py -o SW_18S_V9_derep_cluster_95_tax -i SW_18S_V9_derep_cluster_95_tax.biom
+summarize_taxa_through_plots.py -o SW_18S_V9_derep_zotus_tax -i SW_18S_V9_derep_zotus_tax.biom
+
+
+
+
