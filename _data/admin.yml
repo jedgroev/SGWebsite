@@ -70,10 +70,11 @@
     - RNA-Seq
     - R
 
-- name: Grace Farmiloe
-  position: Board member
-  affiliation: UvA SILS
-  github: Farmiloe3
+- name: Fred White
+  position: regular contributor
+  affiliation: University of Amsterdam (SILS)
+  github: Fred-White94
   interests:
-    - Snakemake
-    - Genomics
+    - Feature selection
+    - Data Science
+    - R

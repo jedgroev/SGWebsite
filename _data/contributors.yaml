@@ -7,15 +7,6 @@
     - Snakemake
     - Genomics
     
-- name: Fred White
-  position: regular contributor
-  affiliation: University of Amsterdam (SILS)
-  github: Fred-White94
-  interests:
-    - Feature selection
-    - Data Science
-    - R
-    
 - name: Pietro Marchesi
   position: regular contributor
   affiliation: UvA SILS
@@ -55,3 +46,11 @@
   interests:
     - Research Data Management
     - Figshare
+
+- name: Grace Farmiloe
+  position: Board member
+  affiliation: UvA SILS
+  github: Farmiloe3
+  interests:
+    - Snakemake
+    - Genomics
