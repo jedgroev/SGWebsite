@@ -49,5 +49,5 @@ Have a look at the structure of the dataframe using `str(df)` and `head(df)`
 
 # Going further / Useful links
 - R for Data Science (data visualisation chapter): https://r4ds.had.co.nz/data-visualisation.html
-- 
+- The "Grammar of graphics" clearly explained: the theoretical foundation of ggplot2: https://moderndive.com/3-viz.html
 
