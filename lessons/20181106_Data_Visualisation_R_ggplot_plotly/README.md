@@ -14,9 +14,12 @@ We want to measure the effect of a bacteria (E.coli) on the immune system of pla
 To do so, we measure the fluorescence of leaf disks at two different wavelenghts and at three different time points (0,2 and 4 hours after inoculation).  
 In the provided dataset, each row is a measurement of the fluorescence (column `fluorescence`) of one leaf disc. There is also a column (`fluo_normalised`) of the normalised fluorescence (normalised relatively to timepoint 0h).   
 
+
+## Data download 
+You can download the dataset at Zenodo (stable data archive): https://doi.org/10.5281/zenodo.1477672  
+
 ## Data visualisation 
 You can visualise the dataframe on Github: https://github.com/ScienceParkStudyGroup/studyGroup/blob/gh-pages/lessons/20181106_Data_Visualisation_R_ggplot_plotly/data.tsv      
-You can download the dataset at Zenodo (stable data archive): https://doi.org/10.5281/zenodo.1477672  
 Have a first look at the dataframe. What are the different experimental variables? Where are the measurements stored?  
 
 ## Draw your ideal plot
