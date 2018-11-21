@@ -6,6 +6,7 @@ whoWeAre: Who Are We
 links: links
 contact: Contact
 tellMeMore: Tell Me More
+lessons: lessons
 
 activitiesSubheading: "Amsterdam Science Park Study Group is dedicated to building a community of computational biologists and bioinformaticians. This Study Group promotes skill sharing and collaboration by (1) organizing one-hour interactive workshops, (2) regularly organise co-working sessions for peer-to-peer assistance, (4) act as local hub to set-up Software and Data Carpentry workshops and, last but not least (4) bring researchers together at social events like Hacky Hours hackatons. All are welcome to this study group, regardless of scientific research area, affiliation or training level."
 activitiesSubheading2: "All are welcome! Regardless of scientific research area, affiliation or programming level (absolute beginner to expert)"
@@ -34,11 +35,11 @@ iCal: 'If you use another calendar app, you can copy and paste <a href="%CALENDA
 
 sayHi: Feel free to contact us 
 contactSubheading: 'Stay in touch using the Slack workspace, mailing list or through emails'
-contact: contact us
+contact: contact
 
 help: Don't stay alone in the data ocean!
 helpSubheading: Click on 'Request assistance' to get help. Then select "New issue" and describe your request 
-help: Get help
+help: help
 
 whoWeAre: Who We Are
 whoWeAreSubheading: "We are a community of life science researchers from SILS and IBED institutes."
