@@ -1,6 +1,6 @@
 ---
-title: From PhD student to Data Scientist - Sarah Stolle
-text:  Discover how more expertise in data analysis can broaden your career perspectives
+title: From PhD student to Data Scientist/Software Engineer - Sarah Stolle & Till Bey
+text:  Discover how more expertise in programmming & data analysis can enhance your science and broaden your career perspectives
 location: D1.112
 link: 
 date: 2018-12-04
