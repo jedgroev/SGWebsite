@@ -3,7 +3,7 @@ title: RNA-Seq hands-on workshop - Max van Hooren, Tijs Bliek & Marc Galland
 text:  Come and discover the power of RNA-Seq during a practical afternoon session
 location: room G3.10
 link: 
-date: 2019-01-29
+date: 2019-03-07
 startTime: '14:00'
 endTime: '17:00'
 ---
