@@ -38,8 +38,7 @@ BiocManager::install("mixOmics", version = "3.8")
 
 ## PCA in R using the mixOmics package
 We will make use of the [mixOmics](https://bioconductor.org/packages/release/bioc/html/mixOmics.html) R package that contains methods to conduct PCA and other analyses on multivariate datasets.
-
-Click on the link to access the related Rmarkdown notebook
+The related Rmarkdown notebook is [here](https://github.com/ScienceParkStudyGroup/studyGroup/blob/gh-pages/lessons/20190124_PCA_Huub_Marc/PCA.Rmd).
 
 ## Bring Your Own Dataset (BYOD)
 If you'd like to bring your own data, please make sure it can be imported into R. 
