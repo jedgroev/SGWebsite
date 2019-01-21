@@ -4,7 +4,7 @@
    - Marc Galland (Support staff, UvA-SILS)
  - **Research field**: Data Analysis
  - **Lesson topic**: perforping a Principal Component Analysis (PCA) on given multivariate dataset
- - **Lesson content URL**: <https://github.com/ScienceParkStudyGroup/studyGroup/tree/gh-pages/lessons/20190124_PCA_Huub/>
+ - **Lesson content URL**: https://github.com/ScienceParkStudyGroup/studyGroup/tree/gh-pages/lessons/20190124_PCA_Huub_Marc/
 
 # Introduction
 Principal Component Analysis is a tool to bring out patterns in your (big) data. It can be used to visualize and explore data. In this hand on tutorial PCA will be explained in simple terms. Further it will be shown how to do a PCA and how to visualize the results in R.
