@@ -22,6 +22,9 @@ The first PC is defined as the linear combination of the original variables that
 
 # Practical hands-on sessions (Marc)
 
+## Prerequesites / level
+You should be able to start R and RStudio. Most commands will be thoroughly explained so no need to be an R expert!
+
 ## Setup 
 Make sure you have a working version of R and RStudio installed.
 __You should have R version 3.5 or higher to be able to perform this tutorial.__ You can find the installation package for all systems [here](https://cran.r-project.org/) on the Comprehensive R Archive Network (CRAN).  
@@ -33,9 +36,8 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 BiocManager::install("mixOmics", version = "3.8")
 ``` 
 
-## PCA in R
+## PCA in R using the mixOmics package
 We will make use of the [mixOmics](https://bioconductor.org/packages/release/bioc/html/mixOmics.html) R package that contains methods to conduct PCA and other analyses on multivariate datasets.
-
 
 Click on the link to access the related Rmarkdown notebook
 
