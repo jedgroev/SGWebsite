@@ -27,10 +27,10 @@ Marc, on behalf of the Study Group board
 ## Advertise through the Slack workspace
 A Slack workspace (__scienceparkstudygroup.slack.com__) was created to help general communication within the local study group community.  
 If you are not a member of the Science Park Study Group Slack workshape, use this [link](https://scienceparkstudygroup.slack.com/join/signup "Join the Slack workspace").  
-Once you are in Slack, you can post an event in the #general channel. Simply type `"/events create"` in the #general channel. 
+Once you are in Slack, you can post an event in the #general channel. Simply type `/events create` in the #general channel. 
 
 ## Advertise through posters
-
+Simple posters hanged in the corridors, at the coffee corners, etc. to announce the event are always efficient! You can find an example of a previously made poster [here](../blob/master/posters/2018/2018-oct-dec-events.pdf).
 
 ## Make sure the Google Calendar is updated
 You can sign in and then add your event in the Google Calendar. It will automatically sent a notification in the Slack #general channel.
