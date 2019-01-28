@@ -4,9 +4,9 @@ When you organise a Study Group event, it is very important to properly advertis
 ## Advertise through emails  
 Secretaries from SILS and IBED can be reached through two mailing adresses:
 - SILS secretaries (Laura & Aly): sils-secr-science@uva.nl
-- IBED secretaries: 
+- IBED secretaries: Secr.IBED.WTCW-science@uva.nl
 
-Here is an example email:    
+Here is an example email that you can send to both secretary offices:      
 ```
 Dear Study Groupers,
 Tomorrow Tuesday, we have a session on Principal Component Analysis (PCA). This tool brings out patterns in your (big) data and can be used to visualize and explore data.     
