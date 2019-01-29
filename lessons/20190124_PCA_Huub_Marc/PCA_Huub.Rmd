@@ -40,13 +40,10 @@ for (i in 1:256){
 writeTIFF(cam2,"Z:/BDA/cam2.tif") # choose a proper destination on your machine
 ```
 
-<<<<<<< HEAD
-# PCA exploration
-The DATA
+# PCA on random data
 
-
+Let's make some random data and see how PCA results look if there is no information in the data.
 ```{r}
-# Let's make some random data and see how PCA results look if there is no information in the data.
 xvec <- rnorm(12*86)
 Xrand=matrix(xvec,12,86)
 
@@ -62,6 +59,98 @@ for (i in 1:npc){
   Xest  <- T1[,1:i] %*% t(P1[,1:i])
   ssqtot[i] <- 100 * (1-sum((X1-Xest)*(X1-Xest))/ssqtotal)
 }
+
 ssq=c(ssqtot[1],ssqtot[2:10]-ssqtot[1:9])
 data.frame(ssq=ssq,ssqtot=ssqtot)
 ```
+
+Plot the first score against the second score.
+```{r}
+plot(T[1:12,1],T[1:12,2], pch=3, col="blue", xlab= "T1",ylab ="T2", main = " scores")
+points(T[7:12,1],T[7:12,2], pch=8, col="red")
+```
+
+Put an artifical effect into the random data.  
+Do the PCA again.
+```{r}
+# add some artifial effect
+Xrand[1:6,1:10] <- Xrand[1:6,1:10] + 5
+
+# do the pca again
+m1= colMeans(Xrand) 				#calculates column means
+X1=sweep(Xrand,2,m1,FUN="-")		#subtract the column means
+ssqtotal <- sum(X1*X1)			# calculates the sum of squares
+USV <- svd(X1)					# see the help for this function
+T1 <- USV$u %*% diag(USV$d)			# calculates the scores
+P1 <- USV$v					# calculates the loadings
+npc <- 10						# number of components
+ssqtot <- 0 * (1:npc)
+for (i in 1:npc){
+  Xest  <- T1[,1:i] %*% t(P1[,1:i])
+  ssqtot[i] <- 100 * (1-sum((X1-Xest)*(X1-Xest))/ssqtotal)
+}
+ssq=c(ssqtot[1],ssqtot[2:10]-ssqtot[1:9])
+data.frame(ssq=ssq,ssqtot=ssqtot)
+```
+
+Plot the first score against the second score once again.
+```{r}
+plot(T[1:12,1],T[1:12,2], pch=3, col="blue", xlab= "T1",ylab ="T2", main = " scores")
+points(T[7:12,1],T[7:12,2], pch=8, col="red")
+```
+
+# PCA on real data
+
+## Load dataset
+Load the dataset. These dataset gives metabolites concentrations for 7control plants and 7 plants placed in the dark.  
+Make sure you indicate the correct file path on your system. 
+```{r}
+data <- read.csv(file='Caldana.csv') # indicate the correct path on your system
+X <- as.matrix(data)
+```
+
+## PCA computation
+Perform a Principal Component Analysis of the untransformed and log transformed data. In both cases center the data (for the case of the transformed data, first take the logarithm of the data, then mean center the data).
+```{r}
+m1= colMeans(X) 					   # calculates column means
+X1=sweep(X,2,m1,FUN="-")		 # subtract the column means
+ssqtotal <- sum(X1*X1)			 # calculates the sum of squares
+USV <- svd(X1)					     # see the help for this function
+T1 <- USV$u %*% diag(USV$d)	 # calculates the scores
+P1 <- USV$v					         # calculates the loadings
+npc <- 10						         # number of components
+ssqtot <- 0 * (1:npc)
+for (i in 1:npc){
+  Xest  <- T1[,1:i] %*% t(P1[,1:i])
+  ssqtot[i] <- 100 * (1-sum((X1-Xest)*(X1-Xest))/ssqtotal)
+}
+ssq=c(ssqtot[1],ssqtot[2:10]-ssqtot[1:9])
+data.frame(ssq=ssq,ssqtot=ssqtot)
+```
+T1 are the scores, P1 the loadings, ssq shows information on the variance explained. The build in R function svd calculates a singular value decomposition 
+Note the dataframe shows: PCnumber, Variance explained per component and cumulative variation explained.
+
+## Focus on scores
+To closely look at the difference between the not transformed data and the log transformed data we will take a look at the scores plot and at the residuals histogram plot of both sets.  
+```{r}
+plot(T1[1:12,1],T1[1:12,2], pch=3, col="blue", xlab= "T1",ylab ="T2", main = " scores")
+points(T1[7:12,1],T1[7:12,2], pch=8, col="red")
+```
+
+## Focus on loadings
+Make a plot of the loadings
+```{r}
+plot(P2[,1],P2[,2])
+text(P2[,1],P2[,2],1:63)
+```
+
+To connect the names with the numbers you can use `names(data)`.  
+
+Look at a number of metabolites and try to understand the relationship with the data. Look at Table 2 in the Eisner paper at the muscle loss column.   
+Can you understand the relationship between the PCA model and the variation in the data from this Table?  
+
+
+```{r}
+
+```
+
