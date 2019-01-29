@@ -1,0 +1,72 @@
+---
+title: "PCA"
+author: "Huub Hoefsloot"
+date: "29 January 2019"
+output: html_document
+---
+
+# Setup
+
+## Warm up
+Let's multiply two vectors
+```{r}
+t1 <- c(1,2,4,8,8)
+p1 <- c(2,2,4)
+t1 %*% t(p1)
+
+```
+
+## Library
+```{r}
+install.packages("tiff")
+library("tiff")
+```
+
+## TIFF file
+You should first download the `cameraman.tif' file on your local machine. 
+```{r}
+# put the tif file in your working directory
+cam <- readTIFF('cameraman.tif', native = FALSE, all = FALSE, convert = FALSE, info = FALSE, indexed = FALSE, as.is = FALSE)
+N <- 5
+cam2 <- USV$u[,1:N] %*% diag(USV$d[1:N]) %*% t(USV$v[,1:N])
+
+# a tif file should have value between 0 and 1 so I need to do a correction
+for (i in 1:256){
+     for (j in 1:256){
+         if (cam2[i,j]<0) {cam2[i,j]=0}
+         if (cam2[i,j]>1) {cam2[i,j]=1}
+     }
+ }
+writeTIFF(cam2,"Z:/BDA/cam2.tif") # choose a proper destination on your machine
+```
+
+# PCA exploration
+The DATA
+
+
+```{r}
+# Let's make some random data and see how PCA results look if there is no information in the data.
+xvec <- rnorm(12*86)
+Xrand=matrix(xvec,12,86)
+
+m1= colMeans(Xrand) 				    #calculates column means
+X1=sweep(Xrand,2,m1,FUN="-")		#subtract the column means
+ssqtotal <- sum(X1*X1)			    # calculates the sum of squares
+USV <- svd(X1)					        # see the help for this function
+T <- USV$u %*% diag(USV$d)			# calculates the scores
+P <- USV$v					            # calculates the loadings
+npc <- 10						            # number of components
+ssqtot <- 0 * (1:npc)
+for (i in 1:npc){
+  Xest  <- T1[,1:i] %*% t(P1[,1:i])
+  ssqtot[i] <- 100 * (1-sum((X1-Xest)*(X1-Xest))/ssqtotal)
+}
+ssq=c(ssqtot[1],ssqtot[2:10]-ssqtot[1:9])
+data.frame(ssq=ssq,ssqtot=ssqtot)
+```
+
+
+
+
+
+
