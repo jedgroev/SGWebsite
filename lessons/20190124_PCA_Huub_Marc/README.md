@@ -1,5 +1,5 @@
 # Principal Component Analysis
- - **Authors**: 
+ - **Authors**:
    - Huub Hoefsloot (Assistant-Professor, UvA-BDA)
    - Marc Galland (Data Science/Manager Facilitator, UvA-SILS)
  - **Research field**: Data Analysis
@@ -20,37 +20,38 @@ The principal components are obtained so that their variance is maximised. To th
 
 The first PC is defined as the linear combination of the original variables that explains the greatest amount of variation. The second PC is then defined as the linear combination of the original variables that accounts for the greatest amount of the remaining variation subject of being orthogonal (uncorrelated) to the first component. Subsequent components are defined likewise for the other PCA dimensions. The user must therefore report how much information is explained by the first PCs as these are used to graphically represent the PCA outputs.
 
-# Practical hands-on session (Huub) 
+# Practical hands-on session (Huub)
+
 ## Prerequesites / level
 You should be able to start R and RStudio. Most commands will be thoroughly explained so no need to be an R expert!
 
-## Setup 
+## Setup
 Make sure you have a working version of R and RStudio installed.
 
-The related Rmarkdown notebook is [here](https://github.com/ScienceParkStudyGroup/studyGroup/blob/gh-pages/lessons/20190124_PCA_Huub_Marc/PCA_Huub.Rmd).
+The related Rmarkdown notebook is [here](https://github.com/ScienceParkStudyGroup/studyGroup/blob/gh-pages/lessons/20190124_PCA_Huub_Marc/Huub/PCA_Huub.Rmd).
 
 # (bonus session if time allows it) Practical hands-on session (Marc)
 
 ## Prerequesites / level
 You should be able to start R and RStudio. Most commands will be thoroughly explained so no need to be an R expert!
 
-## Setup 
+## Setup
 Make sure you have a working version of R and RStudio installed.
 __You should have R version 3.5 or higher to be able to perform this tutorial.__ You can find the installation package for all systems [here](https://cran.r-project.org/) on the Comprehensive R Archive Network (CRAN).  
- 
+
 Once you have the right version of R (3.5 or higher), install the `mixOmics` package from the Bioconductor channel:
 ```
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 BiocManager::install("mixOmics", version = "3.8")
-``` 
+```
 
 ## PCA in R using the mixOmics package
 We will make use of the [mixOmics](https://bioconductor.org/packages/release/bioc/html/mixOmics.html) R package that contains methods to conduct PCA and other analyses on multivariate datasets.
-The related Rmarkdown notebook is [here](https://github.com/ScienceParkStudyGroup/studyGroup/blob/gh-pages/lessons/20190124_PCA_Huub_Marc/PCA.Rmd).
+The related Rmarkdown notebook is [here](https://github.com/ScienceParkStudyGroup/studyGroup/blob/gh-pages/lessons/20190124_PCA_Huub_Marc/Marc/PCA.Rmd).
 
 ## Bring Your Own Dataset (BYOD)
-If you'd like to bring your own data, please make sure it can be imported into R. 
+If you'd like to bring your own data, please make sure it can be imported into R.
 You should be able to run this code without problem:
 
 ```
