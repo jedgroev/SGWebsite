@@ -40,6 +40,7 @@ for (i in 1:256){
 writeTIFF(cam2,"Z:/BDA/cam2.tif") # choose a proper destination on your machine
 ```
 
+<<<<<<< HEAD
 # PCA exploration
 The DATA
 
@@ -64,9 +65,3 @@ for (i in 1:npc){
 ssq=c(ssqtot[1],ssqtot[2:10]-ssqtot[1:9])
 data.frame(ssq=ssq,ssqtot=ssqtot)
 ```
-
-
-
-
-
-
