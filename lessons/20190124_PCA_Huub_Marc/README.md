@@ -20,7 +20,16 @@ The principal components are obtained so that their variance is maximised. To th
 
 The first PC is defined as the linear combination of the original variables that explains the greatest amount of variation. The second PC is then defined as the linear combination of the original variables that accounts for the greatest amount of the remaining variation subject of being orthogonal (uncorrelated) to the first component. Subsequent components are defined likewise for the other PCA dimensions. The user must therefore report how much information is explained by the first PCs as these are used to graphically represent the PCA outputs.
 
-# Practical hands-on sessions (Marc)
+# Practical hands-on session (Huub) 
+## Prerequesites / level
+You should be able to start R and RStudio. Most commands will be thoroughly explained so no need to be an R expert!
+
+## Setup 
+Make sure you have a working version of R and RStudio installed.
+
+The related Rmarkdown notebook is [here](https://github.com/ScienceParkStudyGroup/studyGroup/blob/gh-pages/lessons/20190124_PCA_Huub_Marc/PCA_Huub.Rmd).
+
+# (bonus session if time allows it) Practical hands-on session (Marc)
 
 ## Prerequesites / level
 You should be able to start R and RStudio. Most commands will be thoroughly explained so no need to be an R expert!
