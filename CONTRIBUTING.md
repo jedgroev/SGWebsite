@@ -6,16 +6,17 @@ If you're reading this, it means that you'd like to contribute to the Amsterdam 
 Photo by Belinda Fewings on Unsplash  
 ![alt text](https://unsplash.com/photos/6wAGwpsXHE0 "Welcome!")
 
-# Table of Contents
-1. [Making a one-hour lesson](#one-hour-lesson)
 
-##### Table of Contents  
+
+# Table of Contents  
 [Making a one-hour lesson](#one-hour-lesson)  
 [Emphasis](#emphasis)  
 ...snip...    
 
-<a name="one-hour-lesson"/>
-# Making a one-hour lesson
+<a href="url">link text</a>
+
+
+# <a name="one-hour-lesson"> Making a one-hour lesson <a/>
 
 
 # [Making a one-hour lesson](#one-hour-lesson)
