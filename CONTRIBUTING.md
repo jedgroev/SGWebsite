@@ -6,29 +6,28 @@ If you're reading this, it means that you'd like to contribute to the Amsterdam 
 Photo by Belinda Fewings on Unsplash  
 ![alt text](https://unsplash.com/photos/6wAGwpsXHE0 "Welcome!")
 
-
-
 # Table of Contents  
 [Making a one-hour lesson](#one-hour-lesson)  
-[Emphasis](#emphasis)  
-...snip...    
-
+[Organising a special event](#special-event) 
+[Acting as one moderator/contributor in one of the Slack workspace](#slack) 
 
 
 <h1><a name="one-hour-lesson">Making a one-hour lesson </a></h1>
-
-
 Leading and making a one-hour lesson is maybe the most immediate way to contribute. You can either 
 1. Create a new lesson repository inside the [lessons](lessons/) repositories. Name it with the date of the lesson, the subject and the person leading it. For instance `20190102_Shiny_demo_Joachim`
 2. Create a `README.md` file into that new repository. This file should contain:
   - the author(s) of the lesson
   - the topic of the lesson
   - the entrance level for that lesson i.e. "beginner", "false beginner" or "advanced" for instance. 
-  - the prerequisites for that lesson.
-3.
+  - the prerequisites for that lesson (what do people need to know to go through the lesson)
+3. Learning outcome of the one-hour lesson
 
 We use the [Markdown formatting language](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) to format the `README.md` file for every lesson. 
-# Organising a special event 
 
-# Acting as a moderator/ in one of the Slack workspace
+<h1><a name="special-event">Organising a special event</a></h1>
+ipsum loret ...  
+ipsum loret ...  
+
+<h1><a name="slack">Acting as one moderator/contributor in one of the Slack workspace</a></h1>
+The Science Park Study Group has a Slack workspace
 You could become a moderator 
