@@ -9,6 +9,14 @@ Photo by Belinda Fewings on Unsplash
 # Table of Contents
 1. [Making a one-hour lesson](#one-hour-lesson)
 
+##### Table of Contents  
+[Making a one-hour lesson](#one-hour-lesson)  
+[Emphasis](#emphasis)  
+...snip...    
+
+<a name="one-hour-lesson"/>
+# Making a one-hour lesson
+
 
 # [Making a one-hour lesson](#one-hour-lesson)
 Leading and making a one-hour lesson is maybe the most immediate way to contribute. You can either 
