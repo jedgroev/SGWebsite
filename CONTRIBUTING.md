@@ -7,9 +7,9 @@ Photo by Belinda Fewings on Unsplash
 ![alt text](https://unsplash.com/photos/6wAGwpsXHE0 "Welcome!")
 
 # Table of Contents  
-[Making a one-hour lesson](#one-hour-lesson)  
-[Organising a special event](#special-event) 
-[Acting as one moderator/contributor in one of the Slack workspace](#slack) 
+[Making a one-hour lesson](#one-hour-lesson)    
+[Organising a special event](#special-event)   
+[Acting as one moderator/contributor in one of the Slack workspace](#slack)   
 
 
 <h1><a name="one-hour-lesson">Making a one-hour lesson </a></h1>
@@ -29,5 +29,10 @@ ipsum loret ...
 ipsum loret ...  
 
 <h1><a name="slack">Acting as one moderator/contributor in one of the Slack workspace</a></h1>
-The Science Park Study Group has a Slack workspace
-You could become a moderator 
+The Science Park Study Group has a Slack workspace. Join or find yours here: https://slack.com/signin/find  
+Every scientist with a `@uva.nl` email adress can freely join.   
+
+If you become a moderator for a channel (e.g. `#genomics`), you would:
+- answer questions from other scientists.
+- if you don't know, point the question to someone else (use the `@name` to point to someone in your answer). 
+- make sure questions are being answered after one week or less.
