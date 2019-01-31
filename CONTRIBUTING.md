@@ -9,7 +9,7 @@ Photo by Belinda Fewings on Unsplash
 # Table of Contents  
 [Making a one-hour lesson](#one-hour-lesson)    
 [Organising a special event](#special-event)   
-[Acting as one moderator/contributor in one of the Slack workspace](#slack)   
+[Acting as a Slack moderator](#slack)   
 
 
 <h1><a name="one-hour-lesson">Making a one-hour lesson </a></h1>
@@ -25,6 +25,9 @@ Leading and making a one-hour lesson is maybe the most immediate way to contribu
 We use the [Markdown formatting language](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) to format the `README.md` file for every lesson. 
 
 <h1><a name="special-event">Organising a special event</a></h1>
+Special events are longer Study Group sessions where we adress specific themes. For instance:
+- an afternoon on RNA-Seq (3 hours) to be able to have a short introduction and some hands-on time (cloud computing, plots). 
+- a two-day Carpentry workshop 
 ipsum loret ...  
 ipsum loret ...  
 
