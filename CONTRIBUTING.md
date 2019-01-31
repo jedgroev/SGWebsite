@@ -17,7 +17,7 @@ Photo by Belinda Fewings on Unsplash
 
 <h1><a name="one-hour-lesson">Making a one-hour lesson </a></h1>
 
-# [Making a one-hour lesson](#one-hour-lesson)
+
 Leading and making a one-hour lesson is maybe the most immediate way to contribute. You can either 
 1. Create a new lesson repository inside the [lessons](lessons/) repositories. Name it with the date of the lesson, the subject and the person leading it. For instance `20190102_Shiny_demo_Joachim`
 2. Create a `README.md` file into that new repository. This file should contain:
