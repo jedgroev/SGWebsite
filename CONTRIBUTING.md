@@ -13,11 +13,9 @@ Photo by Belinda Fewings on Unsplash
 [Emphasis](#emphasis)  
 ...snip...    
 
-<a href="url">link text</a>
 
 
-# <a name="one-hour-lesson"> Making a one-hour lesson <a/>
-
+<h1><a name="one-hour-lesson">Making a one-hour lesson </a></h1>
 
 # [Making a one-hour lesson](#one-hour-lesson)
 Leading and making a one-hour lesson is maybe the most immediate way to contribute. You can either 
