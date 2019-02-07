@@ -3,6 +3,7 @@ This is the first event focused on RNA-Seq
 
 * __topic__: mRNA-Seq
 * __authors__: Tijs and Marc  
+* __helpers__: Max van Hooren, Martijs Jonker.
 * __level__: beginners  
 * __learning objectives__:  
     - understand the main steps of a typical mRNA-Seq analysis
@@ -26,16 +27,18 @@ If you don't have an account, please contact Wim de Leeuw (W.C.deLeeuw@uva.nl).
 # Setup
 
 # Schedule
-14.00 - 14.15: know about some basic information about how (Illumina) sequencing works (fastq format)
-14.15 - 14.30: main steps of a typical mRNA-Seq analysis (Ernest Aliche)
-14.30 - 15.00: setup for the practical session: mRNA fastq files + genome + annotation + softwares through conda environment 
-15.00 - 15.30: fastQC of the raw sequencing files. 
-15.30 - 16.00: 
-16.45 - 17.00:
+13.00 - 13.15: know about some basic information about how (Illumina) sequencing works (fastq format)
+13.15 - 13.45: main steps of a typical mRNA-Seq analysis (Ernest Aliche)
+13.45 - 14.30: setup for the practical session: mRNA fastq files + genome + annotation + softwares through conda environment 
+14.30 - 15.00: fastQC of one raw sequencing files. Looping over the different samples for FastQC + trimming (only typing the command). You should check the trimming yourself.
+-- break 15min ---
+15.15 - 16.00: hisat2 alignment + featureCounts for one sample + looping over the different samples. 
+16.00 - 16.15: counts.txt + design.txt file preparation for ideal (online tool).
+16.15 - 17.00: data exploration using the ideal Shiny app.
 (if time allows and/or interest from people): demo of the RNA-Seq Snakemake pipeline (Tijs )
 
 ## Description of the files
 Genome: 1 chromosome of Arabidopsis
-mRNA: a randomly downsampled subset of the original files
+mRNA: a randomly downsampled subset of the original files (single-end)
 GFF annotation: 
 
