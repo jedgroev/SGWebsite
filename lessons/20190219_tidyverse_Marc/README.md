@@ -1,4 +1,4 @@
-# From messy to tidy <a href='https:/tidyr.tidyverse.org'><img src='https://github.com/ScienceParkStudyGroup/studyGroup/blob/gh-pages/img/hex-tidyverse.png' align="right" height="139" /></a>  
+# From messy to tidy <a href='https:/tidyr.tidyverse.org'><img src='../../../img/hex-tidyverse.png' align="right" height="139" /></a>  
  - **Author**: Marc Galland (Data Science/Manager Facilitator, UvA-SILS)
  - **Research field**: Data Science
  - **Language**: R
@@ -28,6 +28,37 @@ Peter and Petra are researchers that work on trichomes (little hairs) that devel
 7. Subset the data to keep only the upper side of the leaf.
 8. Design a one-way ANOVA model that explain the trichome count results.
 
+### The tidy format
+
+- Each variable forms a column.
+- Each observation forms a row.
+- Each type of observational unit forms a table.
+
+<img src='../../img/tidy_data.png' height="300" alt="The tidy format">  
+
+### Examples (from Hadley Wickham tidy data paper)
+
+Table 1. A wide / messy formatting:  
+
+|              	| treatment-a 	| treatment-b 	|
+|--------------	|-------------	|-------------	|
+| John Smith   	| -           	| 2           	|
+| Jane Doe     	| 16          	| 11          	|
+| Mary Johnson 	| 3           	| 1           	|
+
+Table 2. the same data in the tidy format:    
+
+| name         	| treatment 	| result 	|
+|--------------	|-----------	|--------	|
+| John Smith   	|  a        	| -      	|
+| Jane Doe     	| a         	| 16     	|
+| Mary Johnson 	| a         	| 3      	|
+| John Smith   	| b         	| 2      	|
+| Jane Doe     	| b         	| 11     	|
+| Mary Johnson 	| b         	| 1      	|
+
+### Questions
+- what distinguish table "messy"
 
 # Setup and prerequesites
 
@@ -47,3 +78,4 @@ This lesson is for beginners as we will perform the commands together.
 # Resources
 - The tidyr cheatsheet: https://github.com/rstudio/cheatsheets/blob/master/data-import.pdf  
 - The tidyr package Github page: https://github.com/tidyverse/tidyr/blob/master/README.md  
+- The tidy data format: http://vita.had.co.nz/papers/tidy-data.pdf
