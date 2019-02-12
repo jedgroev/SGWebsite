@@ -1,4 +1,4 @@
-# From messy to tidy <a href='https:/tidyr.tidyverse.org'><img src='../../../img/hex-tidyverse.png' align="right" height="139" /></a>  
+# From messy to tidy <a href='https:/tidyr.tidyverse.org'><img src='../../img/hex-tidyverse.png' align="right" height="139" /></a>  
  - **Author**: Marc Galland (Data Science/Manager Facilitator, UvA-SILS)
  - **Research field**: Data Science
  - **Language**: R
