@@ -4,12 +4,18 @@
  - **Language**: R
  - **Level**: for beginners
  - **Lesson topic**: transforming a "messy" dataset into a tidy one. Plotting and performing some tests (ANOVA, post-hoc tests)
- - **Lesson content URL**: https://github.com/ScienceParkStudyGroup/studyGroup/tree/gh-pages/lessons/20190219_tidyverse_Marc/
 
 ## Learning objectives
 After this lesson, you will:
 - know what is the tidy format and the logic behind it.
 - be able to convert a "messy" data format into a "tidy" format using the `tidyr` package.
+- understand how to explore a dataset based on the different experimental factors of your dataset.
+- perform ANOVA and related post-hoc tests on your different experimental factors.
+
+## Dataset
+Peter and Petra are researchers that work on trichomes (little hairs) that develop at the surface of tomato leaves. They have counted the trichomes on the upper and lower side of the leaves of several genotypes (wild-type, mutant1,mutant2) and now want to explore the resulting data and compute some statistical tests. 
+
+<img src='../../img/trichomes.png' height="200" alt="Picture of trichomes">  
 
 
 ## Lesson outline
@@ -17,10 +23,15 @@ After this lesson, you will:
 2. Get a first peek into the dataset: `head`, `glimpse`, `View`
 3. Why is this format not handy to answer data questions?
 4. Identify experimental factors from measured values: defining the key-value pairs of the `gather` function. `?gather` 
-5. 
+5. Transform your dataset format into the tidy format.
+6. Build a few explorative plots using the `ggplot2` package from the `tidyverse` suite.
+7. Subset the data to keep only the upper side of the leaf.
+7. Design a one-way ANOVA modelrelevant statistical tests.
 
 
-## Setup 
+
+# Setup and prerequesites
+
 ### R and RStudio
 You should have R and RStudio installed on your machine.   
 Get R here: https://lib.ugent.be/CRAN/  
@@ -34,7 +45,6 @@ You should know how to start RStudio and have an understanding of the different 
 This lesson is for beginners as we will perform the commands together. 
 
 
-
 # Resources
-The tidyr cheatsheet: https://github.com/rstudio/cheatsheets/blob/master/data-import.pdf
-The tidyr package Github page: https://github.com/tidyverse/tidyr/blob/master/README.md
+- The tidyr cheatsheet: https://github.com/rstudio/cheatsheets/blob/master/data-import.pdf  
+- The tidyr package Github page: https://github.com/tidyverse/tidyr/blob/master/README.md  
