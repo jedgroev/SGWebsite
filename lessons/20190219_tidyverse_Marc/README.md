@@ -15,30 +15,7 @@ After this lesson, you will:
 ## Dataset
 Peter and Petra are researchers that work on trichomes (little hairs) that develop at the surface of tomato leaves. They have both counted the trichomes on both upper and lower sides of the leaves of individuals of several genotypes (wild-type, mutant1,mutant2). They now want to explore the resulting data and compute some statistical tests. 
 
-<style>
-
- /* Three image containers (use 25% for four, and 50% for two, etc) */
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
-/* Clear floats after image containers */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-} 
-</style>
-
- <div class="row">
-  <div class="column">
-    <img src="../../img/trichomes.png" alt="Picture of trichomes" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="../../img/leaf_with_trichomes.png" alt="Scheme of leaf with trichomes" style="width:100%">
-  </div>
-</div>   
+![Picture of trichomes](../../img/trichomes.png) ![Leaf with trichomes](../../img/leaf_with_trichomes.png)
 
 
 ## Lesson outline
