@@ -1,13 +1,15 @@
 # From messy to tidy
  - **Author**: Marc Galland (Data Science/Manager Facilitator, UvA-SILS)
  - **Research field**: Data Science
+ - **Language**: R
+ - **Level**: for beginners
  - **Lesson topic**: transforming a "messy" dataset into a tidy one. Plotting and performing some statistical tests (ANOVA, post-hoc tests)
  - **Lesson content URL**: https://github.com/ScienceParkStudyGroup/studyGroup/tree/gh-pages/lessons/20190219_tidyverse_Marc/
 
 ## Learning objectives
 After this lesson, you will:
 - know what is the tidy format and the logic behind it.
-- 
+- be able to convert a "messy" data format into a "tidy" format using the `tidyr` package.
 
 
 ## Lesson outline
