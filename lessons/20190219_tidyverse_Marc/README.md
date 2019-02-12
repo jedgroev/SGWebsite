@@ -13,7 +13,7 @@ After this lesson, you will:
 - perform ANOVA and related post-hoc tests on your different experimental factors.
 
 ## Dataset
-Peter and Petra are researchers that work on trichomes (little hairs) that develop at the surface of tomato leaves. They have counted the trichomes on the upper and lower side of the leaves of several genotypes (wild-type, mutant1,mutant2) and now want to explore the resulting data and compute some statistical tests. 
+Peter and Petra are researchers that work on trichomes (little hairs) that develop at the surface of tomato leaves. They have both counted the trichomes on both upper and lower sides of the leaves of individuals of several genotypes (wild-type, mutant1,mutant2). They now want to explore the resulting data and compute some statistical tests. 
 
 <img src='../../img/trichomes.png' height="200" alt="Picture of trichomes">  
 
@@ -26,8 +26,7 @@ Peter and Petra are researchers that work on trichomes (little hairs) that devel
 5. Transform your dataset format into the tidy format.
 6. Build a few explorative plots using the `ggplot2` package from the `tidyverse` suite.
 7. Subset the data to keep only the upper side of the leaf.
-7. Design a one-way ANOVA modelrelevant statistical tests.
-
+8. Design a one-way ANOVA model that explain the trichome count results.
 
 
 # Setup and prerequesites
