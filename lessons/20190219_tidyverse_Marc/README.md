@@ -1,6 +1,6 @@
-# Mastering tidyverse
+# From messy to tidy
  - **Author**: Marc Galland (Data Science/Manager Facilitator, UvA-SILS)
- - **Research field**: Data Analysis
+ - **Research field**: Data Science
  - **Lesson topic**: transforming a "messy" dataset into a tidy one. Plotting and performing some statistical tests (ANOVA, post-hoc tests)
  - **Lesson content URL**: https://github.com/ScienceParkStudyGroup/studyGroup/tree/gh-pages/lessons/20190219_tidyverse_Marc/
 
@@ -10,8 +10,13 @@ After this lesson, you will:
 - 
 
 
-## Lesson Outline
-1.
+## Lesson outline
+1. Loading the `tidyverse` library and downloading the dataset  
+2. Get a first peek into the dataset: `head`, `glimpse`, `View`
+3. Why is this format not handy to answer data questions?
+4. Identify experimental factors from measured values: defining the key-value pairs of the `gather` function. `?gather` 
+5. 
+
 
 ## Setup 
 ### R and RStudio
