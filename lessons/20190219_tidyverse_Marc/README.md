@@ -1,9 +1,9 @@
-# From messy to tidy
+# From messy to tidy <a href='https:/tidyr.tidyverse.org'><img src='man/figures/logo.png' align="right" height="139" /></a>  
  - **Author**: Marc Galland (Data Science/Manager Facilitator, UvA-SILS)
  - **Research field**: Data Science
  - **Language**: R
  - **Level**: for beginners
- - **Lesson topic**: transforming a "messy" dataset into a tidy one. Plotting and performing some statistical tests (ANOVA, post-hoc tests)
+ - **Lesson topic**: transforming a "messy" dataset into a tidy one. Plotting and performing some tests (ANOVA, post-hoc tests)
  - **Lesson content URL**: https://github.com/ScienceParkStudyGroup/studyGroup/tree/gh-pages/lessons/20190219_tidyverse_Marc/
 
 ## Learning objectives
