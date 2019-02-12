@@ -19,16 +19,19 @@ Peter and Petra are researchers that work on trichomes (little hairs) that devel
 
 
 ## Lesson outline
-1. Loading the `tidyverse` library and downloading the dataset  
-2. Get a first peek into the dataset: `head`, `glimpse`, `View`
-3. Why is this format not handy to answer data questions?
-4. Identify experimental factors from measured values: defining the key-value pairs of the `gather` function. `?gather` 
-5. Transform your dataset format into the tidy format.
-6. Build a few explorative plots using the `ggplot2` package from the `tidyverse` suite.
-7. Subset the data to keep only the upper side of the leaf.
-8. Design a one-way ANOVA model that explain the trichome count results.
+1. Introduction to the lesson (tidy format, examples, dataset, setup)
+2. Loading the `tidyverse` library and downloading the dataset  
+3. Get a first peek into the dataset: `head`, `glimpse`, `View`
+4. Why is this format not handy to answer data questions?
+5. Identify experimental factors from measured values: defining the key-value pairs of the `gather` function. `?gather` 
+6. Transform your dataset format into the tidy format.
+7. Build a few explorative plots using the `ggplot2` package from the `tidyverse` suite.
+8. Subset the data to keep only the upper side of the leaf.
+9. Design a one-way ANOVA model that explain the trichome count results.
 
-### The tidy format
+# Introduction
+
+## The tidy format
 
 - Each variable forms a column.
 - Each observation forms a row.
@@ -36,7 +39,7 @@ Peter and Petra are researchers that work on trichomes (little hairs) that devel
 
 <img src='../../img/tidy_data.png' height="300" alt="The tidy format">  
 
-### Examples (from Hadley Wickham tidy data paper)
+## Examples (from Hadley Wickham tidy data paper)
 
 Table 1. A wide / messy formatting:  
 
@@ -50,25 +53,22 @@ Table 2. the same data in the tidy format:
 
 | name         	| treatment 	| result 	|
 |--------------	|-----------	|--------	|
-| John Smith   	|  a        	| -      	|
+| John Smith   	| a         	| -      	|
 | Jane Doe     	| a         	| 16     	|
 | Mary Johnson 	| a         	| 3      	|
 | John Smith   	| b         	| 2      	|
 | Jane Doe     	| b         	| 11     	|
 | Mary Johnson 	| b         	| 1      	|
 
-### Questions
-- what distinguish table "messy"
+## Dataset used today
+The dataset is visible on the Github lesson repository. No need to download it, we'll download it together.
 
 # Setup and prerequesites
 
-### R and RStudio
+## R and RStudio
 You should have R and RStudio installed on your machine.   
 Get R here: https://lib.ugent.be/CRAN/  
 Get RStudio here: https://www.rstudio.com/  
-
-### Dataset
-The dataset is visible on the Github lesson repository. No need to download it, we'll download it together.
 
 ## Prerequisites
 You should know how to start RStudio and have an understanding of the different panels of RStudio that's all.  
