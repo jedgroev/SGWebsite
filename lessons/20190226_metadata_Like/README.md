@@ -1,4 +1,4 @@
-# Data about the data <a href='https://www.ebi.ac.uk/ena'><img src='../../img/ena_logo.png' align="right" height="139" /></a>  
+# Data about the data <a href='https://www.ebi.ac.uk/ena'><img src='../../img/ENA-logo.png' align="right" height="139" /></a>  
  - **Author**: Like Fokkens (Postdoctorate) & Marc Galland (Data Science/Manager Facilitator, UvA-SILS)
  - **Research topic**: Research Data Management
  - **Language**: None (Web browser)
@@ -16,3 +16,13 @@ In this workshop we'll show some example of how metadata is used to retrieve rel
 
 
 ## Submitting to MetaboLights
+From the website:
+> MetaboLights is a database for Metabolomics experiments and derived information. The database is cross-species, cross-technique and covers metabolite structures and their reference spectra as well as their biological roles, locations and concentrations, and experimental data from metabolic experiments.
+MetaboLights is the recommended Metabolomics repository for a number of leading journals.
+
+
+
+## Useful links
+* [Recommended data repositories by Nature Scientific Data](https://www.nature.com/sdata/policies/repositories)
+* The European Nucleotide Archive
+* The
