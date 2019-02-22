@@ -1,4 +1,4 @@
-# Data about the data <a href='https://www.ebi.ac.uk/ena'><img src='../../img/ENA-logo.png' align="right" height="139" /></a>  
+# Data about the data <a href='https://www.ebi.ac.uk/ena'><img src='../../img/ENA-logo.png' align="right" height="80" /></a>  
  - **Author**: Like Fokkens (Postdoctorate) & Marc Galland (Data Science/Manager Facilitator, UvA-SILS)
  - **Research topic**: Research Data Management
  - **Language**: None (Web browser)
