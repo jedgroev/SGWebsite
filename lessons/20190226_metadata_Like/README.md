@@ -1,4 +1,4 @@
-# Data about the data From messy to tidy <a href='https:/tidyr.tidyverse.org'><img src='../../img/hex-tidyverse.png' align="right" height="139" /></a>  
+# Data about the data <a href='https://www.ebi.ac.uk/ena'><img src='../../img/ena_logo.png' align="right" height="139" /></a>  
  - **Author**: Like Fokkens (Postdoctorate) & Marc Galland (Data Science/Manager Facilitator, UvA-SILS)
  - **Research topic**: Research Data Management
  - **Language**: None (Web browser)
