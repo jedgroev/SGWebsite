@@ -1,54 +1,16 @@
 <section id="lessons">
-        <div class="container">
-            <div class="row text-center">
-                    <h2 class="section-heading">Lesson Material </h2>
-                    <h3 class="section-subheading text-muted">All our marvelous lesson contents</h3>   
-                    <!-- Lesson section -->
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <h2>By Topic</h2>
-                          {% for lang in site.languages %}
-                          <h3>{{ lang | capitalize }}</h3>
-                          <ul>
-                            {% assign pages_list = site.pages | sort: 'title' %}
-                            {% for node in pages_list %}
-                            {% if node.title != null %}
-      {% if node.visible == true %}
-        {% if node.tags contains lang %}
-          <li><a href="{{ site.github.url | replace:'http:','https:' }}{{ node.url }}">{{ node.title }}</a></li>
-        {% endif %}
-      {% endif %}
-    {% endif %}
-  {% endfor %}  <!-- node -->
-</ul>
-{% endfor %}  <!-- lang -->
-</div>
+    <div class="container">
+      <div class="row text-center">
+        <h2 class="section-heading">Lessons</h2>
+        <h3 class="section-subheading text-muted">{{site.data[site.language].linksSubheading}}</h3>
+      </div>
+    </div>
 
-<div class="col-sm-6">
-<h2>By Level</h2>
-{% for level in site.levels %}
-<h3>{{ level | capitalize }}</h3>
-
-<ul>
-  {% assign pages_list = site.pages | sort: 'title' %}
-  {% for node in pages_list %}
-    {% if node.title != null %}
-      {% if node.visible == true %}
-        {% if node.tags contains level %}
-          <li><a href="{{ site.github.url | replace:'http:','https:' }}{{ node.url }}">{{ node.title }}</a></li>
-        {% endif %}
-      {% endif %}
-    {% endif %}
-  {% endfor %}  <!-- node -->
-</ul>
-{% endfor %}  <!-- level -->
-</div>
-</div>
-</div>  
-            </div>
-        </div>
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <a class='eventTitle' href="https://github.com/ScienceParkStudyGroup/studyGroup/tree/gh-pages/lessons/20190219_tidyverse_Marc">From messy to tidy using tidyverse and to ANOVA</a>
+        <div class="eventSub">A lesson on how to convert a "messy" dataset into a tidy one which allows you to perform filtering, plotting and ANOVA tests smoothly</div>
+        <br>
+      </div>
+    </div>
 </section>
-
-
-
