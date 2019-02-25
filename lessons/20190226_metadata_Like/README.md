@@ -47,7 +47,7 @@ For instance, let's say your favorite organism is tomato :tomato: and you partic
 
 All submitted data is encoded in the standardised and open ISA-Tab format.
 
-## Submitting a metabolic dataset
+## Submitting a metabolic dataset to MetaboLights
 The MetaboLights repository requires that experimental metadata are uploaded according to the _ISA-Tab_ file format.
 
 ### ISA and ISA-Tab formats
@@ -59,27 +59,25 @@ ISA stands for __"Investigation"__, __"Study"__ and __"Assay"__.
 <a href="https://isa-tools.org/format/specification.html"><img src='../../img/isa-model-structure.png' height="400"/></a>       
 
 Description and goal of the ISA format:
-> Built around the 'Investigation' (the project context), 'Study' (a unit of research) and 'Assay' (analytical measurement) data model and serializations (tabular, JSON and RDF), the ISA framework helps you to provide rich description of the experimental metadata (i.e. sample characteristics, technology and measurement types, sample-to-data relationships) so that the resulting data and discoveries are reproducible and reusable.
+> Built around the 'Investigation' (the project context), 'Study' (a unit of research) and 'Assay' (analytical measurement) data model and serializations (tabular, JSON and RDF), the ISA framework helps you to provide rich description of the experimental metadata (i.e. sample characteristics, technology and measurement types, sample-to-data relationships) so that the resulting data and discoveries are reproducible and reusable.  
 
 The ISA-Tab is simply the tabulated version of this format.
 
 ### ISAtools and ISAcreator
-To help you to obtain an ISA-Tab tabular file that you can open in a spreadsheet program such as Excel, you can use the __ISAcreator__ software.
-The ISA-Tab format is required by certain databases such as MetaboLights. A toolbox called __isa-tools__ has been created to facilitate the handling and curation of experimental metadata.      
-<a href="https://isa-tools.org/software-suite.html"><img src='../../img/isa-tools-website.png' height="1200"/></a>     
+A toolbox called __isa-tools__ has been created to facilitate the handling and curation of experimental metadata.      
+<a href="https://isa-tools.org/software-suite.html"><img src='../../img/isa-tools-website.png' height="600"/></a>     
 
 Within that toolbox, you can use the ISAcreator to create the ISA-tabular format for MetaboLights.  
 1. Download it [here](https://github.com/downloads/ISA-tools/ISAcreator/ISAcreator-1.5.zip) for all platforms.
 2. Click on `ISAcreator.jar` to launch the graphical interface.
 3. Then follow the steps described in the ISAcreator user manual: http://isatab.sourceforge.net/isahelp/ch04s02.html
 
-Alternatively, you can use the [conda package manager](https://conda.io/en/latest/) that is part of the [Anaconda distribution](https://www.anaconda.com/distribution/) that is available for Linux, macOS and Windows. In the Shell, you can run `conda create --name isatools -c bioconda isatools` to create an environment for the __isa-tools__ toolbox. Activate this environment with `source activate isatools`.
-
 ### Submitting a dataset
 1. Open the ISAcreator software and create a local user profile.
 2. Create an ISArchive file that will contain the study, validate the experimental design and create an archive file.
-3. Login and submit to MetaboLights
+3. Login and submit to MetaboLights.
 
+A complete guide can be found here: https://www.ebi.ac.uk/training/online/course/metabolights-quick-tour/submitting-data-metabolights
 
 # Useful links
 * [Recommended data repositories by Nature Scientific Data](https://www.nature.com/sdata/policies/repositories).
