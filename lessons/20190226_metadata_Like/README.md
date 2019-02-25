@@ -61,7 +61,29 @@ ISA stands for __"Investigation"__, __"Study"__ and __"Assay"__.
 Description and goal of the ISA format:
 > Built around the 'Investigation' (the project context), 'Study' (a unit of research) and 'Assay' (analytical measurement) data model and serializations (tabular, JSON and RDF), the ISA framework helps you to provide rich description of the experimental metadata (i.e. sample characteristics, technology and measurement types, sample-to-data relationships) so that the resulting data and discoveries are reproducible and reusable.  
 
-The ISA-Tab is simply the tabulated version of this format.
+The ISA-Tab is simply the tabulated version of this format.  
+
+For instance, an __Investigation__ have to record the following information:
+
+| Property   	|      Datatype      	|  Description 	|
+|----------	|:-------------:	|------:	|
+| Identifier 	|  String 	| A identifier or an accession number provided by a repository. This SHOULD be locally unique. 	|
+| Title 	|    String   	|   A concise name given to the investigation. 	|
+| Description 	| String 	|    A textual description of the investigation (Abstract of the paper for instance).  	|
+| Submission Date 	|    Representation of a ISO8601 date   	|   The date on which the investigation was reported to the repository. 	|
+| Public Release Date 	| Representation of a ISO8601 date 	|   The date on which the investigation was released publicly. 	|
+| Publications 	|   A list of Publication   	|   A list of Publications relating to the investigation. 	|
+| Contacts 	| A list of Contact 	|  A list of Contacts relating to the investigation.  	|
+
+As another example, the __Assay__ should record the following information:
+
+| Property   	|      Datatype      	|  Description 	|
+|----------	|:-------------:	|------:	|
+| Measurement type	|  Ontology annotation 	| An Ontology Annotation to qualify the endpoint, or what is being measured (e.g. gene expression profiling or protein identification). 	|
+| Technology Type 	|    Ontology annotation   	|   An Ontology Annotation to identify the technology used to perform the measurement, e.g. DNA microarray, mass spectrometry. 	|
+| Technology Platform 	| String 	|    The manufacturer and platform name, e.g. Bruker AVANCE, of the technology used. 	|
+
+
 
 ### ISAtools and ISAcreator
 A toolbox called __isa-tools__ has been created to facilitate the handling and curation of experimental metadata.      
