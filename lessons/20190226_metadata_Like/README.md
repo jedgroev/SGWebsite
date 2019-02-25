@@ -60,7 +60,7 @@ Description and goal of the ISA format:
 ### ISAtools and ISAcreator
 To help you to
 This format is required by certain databases such as MetaboLights. A toolbox called __isa-tools__ has been created to facilitate the handling and curation of experimental metadata.      
-<a href="https://isa-tools.org/software-suite.html"><img src='../../img/isa-tools-website.png' align="right" height="200"/></a>  <br>   
+<a href="https://isa-tools.org/software-suite.html"><img src='../../img/isa-tools-website.png' height="200"/></a>     
 
 Within that toolbox, you can use the ISAcreator to create the ISA-tabular format for MetaboLights.  
 1. Download it [here](https://github.com/downloads/ISA-tools/ISAcreator/ISAcreator-1.5.zip) for all platforms.
