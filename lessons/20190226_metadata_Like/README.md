@@ -47,9 +47,37 @@ For instance, let's say your favorite organism is tomato :tomato: and you partic
 
 All submitted data is encoded in the standardised and open ISA-Tab format.
 
+### ISA format
+ISA stands for "Investigation", "Study" and "Assay".  
+* the __Investigation__ contains all the information needed to understand the overall goals and means used in an experiment.  
+* the __Study__ and __Assay__ contains the experimental steps (or sequences of events).  
+* For each __Investigation__ there may be one or more Study associated with it.  
+* For each __Study__ there may be one or more __Assay__.
+
+Description and goal of the ISA format:
+> Built around the 'Investigation' (the project context), 'Study' (a unit of research) and 'Assay' (analytical measurement) data model and serializations (tabular, JSON and RDF), the ISA framework helps you to provide rich description of the experimental metadata (i.e. sample characteristics, technology and measurement types, sample-to-data relationships) so that the resulting data and discoveries are reproducible and reusable.
+
+### ISAtools and ISAcreator
+To help you to
+This format is required by certain databases such as MetaboLights. A toolbox called __isa-tools__ has been created to facilitate the handling and curation of experimental metadata.      
+<a href="https://isa-tools.org/software-suite.html"><img src='../../img/isa-tools-website.png' align="left" height="200"/></a>   
+
+Within that toolbox, you can use the ISAcreator to create the ISA-tabular format for MetaboLights.  
+1. Download it [here](https://github.com/downloads/ISA-tools/ISAcreator/ISAcreator-1.5.zip) for all platforms.
+2. Click on `ISAcreator.jar` to launch the graphical interface.
+3. Then follow the steps described in the ISAcreator user manual: http://isatab.sourceforge.net/isahelp/ch04s02.html
+
+Alternatively, you can use the [conda package manager](https://conda.io/en/latest/) that is part of the [Anaconda distribution](https://www.anaconda.com/distribution/) that is available for Linux, macOS and Windows. In the Shell, you can run `conda create --name isatools -c bioconda isatools` to create an environment for the __isa-tools__ toolbox. Activate this environment with `source activate isatools`.
+
 ### Submitting a dataset
+1.
+2. Create an ISArchive file that will contain the study, validate the experimental design and create an archive file.
+3. Login and submit to MetaboLights
+
 What is this ISA-Tab format?
 
+
+###
 
 
 
