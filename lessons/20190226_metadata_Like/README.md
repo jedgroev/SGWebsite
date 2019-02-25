@@ -15,7 +15,7 @@ After this lesson, you will:
 In this workshop we'll show some example of how metadata is used to retrieve relevant studies from online resources and we'll show some examples of metadata we've provided with studies we've submitted.
 
 
-## The MetaboLights repository
+# The MetaboLights repository
 From the [MetaboLights website](https://www.ebi.ac.uk/metabolights/):
 > MetaboLights is a database for Metabolomics experiments and derived information. The database is cross-species, cross-technique and covers metabolite structures and their reference spectra as well as their biological roles, locations and concentrations, and experimental data from metabolic experiments.
 MetaboLights is the recommended Metabolomics repository for a number of leading journals.
@@ -39,7 +39,7 @@ MetaboLights is the recommended Metabolomics repository for a number of leading 
 ### How to retrieve a dataset?
 For instance, let's say your favorite organism is tomato :tomato: and you particularly like to work with a :de: research group headed by Alain Tissier. Just guessing!     
 1. Go to the [MetaboLights website](https://www.ebi.ac.uk/metabolights/).
-2. Under Study, click on "Browse" <img src='../../img/metabolights-browse.png' align="right" height="80" /></a>.
+2. Under Study, click on "Browse" <img src='../../img/metabolights-browse.png' align="right" height="200" /></a>.
 3. Filter for _study_ and _mass spectrometry_ in the __Type__ box.
 4. Filter for _mass spectrometry_ in the __Technology__ box.
 5. Type "Solanum lycopersicum" in the __Organism__ tool.
@@ -48,7 +48,7 @@ For instance, let's say your favorite organism is tomato :tomato: and you partic
 All submitted data is encoded in the standardised and open ISA-Tab format.
 
 ### ISA format
-ISA stands for "Investigation", "Study" and "Assay".  
+ISA stands for __"Investigation"__, __"Study"__ and __"Assay"__.  
 * the __Investigation__ contains all the information needed to understand the overall goals and means used in an experiment.  
 * the __Study__ and __Assay__ contains the experimental steps (or sequences of events).  
 * For each __Investigation__ there may be one or more Study associated with it.  
@@ -60,7 +60,7 @@ Description and goal of the ISA format:
 ### ISAtools and ISAcreator
 To help you to
 This format is required by certain databases such as MetaboLights. A toolbox called __isa-tools__ has been created to facilitate the handling and curation of experimental metadata.      
-<a href="https://isa-tools.org/software-suite.html"><img src='../../img/isa-tools-website.png' align="left" height="200"/></a>   
+<a href="https://isa-tools.org/software-suite.html"><img src='../../img/isa-tools-website.png' align="right" height="200"/></a>  <br>   
 
 Within that toolbox, you can use the ISAcreator to create the ISA-tabular format for MetaboLights.  
 1. Download it [here](https://github.com/downloads/ISA-tools/ISAcreator/ISAcreator-1.5.zip) for all platforms.
