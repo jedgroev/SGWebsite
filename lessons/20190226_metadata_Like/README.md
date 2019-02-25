@@ -20,14 +20,14 @@ From the [MetaboLights website](https://www.ebi.ac.uk/metabolights/):
 > MetaboLights is a database for Metabolomics experiments and derived information. The database is cross-species, cross-technique and covers metabolite structures and their reference spectra as well as their biological roles, locations and concentrations, and experimental data from metabolic experiments.
 MetaboLights is the recommended Metabolomics repository for a number of leading journals.
 
-### Why would I use it?
+## Why would I use it?
 - To store your own metabolomic research in a safe and reliable way.
 - To get an accession number for your metabolomic study that you can cite in your publication (it is asked by reviewers).
 - To be able to store the experimental _metadata_ along with the _raw data_.
 - It is hosted by the European Bioinformatics Institute so it is a safe and reliable way to preserve and access your research.
 - To collaborate with other research groups in an open but protected manner (authentification).
 
-### What can I do with MetaboLights?
+## What can I do with MetaboLights?
 - Find metabolites and related metablomics studies by searching a wide range of associated metadata.
 - Filter your search results on species, techniques and metabolites.
 - Submit public or private studies.
@@ -36,7 +36,7 @@ MetaboLights is the recommended Metabolomics repository for a number of leading 
 - Download public metabolomics studies for futher analysis.
 - Retrieve molecular information from ChEBI or other linked compound databases.
 
-### How to retrieve a dataset?
+## How to retrieve a dataset?
 For instance, let's say your favorite organism is tomato :tomato: and you particularly like to work with a :de: research group headed by Alain Tissier. Just guessing!     
 1. Go to the [MetaboLights website](https://www.ebi.ac.uk/metabolights/).
 2. Under Study, click on "Browse" <img src='../../img/metabolights-browse.png' align="right" height="200" /></a>.
@@ -47,19 +47,25 @@ For instance, let's say your favorite organism is tomato :tomato: and you partic
 
 All submitted data is encoded in the standardised and open ISA-Tab format.
 
-### ISA format
+## Submitting a metabolic dataset
+The MetaboLights repository requires that experimental metadata are uploaded according to the _ISA-Tab_ file format.
+
+### ISA and ISA-Tab formats
 ISA stands for __"Investigation"__, __"Study"__ and __"Assay"__.  
 * the __Investigation__ contains all the information needed to understand the overall goals and means used in an experiment.  
 * the __Study__ and __Assay__ contains the experimental steps (or sequences of events).  
 * For each __Investigation__ there may be one or more Study associated with it.  
-* For each __Study__ there may be one or more __Assay__.
+* For each __Study__ there may be one or more __Assay__.  
+<a href="https://isa-tools.org/format/specification.html"><img src='../../img/isa-model-structure.png' height="400"/></a>       
 
 Description and goal of the ISA format:
 > Built around the 'Investigation' (the project context), 'Study' (a unit of research) and 'Assay' (analytical measurement) data model and serializations (tabular, JSON and RDF), the ISA framework helps you to provide rich description of the experimental metadata (i.e. sample characteristics, technology and measurement types, sample-to-data relationships) so that the resulting data and discoveries are reproducible and reusable.
 
+The ISA-Tab is simply the tabulated version of this format.
+
 ### ISAtools and ISAcreator
-To help you to
-This format is required by certain databases such as MetaboLights. A toolbox called __isa-tools__ has been created to facilitate the handling and curation of experimental metadata.      
+To help you to obtain an ISA-Tab tabular file that you can open in a spreadsheet program such as Excel, you can use the __ISAcreator__ software.
+The ISA-Tab format is required by certain databases such as MetaboLights. A toolbox called __isa-tools__ has been created to facilitate the handling and curation of experimental metadata.      
 <a href="https://isa-tools.org/software-suite.html"><img src='../../img/isa-tools-website.png' height="1200"/></a>     
 
 Within that toolbox, you can use the ISAcreator to create the ISA-tabular format for MetaboLights.  
@@ -70,18 +76,13 @@ Within that toolbox, you can use the ISAcreator to create the ISA-tabular format
 Alternatively, you can use the [conda package manager](https://conda.io/en/latest/) that is part of the [Anaconda distribution](https://www.anaconda.com/distribution/) that is available for Linux, macOS and Windows. In the Shell, you can run `conda create --name isatools -c bioconda isatools` to create an environment for the __isa-tools__ toolbox. Activate this environment with `source activate isatools`.
 
 ### Submitting a dataset
-1.
+1. Open the ISAcreator software and create a local user profile.
 2. Create an ISArchive file that will contain the study, validate the experimental design and create an archive file.
 3. Login and submit to MetaboLights
 
-What is this ISA-Tab format?
 
-
-###
-
-
-
-## Useful links
-* [Recommended data repositories by Nature Scientific Data](https://www.nature.com/sdata/policies/repositories)
-* The European Nucleotide Archive
-* The MetaboLights database.
+# Useful links
+* [Recommended data repositories by Nature Scientific Data](https://www.nature.com/sdata/policies/repositories).
+* The European Nucleotide Archive: https://www.ebi.ac.uk/ena.
+* The MetaboLights database: https://www.ebi.ac.uk/metabolights/.
+* The Nature Genetics publication on the ISA format: https://www.nature.com/articles/ng.1054
