@@ -4,6 +4,6 @@ text:  Come and discover the power of RNA-Seq during a practical afternoon sessi
 location: Science Park 904, room G3.10
 link: 
 date: 2019-03-07
-startTime: '14:00'
+startTime: '13:00'
 endTime: '17:00'
 ---
