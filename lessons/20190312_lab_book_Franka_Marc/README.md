@@ -32,4 +32,4 @@ Some explanation and tips:
 
 ## Systems for data documentation (5 min) - Marc
 - Simple data documentation: Zenodo upload.
--  More advanced: Gene Expression Omnibus. 
+- 4TU guidelines: https://researchdata.4tu.nl/en/publishing-research/uploading-data/
