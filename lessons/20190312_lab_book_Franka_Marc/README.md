@@ -20,9 +20,10 @@ In this workshop we will direct you to think critically about the way you store 
 We'll start with some lego activity to see how easy (or not) it is to document a simple process. This will help to start the discussion!
 
 ## exchange labbooks (15 min) - Franka
-Some explanation and tips:
-- Critically look: is all data and metadata available to reproduce the experiment? 
-- Do I understand references to methods?
+Critical look at:
+- Is all data and metadata available to reproduce the experiment? 
+- Do I understand references to methods at some other location?
+- Are experimental results (online) linked to the offline labbook? 
 
 ## Different ways to organise your project & data, examples from colleagues (15 min) - Franka
 
