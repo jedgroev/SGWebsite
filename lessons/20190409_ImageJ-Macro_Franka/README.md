@@ -1,9 +1,9 @@
 # Building macro’s in ImageJ
 
-- **Authors**: Franka van der Linden (PhD Molecular Cytology)
+- **Authors**: Franka van der Linden (PhD Molecular Cytology), Marten Postma (UD Molecular Cytology)
 - **Lesson Topic**: How to write your own macro's in ImageJ
 - **When and Where**: April 9th, 16-17h, B0.207
-- **Preparation**: Bring your laptop, download the ZIP ....NAAM.... to your computer.
+- **Preparation**: Bring your laptop, download the data files to your computer.
 
 **Required knowledge**:
 We will assume that you   
@@ -22,13 +22,13 @@ This lesson will cover basic principles on how to write your own macro in ImageJ
 Macro's can be very simple to very complex. Everything you do by hand repeatedly causes you to loose time and should be avoided. Examples of simple macro's:   
 - rearrange the order of images in a stack
 - save lots of images in a different type
-- semi-automatically crop images, while you manually place the crop box over an image
+- semi-automatically crop images and add scale bar etc, while you manually place the crop box over an image (prepare for publication)
 - determine values from multiple regions of a hyperstack and save these
 - make a nice ratio FRET image
 - save the ROIs (regions of interest) you have analysed
 - ... your 'favorite' repetitive task ...
 
-There are many languages that can be used to write a script in ImageJ, we will only work with the most simple one, which can be saved as an .txt file. If you want to write your own plugins, you will need more advanced programming and I recommend you to go to the ImageJ intro to programming link at the bottom of this page.
+There are many languages that can be used to write a script in ImageJ, we will only work with the most simple one, which can be saved as a .txt file. If you want to write your own plugins, you might need more advanced programming and I recommend you to go to the ImageJ intro to programming link at the bottom of this page.
 
 ## Very basic commands (5 min)
 First open a new macro: _Plugins > New > Macro_.
@@ -57,7 +57,7 @@ now only run:
 ```
 print(x+y);
 ```
-This should give you an error, stating that you have an undefined variable <x>, because ImageJ doesn't remember x=3 and y=5 from before. ImageJ will stop directly after encountering a problem in your code, so it won't complain about the missing <y> variable. So if you want to test a specific part of you code later on, make sure to include the part where you assign the necessary variables.
+This should give you an error, stating that you have an undefined variable <x>, because ImageJ doesn't remember x=3 and y=5 from before. ImageJ will stop directly after encountering a problem in your code, so it won't complain about the missing <y> variable. If you want to test a specific part of you code later on, make sure to include the part where you assign the necessary variables.
 
 
 ## Simple exercises (10min)
@@ -191,7 +191,7 @@ while (nImages>0) {
 </p>
 </details>
 
-If you want to use this function reagularly, you can add a keyboard shortcut to the code that will start the script. _Look at the added lines below and try to understand what is happening._ The shortcut is the F2-key.
+If you want to use this function regularly, you can add a keyboard shortcut to the code that will start the script. _Look at the added lines below and try to understand what is happening._ The shortcut is the F2-key.
 
 <details><summary>answer</summary>
 <p>
@@ -229,7 +229,7 @@ open(path); // opens the file
 </p>
 </details>
 
-2) Retrieve the name of the file and the dir where the file is saved. You'll need this for saving you data later.
+2) Retrieve the name of the file and the directory where the file is saved. You'll need this for saving you data later.
 <details><summary>Click for answer</summary>
 <p>
 
@@ -364,7 +364,7 @@ roiManager("Show All with labels");
 ```
 </p>
 </details>
-14) You know that later in you analysis you will have more than 9 regions, and you want to name them Cell-01.. Cell-09, but Cell-10, Cell-11 etc (not Cell-010). In that case you need an if/else statement within the loop! _if_ i < 9, the name would be "Cell0"+ i+1, _else_ the name would be "Cell"+ i+1. Adjust your code to include these cases. Lookup the general structure of if and else statements yourself.
+14) Hypothetical situation: You know that later in your analysis you will have more than 9 regions, and you want to name them Cell-01.. Cell-09, but Cell-10, Cell-11 etc (not Cell-010). In that case you need an if/else statement within the loop! _if_ i < 9, the name would be "Cell0"+ i+1, _else_ the name would be "Cell"+ i+1. Adjust your code to this hypothetical situation. Lookup the general structure of if and else statements yourself on the internet.
 15) Make sure the ROIs are displayed.
 
 <details><summary>Click for answer</summary>
@@ -474,15 +474,10 @@ run("CloseAllWindows");
 </p>
 </details>
 
+## End session (5 min)
+- Example: Lut change RGB picture (Marten)
 
-## notes voor mij:
-Werkt het op ImageJ en FIJI hetzelfde???
-
-## Some examples and wrapping up (5 min)
-- Lut change RGB picture (Marten)
-- Masking and making a FRET ratio movie (Franka)
-
-## Further reading
+### Further reading
 Introduction to Macro’s, includes information about writing functions: https://imagej.net/Introduction_into_Macro_Programming
 
 All kind of info on making macro’s: https://imagej.net/developer/index.html   
