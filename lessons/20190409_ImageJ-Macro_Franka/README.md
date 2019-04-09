@@ -4,6 +4,7 @@
 - **Lesson Topic**: How to write your own macro's in ImageJ
 - **When and Where**: April 9th, 16-17h, B0.207
 - **Preparation**: Bring your laptop, download the data files to your computer.
+- **Level**: Beginners, ImageJ users who do not yet write macros
 
 **Required knowledge**:
 We will assume that you   
@@ -136,7 +137,7 @@ _Try if you can get a for loop to print out the table of three like this._
 ```
 You'll need the print() command. Remember:
 ```
-print("5" + " plus "  "3"); //the string "5 plus 3" is printed.
+print("5" + " plus " + "3"); //the string "5 plus 3" is printed.
 ```
 
 **Debugging tips!**
