@@ -1,0 +1,7 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = true
+	ignorecase = true
+[remote "upstream"]
+	url = https://github.com/ScienceParkStudyGroup/RNAseqDataVis
