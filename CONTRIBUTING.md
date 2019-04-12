@@ -4,7 +4,7 @@
 If you're reading this, it means that you'd like to contribute to the Amsterdam Science Park Study Group! Thank you and welcome! We welcome every contribution whether small or big. You will find here different ways to contribute. 
 
 Photo by Belinda Fewings on Unsplash  
-![alt text](https://unsplash.com/photos/6wAGwpsXHE0 "Welcome!")
+![alt text](https://unsplash.com/photos/6wAGwpsXHE0)
 
 # Table of Contents  
 [Making a one-hour lesson](#one-hour-lesson)    
@@ -14,22 +14,22 @@ Photo by Belinda Fewings on Unsplash
 
 <h1><a name="one-hour-lesson">Making a one-hour lesson </a></h1>
 Leading and making a one-hour lesson is maybe the most immediate way to contribute. You can either 
-1. Create a new lesson repository inside the [lessons](lessons/) repositories. Name it with the date of the lesson, the subject and the person leading it. For instance `20190102_Shiny_demo_Joachim`
+1. Create a new lesson repository inside the [lessons](lessons/) repositories. Name it with the date of the lesson, the subject and the person leading it. For instance `20190102_Shiny_demo_Joachim`  
 2. Create a `README.md` file into that new repository. This file should contain:
   - the author(s) of the lesson
   - the topic of the lesson
   - the entrance level for that lesson i.e. "beginner", "false beginner" or "advanced" for instance. 
-  - the prerequisites for that lesson (what do people need to know to go through the lesson)
+  - the prerequisites for that lesson (what do people need to know to go through the lesson)  
 3. Learning outcome of the one-hour lesson
 
 We use the [Markdown formatting language](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) to format the `README.md` file for every lesson. 
 
 <h1><a name="special-event">Organising a special event</a></h1>
-Special events are longer Study Group sessions where we adress specific themes. For instance:
+Special events are longer Study Group sessions where we adress specific themes. For instance:  
 - an afternoon on RNA-Seq (3 hours) to be able to have a short introduction and some hands-on time (cloud computing, plots). 
 - a two-day Carpentry workshop 
-ipsum loret ...  
-ipsum loret ...  
+- ipsum loret ...  
+- ipsum loret ...  
 
 <h1><a name="slack">Acting as one moderator/contributor in one of the Slack workspace</a></h1>
 The Science Park Study Group has a Slack workspace. Join or find yours here: https://slack.com/signin/find  
