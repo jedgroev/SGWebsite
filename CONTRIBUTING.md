@@ -3,8 +3,8 @@
 
 If you're reading this, it means that you'd like to contribute to the Amsterdam Science Park Study Group! Thank you and welcome! We welcome every contribution whether small or big. You will find here different ways to contribute. 
 
-Photo by Belinda Fewings on Unsplash  
-![alt text](https://unsplash.com/photos/6wAGwpsXHE0)
+
+![Photo by Belinda Fewings on Unsplash  ](img/welcome.png)
 
 # Table of Contents  
 [Making a one-hour lesson](#one-hour-lesson)    
