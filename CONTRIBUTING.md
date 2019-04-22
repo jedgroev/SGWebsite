@@ -3,7 +3,6 @@
 
 If you're reading this, it means that you'd like to contribute to the Amsterdam Science Park Study Group! Thank you and welcome! We welcome every contribution whether small or big. You will find here different ways to contribute. 
 
-
 ![Photo by Belinda Fewings on Unsplash  ](img/welcome.png)
 
 # Table of Contents  
@@ -11,6 +10,12 @@ If you're reading this, it means that you'd like to contribute to the Amsterdam 
 [Organising a special event](#special-event)   
 [Acting as a Slack moderator](#slack)   
 
+
+<h1><a name="one-hour-lesson">Making a one-hour lesson </a></h1>
+There are two responsabilities for a one-hour lesson:
+- Host: One is to host the session 
+- Teacher: 
+These two responsabilities can be merged (e.g. if you organise one session completely by yourself).
 
 <h1><a name="one-hour-lesson">Making a one-hour lesson </a></h1>
 Leading and making a one-hour lesson is maybe the most immediate way to contribute. You can either 
