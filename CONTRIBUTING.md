@@ -15,10 +15,11 @@ If you're reading this, it means that you'd like to contribute to the Amsterdam 
 A one-hour lesson can be anything from a classroom-like session to the demonstration of a software for instance. It can also be a presentation on a specific topic. 
 
 <h2>Host and teacher roles</h2>  
-There are two responsabilities for a one-hour lesson:    
-- **Host**: the host has to book the room, create a new event on the website, advertise the event, create the lesson folder and the README file. The host will indicate how big will be the attendance (usually between 5 and 15). The host will also chair the session (introduce the teacher for instance).
-- **Teacher**: the person teaching the lesson. 
-These two responsabilities can be merged (a person organsing an event and teaching it).
+There are two responsabilities for a one-hour lesson:  
+
+- **Host**: the host has to book the room, create a new event on the website, advertise the event, create the lesson folder and the README file. The host will indicate how big will be the attendance (usually between 5 and 15). The host will also chair the session (introduce the teacher for instance).  
+- **Teacher**: the person teaching the lesson.    
+These two responsabilities can be merged (a person organsing an event and teaching it).  
 
 **Host to-do list:**  
 1. Create a new lesson repository inside the [lessons](lessons/) repositories. Name it with the date of the lesson, the subject and the person leading it. For instance `20190102_Shiny_demo_Joachim`    
@@ -36,9 +37,10 @@ We use the [Markdown formatting language](https://github.com/adam-p/markdown-her
 2. Make sure your lesson fits in one hour. Keep some time for introducing yourself (~5min) and wrapping up the session (~10min).  
 
 <h2>Lesson examples</h2>  
-- [Explore your data with Python Seaborn package](https://github.com/ScienceParkStudyGroup/studyGroup/blob/gh-pages/lessons/20171024_Explore_your_data_Pietro/eda.ipynb)
-- [Machine Learning (Random Forest) in Python](https://github.com/ScienceParkStudyGroup/studyGroup/tree/gh-pages/lessons/20180529_Machine_Learning_Zsofia_Stefania_Marc/) 
-- [The tidyverse package from R](https://github.com/ScienceParkStudyGroup/studyGroup/tree/gh-pages/lessons/20190219_tidyverse_Marc/)  
+
+-[Explore your data with Python Seaborn package](https://github.com/ScienceParkStudyGroup/studyGroup/blob/gh-pages/lessons/20171024_Explore_your_data_Pietro/eda.ipynb)  
+-[Machine Learning (Random Forest) in Python](https://github.com/ScienceParkStudyGroup/studyGroup/tree/gh-pages/lessons/20180529_Machine_Learning_Zsofia_Stefania_Marc/)   
+-[The tidyverse package from R](https://github.com/ScienceParkStudyGroup/studyGroup/tree/gh-pages/lessons/20190219_tidyverse_Marc/)  
 
 
 <h1><a name="special-event">Helping at a Carpentry workshop</a></h1>
