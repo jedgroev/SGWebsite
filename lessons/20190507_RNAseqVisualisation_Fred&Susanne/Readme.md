@@ -29,8 +29,7 @@ BiocManager::install("DESeq2", version = "3.8")
 ### Data
 [**The data provided for this session is already in a counts table format (i.e. has already been trimmed and aligned)**](https://github.com/ScienceParkStudyGroup/studyGroup/blob/gh-pages/lessons/20190507_RNAseqVisualisation_Fred%26Susanne/data/counts.txt)
 
-For previous stages of RNA-sequencing data anlysis to prepare your own data for this phase see: [RNA-Seq Workshop]
-(https://scienceparkstudygroup.github.io/2019-03-07-rnaseq-workshop/)
+For previous stages of RNA-sequencing data anlysis to prepare your own data for this phase see: [RNA-Seq Workshop](https://scienceparkstudygroup.github.io/2019-03-07-rnaseq-workshop/)
 
 
 ### Part 1 Preprocessing 
