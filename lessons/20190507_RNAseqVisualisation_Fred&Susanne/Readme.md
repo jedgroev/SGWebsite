@@ -55,9 +55,9 @@ Next the MAplot is another typical starter visualisation. This shows the distrib
 ### Part 3 Heatmap 
 To plot a heatmap we first need to reduce the number of genes that are being assesed. An easy way to quickly get rid of non-interesting genes is to use the padj column of the DESeq results table and make a new dataframe with only those genes that have a p-value <0.05.
 
-
 We can now use the filtered and ordered DESeq results object `resordered` to filter the counts object with however many genes we would like to see in a heatmap. Here we have chosen the 25 genes that have the lowest adjusted p-values.
 
+Find more information about pheatmap [here](https://cran.r-project.org/web/packages/pheatmap/pheatmap.pdf) and see the options that can be used for clustering and annotation.
 
 
 
