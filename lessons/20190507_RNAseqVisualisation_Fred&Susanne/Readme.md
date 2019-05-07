@@ -35,7 +35,7 @@ For previous stages of RNA-sequencing data anlysis to prepare your own data for 
 ### Part 1 Preprocessing 
 After loading the packages we'll need for the lesson, we will do some data preprocessing.  
 To begin, the data needs to be downloaded/read in to R from the URL provided (Tip: You can change this destination for your own data).  
-`df <- read.csv("https://raw.githubusercontent.com/ScienceParkStudyGroup/studyGroup/gh-pages/lessons/20190507_RNAseqVisualisation_Fred%26Susanne/data/counts.txt")`  
+`counts <- read.table("https://raw.githubusercontent.com/ScienceParkStudyGroup/studyGroup/gh-pages/lessons/20190507_RNAseqVisualisation_Fred%26Susanne/data/counts.txt", sep = "\t", header = T`  
 
 Here we can also make the design object (indicating condition/cell-type etc. of each sample)
 
