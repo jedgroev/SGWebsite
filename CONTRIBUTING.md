@@ -45,6 +45,7 @@ We use the [Markdown formatting language](https://github.com/adam-p/markdown-her
 We regularly organise Software and Data Carpentry workshop under the umbrella of the Science Park Study Group. To run these coding workshops as smoothly as possible, we always need motivated and code-enthusiast helpers to assist beginners and attendees in general.
 Please contact <a href="mailto:m.galland@uva.nl">Marc</a> or <a href="mailto:L.Fokkens@uva.nl">Like</a> to get in touch.  
 
+
 **Examples of Carpentry workshops:**  
 
 - January 2019: [Software Carpentry](https://scienceparkstudygroup.github.io/2019-14-01-Amsterdam-Python-workshop/)
