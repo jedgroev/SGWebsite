@@ -11,7 +11,7 @@ Click on `Raw` to display the raw text and copy-paste it.
 
 =============================  
 
-## Title of the lesson
+# Title of the lesson
 
 - **Author**: Joachim Goedhart (Assistant Processor, Molecular Cytology)
 - **Lesson Topic**: How to make a Shiny app in R/Rstudio
