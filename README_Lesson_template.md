@@ -1,6 +1,8 @@
 # README file for a one-hour study group lesson
-First of all, thank you for the time you will spend shaping the lesson :heart: Much appreciated! :+1: :star:  
+:tada: First of all, thank you for the time you will spend shaping the lesson: much appreciated! :+1: :star: :heart: 
 Below is a nice example of a good `README.md` file that you should make inside the lesson repository. The complete contribution guidelines are in the `CONTRIBUTING.md` file available [here](https://github.com/ScienceParkStudyGroup/studyGroup/blob/gh-pages/CONTRIBUTING.md).
+
+**Simply copy and paste the template below and modify it to create your own `README.md` file for your lesson. 
 
 =============================    
 
