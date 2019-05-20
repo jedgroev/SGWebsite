@@ -34,9 +34,11 @@ We use the [Markdown formatting language](https://github.com/adam-p/markdown-her
 
 <h2>Lesson examples</h2>  
 
--[Explore your data with Python Seaborn package](https://github.com/ScienceParkStudyGroup/studyGroup/blob/gh-pages/lessons/20171024_Explore_your_data_Pietro/eda.ipynb)  
--[Machine Learning (Random Forest) in Python](https://github.com/ScienceParkStudyGroup/studyGroup/tree/gh-pages/lessons/20180529_Machine_Learning_Zsofia_Stefania_Marc/)   
--[The tidyverse package from R](https://github.com/ScienceParkStudyGroup/studyGroup/tree/gh-pages/lessons/20190219_tidyverse_Marc/)  
+- [Explore your data with Python Seaborn package](https://github.com/ScienceParkStudyGroup/studyGroup/blob/gh-pages/lessons/20171024_Explore_your_data_Pietro/eda.ipynb)  
+
+- [Machine Learning (Random Forest) in Python](https://github.com/ScienceParkStudyGroup/studyGroup/tree/gh-pages/lessons/20180529_Machine_Learning_Zsofia_Stefania_Marc/)   
+
+- [The tidyverse package from R](https://github.com/ScienceParkStudyGroup/studyGroup/tree/gh-pages/lessons/20190219_tidyverse_Marc/)  
 
 
 <h1><a name="special-event">Helping at a Carpentry workshop</a></h1>
