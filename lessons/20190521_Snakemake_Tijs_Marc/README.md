@@ -1,6 +1,8 @@
 ## Title of the lesson
 
-- **Authors**: Tijs Bliek (technician, Plant Epigenetics & Development, SILS) and Marc Galland (Data analyst/manager, Plant Physiology, SILS) 
+- **Authors**: 
+  - Tijs Bliek (technician, Plant Epigenetics & Development, SILS)
+  - Marc Galland (Data analyst/manager, Plant Physiology, SILS) 
 - **Lesson Topic**: How to make a bioinformatic pipeline using the workflow manager Snakemake
 - **When and Where**: May 21th, 16-17h, D1.110
 - **Preparation**: A laptop is not mandatory for this lesson although we recommend to bring one for the small hands-on session.
@@ -26,8 +28,8 @@ When conda is installed, you can install Snakemake by typing: `conda env create 
 
 :pencil2: :notebook: **Text editor**  
 There are many text editors that you can use. We recommend:
-- Sublime text
-- Atom
+- Sublime text: https://www.sublimetext.com/
+- Atom: https://atom.io/  
 
 ### Datasets :
 The best thing is to upload your datasets and all necessary files on a stable archive :open_file_folder: such as [Zenodo](https://zenodo.org/) or on the [UvA Figshare account](https://uvaauas.figshare.com/).  
