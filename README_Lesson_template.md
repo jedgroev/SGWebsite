@@ -2,9 +2,9 @@
 First of all, thank you for the time you will spend shaping the lesson :heart: Much appreciated! :+1: :star:  
 Below is a nice example of a good `README.md` file that you should make inside the lesson repository. The complete contribution guidelines are in the `CONTRIBUTING.md` file available [here](https://github.com/ScienceParkStudyGroup/studyGroup/blob/gh-pages/CONTRIBUTING.md).
 
-=============================
- ======== README.md =========
-=============================
+=============================  
+ ======== README.md =========  
+=============================  
 
 ## Title of the lesson
 
@@ -26,7 +26,6 @@ For instance, if R and RStudio are required, you could write:
 Get R here: https://lib.ugent.be/CRAN/  
 Get RStudio here: https://www.rstudio.com/   
 
-### Datasets 
-The best thing is to upload your datasets and all necessary files on a stable archive such as [Zenodo](https://zenodo.org/) or Figshare
-
+### Datasets :
+The best thing is to upload your datasets and all necessary files on a stable archive :inbox_tray: such as [Zenodo](https://zenodo.org/) or on the [UvA Figshare account](https://uvaauas.figshare.com/).  
 For Zenodo, there is a Science Park Study Group community :family: to host all Study Group related files: https://zenodo.org/communities/scienceparkstudygroup/.
