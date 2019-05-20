@@ -3,7 +3,7 @@
 Below is a nice example of a good `README.md` file that you should make inside the lesson repository. The complete contribution guidelines are in the `CONTRIBUTING.md` file available [here](https://github.com/ScienceParkStudyGroup/studyGroup/blob/gh-pages/CONTRIBUTING.md).
 
 **Simply copy and paste the template below and modify it to create your own `README.md` file for your lesson.**   
-First click on the :pencil2: icon on the top right of this file to 
+First click on `Raw` to display the raw text and copy-paste it. 
 
 =============================    
 
