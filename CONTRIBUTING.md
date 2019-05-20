@@ -23,12 +23,7 @@ These two responsabilities can be merged (a person organsing an event and teachi
 
 **Host to-do list:**  
 1. Create a new lesson repository inside the [lessons](lessons/) repositories. Name it with the date of the lesson, the subject and the person leading it. For instance `20190102_Shiny_demo_Joachim`    
-2. Create a `README.md` file into that new repository. This file should contain:
-  - the author(s) of the lesson
-  - the topic of the lesson
-  - the entrance level for that lesson i.e. "beginner", "false beginner" or "advanced" for instance. 
-  - the prerequisites for that lesson (what do people need to know to go through the lesson)  
- Full guidelines of a lesson README.md file can be found [here](https://github.com/ScienceParkStudyGroup/studyGroup/blob/gh-pages/README_Lesson_template.md).  
+2. Create a `README.md` file into that new repository. A template is available here: https://github.com/ScienceParkStudyGroup/studyGroup/blob/gh-pages/README_Lesson_template.md   
 3. Learning outcome of the one-hour lesson (to be defined together with the teacher)
 
 We use the [Markdown formatting language](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) to format the `README.md` file for every lesson. 
