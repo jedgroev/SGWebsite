@@ -1,6 +1,6 @@
 - name: Jihed Chouaref
   affiliation: University of Amsterdam (SILS)
-  position: Snakemake users lead
+  position: past contributor
   github: JihedC
   interests:
     - ChIP-Seq
@@ -9,22 +9,22 @@
     
 - name: Pietro Marchesi
   position: regular contributor
-  affiliation: UvA SILS
+  affiliation: University of Amsterdam (SILS)
   github: pietromarchesi
   interests:
     - Machine Learning
     - Python
 
 - name: Joeri Jongbloets
-  position: regular contributor
-  affiliation: UvA SILS
+  position: past contributor
+  affiliation: University of Amsterdam (SILS)
   github: jjongbloets
   interests:
     - Data visualisation
     - R
 
 - name: Pim Schravendijk
-  position: regular contributor
+  position: past contributor
   affiliation: Rijk Zwaan
   github: rdwrt
   interests:
@@ -33,7 +33,7 @@
 
 - name: Caspar Treijtel
   position: regular contributor
-  affiliation: UvA Library
+  affiliation: University of Amsterdam (Library)
   github: caspartreijtel
   interests:
     - Python
@@ -41,8 +41,43 @@
 
 - name: Mariette van Selm
   position: regular contributor
-  affiliation: UvA Library
+  affiliation: University of Amsterdam (Library)
   github: mariettevanselm
   interests:
     - Research Data Management
     - Figshare
+
+- name: Fred White
+  position: former board member
+  affiliation: University of Amsterdam (SILS)
+  github: Fred-White94
+  interests:
+    - Feature selection
+    - Data Science
+    - R
+
+- name: Max van Hooren
+  position: former board member
+  affiliation: University of Amsterdam (SILS)
+  github: mvhoore1
+  interests:
+    - RNA-Seq
+    - R
+
+- name: Susanne Wilken
+  position: former board member
+  affiliation: University of Amsterdam (IBED)
+  github: SuseW
+  interests:
+    - Marine Biology
+    - Microbial Ecology
+    - R
+
+- name: Emiel van Loon
+  position: former board member
+  affiliation: University of Amsterdam (IBED)
+  github: EmielvanLoon
+  interests:
+    - Statistics
+    - R
+    - Modelling
