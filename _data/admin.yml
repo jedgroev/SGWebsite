@@ -1,5 +1,5 @@
 - name: Zsofia Koma
-  position: Community lead
+  position: Board member
   affiliation: UvA IBED
   github: komazsofi
   interests:
@@ -16,15 +16,6 @@
     - Genomics
     - Snakemake
     - Data Science
-    
-- name: Emiel van Loon
-  position: Board member
-  affiliation: UvA IBED
-  github: EmielvanLoon
-  interests:
-    - Statistics
-    - R
-    - Modelling
 
 - name: Tijs Bliek
   position: Board member
@@ -36,7 +27,7 @@
     - RNA-Seq
 
 - name: Like Fokkens 
-  position: Carpentry Workshop organiser
+  position: Board member
   affiliation: UvA SILS
   github: LikeFokkens
   interests:
@@ -53,37 +44,27 @@
     - Mathematical modelling
     - Teaching
 
-- name: Susanne Wilken
-  position: Board member
-  affiliation: UvA IBED
-  github: SuseW
-  interests:
-    - Marine Biology
-    - Microbial Ecology
-    - R
-
-- name: Max van Hooren
-  position: Board member
-  affiliation: UvA SILS
-  github: mvhoore1
-  interests:
-    - RNA-Seq
-    - R
-
-- name: Fred White
-  position: board member
-  affiliation: University of Amsterdam (SILS)
-  github: Fred-White94
-  interests:
-    - Feature selection
-    - Data Science
-    - R
-
 - name: Franka van der Linden
-  position: board member
+  position: Board member
   affiliation: University of Amsterdam (SILS)
   github: 
   interests:
     - Molecular Cytology
     - Data Science
     - R
+
+- name: Stacy Shinneman
+  position: Board member
+  affiliation: University of Amsterdam (IBED)
+  github: 
+  interests:
+    - R
+    - Geospatial data
+
+- name: Johannes van De Groeve 
+  position: Board member
+  affiliation: University of Amsterdam (IBED)
+  github: 
+  interests:
+    - Databases
+    - SQL
