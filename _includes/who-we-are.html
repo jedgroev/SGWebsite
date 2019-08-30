@@ -52,7 +52,7 @@
             {% endfor %}
             
             <!-- Contributors (persons who participated in the past) -->
-            <h2 class="section-subheading text-center">Regular contributors</h2>
+            <h2 class="section-subheading text-center">Past and regular contributors</h2>
             {% for member in site.data.contributors %}
             {% assign loopindex = forloop.index0 | modulo: 4 %}
             {% if loopindex == 0 %}
