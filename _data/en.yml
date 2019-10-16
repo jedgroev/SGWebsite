@@ -9,8 +9,21 @@ links: links
 contact: Contact
 tellMeMore: Tell Me More
 
-activitiesSubheading: "Amsterdam Science Park Study Group is dedicated to building a community of computational biologists and bioinformaticians. This Study Group promotes skill sharing and collaboration by (1) organizing one-hour interactive workshops, (2) regularly organise co-working sessions for peer-to-peer assistance, (4) act as local hub to set-up Software and Data Carpentry workshops and, last but not least (4) bring researchers together at social events like Hacky Hours hackatons. All are welcome to this study group, regardless of scientific research area, affiliation or training level."
-activitiesSubheading2: "All are welcome! Regardless of scientific research area, affiliation or programming level (absolute beginner to expert)"
+activitiesSubheading: "Amsterdam Science Park Study Group is dedicated to building a community of computational biologists
+and bioinformaticians. This Study Group promotes skill sharing and collaboration by (1) organizing interactive coding workshops, 
+(2) regularly organise co-working sessions for peer-to-peer assistance, (4) act as local hub of the Software/Data Carpentry Foundation and, 
+(4) bring researchers together at social events (e.g. hackatons). All are welcome to this study group, regardless of scientific research area, 
+affiliation or training level. 
+<br>
+We use Slack to discuss and ask for help on data and code-related topics. Click on Contact and select Join Slack. 
+You will need to create an account with a username, and log in to read and post. You can use Slack right from a web browser, or you can download
+a standalone Slack application to your Mac, Windows, Linux and/or Android/iOS device. You can control whether you receive notifications on new posts by going to Preferences, 
+as well as decide which ‘channels’ to subscribe to. A ‘channel’ is a discussion thread, which is used to organize communications into topics. 
+Several channels have been set up for specific topics (R, metagenomics, etc.)
+<br>
+All are welcome! Regardless of scientific research area, affiliation or programming level (absolute beginner to expert)
+"
+activitiesSubheading2: ""
 activities:
   - title: Lessons
     description: One-hour lessons to learn and practice coding skills
