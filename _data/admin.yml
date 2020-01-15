@@ -1,3 +1,12 @@
+- name: Tijs Bliek
+  position: Board member
+  affiliation: UvA SILS
+  github: tijsbliek
+  interests:
+    - Genomics
+    - Snakemake
+    - RNA-Seq
+
 - name: Zsofia Koma
   position: Board member
   affiliation: UvA IBED
@@ -17,15 +26,6 @@
     - Snakemake
     - Data Science
 
-- name: Tijs Bliek
-  position: Board member
-  affiliation: UvA SILS
-  github: tijsbliek
-  interests:
-    - Genomics
-    - Snakemake
-    - RNA-Seq
-
 - name: Like Fokkens 
   position: Board member
   affiliation: UvA SILS
@@ -33,7 +33,7 @@
   interests:
     - Comparative genomics  
     - Python
-    - Teaching
+    - Phylogeny
 
 - name: Huub Hoefsloot
   position: Board member
@@ -44,14 +44,15 @@
     - Mathematical modelling
     - Teaching
 
-- name: Franka van der Linden
+- name: Joachim Goedhart
   position: Board member
   affiliation: University of Amsterdam (SILS)
-  github: Franka-van-der-Linden
+  github: JoachimGoedhart
   interests:
     - Molecular Cytology
     - Data Science
     - R
+    - Shiny
 
 - name: Stacy Shinneman
   position: Board member
@@ -64,7 +65,16 @@
 - name: Johannes van De Groeve 
   position: Board member
   affiliation: University of Amsterdam (IBED)
-  github: 
+  github: jedgroev
   interests:
     - Databases
     - SQL
+
+- name: Evelien Jongepier
+  position: Board member
+  affiliation: University of Amsterdam (IBED)
+  github: ejongepier
+  interests:
+    - Microbiome
+    - Bioinformatics
+    - QIIME
