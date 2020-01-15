@@ -6,6 +6,5 @@ link:
 date: 2020-04-06
 startTime: '09:00'
 endTime: '17:00' 
-
 ---
 
