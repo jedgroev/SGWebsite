@@ -7,15 +7,14 @@
     - Snakemake
     - RNA-Seq
 
-- name: Zsofia Koma
+- name: Like Fokkens 
   position: Board member
-  affiliation: UvA IBED
-  github: komazsofi
+  affiliation: UvA SILS
+  github: LikeFokkens
   interests:
-    - Spatial analysis (GIS)
+    - Comparative genomics  
     - Python
-    - Databases
-    - Machine Learning
+    - Phylogeny
 
 - name: Marc Galland
   position: Community lead
@@ -26,14 +25,15 @@
     - Snakemake
     - Data Science
 
-- name: Like Fokkens 
+- name: Joachim Goedhart
   position: Board member
-  affiliation: UvA SILS
-  github: LikeFokkens
+  affiliation: University of Amsterdam (SILS)
+  github: JoachimGoedhart
   interests:
-    - Comparative genomics  
-    - Python
-    - Phylogeny
+    - Molecular Cytology
+    - Data Science
+    - R
+    - Shiny
 
 - name: Huub Hoefsloot
   position: Board member
@@ -44,15 +44,24 @@
     - Mathematical modelling
     - Teaching
 
-- name: Joachim Goedhart
+- name: Evelien Jongepier
+  position: Board member
+  affiliation: University of Amsterdam (IBED)
+  github: ejongepier
+  interests:
+    - Microbiome
+    - Bioinformatics
+    - QIIME
+
+- name: Frans van der Kloet
   position: Board member
   affiliation: University of Amsterdam (SILS)
-  github: JoachimGoedhart
+  github: franskloet
   interests:
-    - Molecular Cytology
-    - Data Science
-    - R
-    - Shiny
+    - Data analysis
+    - Metabolomics
+    - Python
+    - Machine Learning
 
 - name: Stacy Shinneman
   position: Board member
@@ -70,11 +79,4 @@
     - Databases
     - SQL
 
-- name: Evelien Jongepier
-  position: Board member
-  affiliation: University of Amsterdam (IBED)
-  github: ejongepier
-  interests:
-    - Microbiome
-    - Bioinformatics
-    - QIIME
+

@@ -121,7 +121,6 @@
     - Plant-Microbe interactions
     - R
     
-    
 - name: Fred White
   affiliation: University of Amsterdam (SILS)
   github: Fred-White94
@@ -129,5 +128,15 @@
     - Transcriptomics
     - Human brain development
     - Bioinformatics
+
+- name: Zsofia Koma
+  position: former board member
+  affiliation: UvA IBED
+  github: komazsofi
+  interests:
+    - Spatial analysis (GIS)
+    - Python
+    - Databases
+    - Machine Learning
     
   
