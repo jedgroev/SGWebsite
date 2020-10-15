@@ -71,12 +71,14 @@
     - R
     - Geospatial data
 
-- name: Johannes van De Groeve 
+- name: Johannes De Groeve 
   position: Board member
   affiliation: University of Amsterdam (IBED)
   github: jedgroev
   interests:
+    - R
+    - Shiny
+    - Geospatial data. 
     - Databases
     - SQL
-
 
