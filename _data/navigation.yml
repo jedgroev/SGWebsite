@@ -6,10 +6,10 @@
   url: "/events/"
   side: left
   dropdown:
-  - title: "Grid & Colors"
+  - title: "Workshops"
     url: "/events/workshops/"
-  - title: "Typography"
-    url: "/design/typography/typography/"
+  - title: "Presentations"
+    url: "/events/presentations/"
 
 - title: "Members"
   url: "/members/"
