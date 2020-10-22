@@ -1,3 +1,0 @@
-cutadapt -g TTGTACACACCGCCC --match-read-wildcards -o test.trim.fastq test.fastq 
-
-that removes 

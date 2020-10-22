@@ -4,3 +4,4 @@ _site/
 .Rproj.user
 *.ipynb_checkpoints*
 *DSEL15*
+.jekyll-cache/
